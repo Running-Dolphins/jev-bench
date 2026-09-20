@@ -1,0 +1,91 @@
+{
+ "name": "duplicates",
+ "n": 500,
+ "model": "jev-latest",
+ "date": "2026-09-20",
+ "accuracy": 0.834,
+ "ece": 0.0514,
+ "brier": 0.2173,
+ "thresholds": {
+  "0.5": {
+   "coverage": 1.0,
+   "accuracy": 0.834,
+   "errors_let_through": 83
+  },
+  "0.7": {
+   "coverage": 0.824,
+   "accuracy": 0.8956,
+   "errors_let_through": 43
+  },
+  "0.8": {
+   "coverage": 0.708,
+   "accuracy": 0.935,
+   "errors_let_through": 23
+  },
+  "0.9": {
+   "coverage": 0.544,
+   "accuracy": 0.989,
+   "errors_let_through": 3
+  },
+  "0.95": {
+   "coverage": 0.406,
+   "accuracy": 1.0,
+   "errors_let_through": 0
+  },
+  "0.99": {
+   "coverage": 0.154,
+   "accuracy": 1.0,
+   "errors_let_through": 0
+  }
+ },
+ "reliability": [
+  {
+   "lo": 0.4,
+   "hi": 0.5,
+   "n": 3,
+   "stated": 0.5,
+   "actual": 0.6667
+  },
+  {
+   "lo": 0.5,
+   "hi": 0.6,
+   "n": 41,
+   "stated": 0.551,
+   "actual": 0.4634
+  },
+  {
+   "lo": 0.6,
+   "hi": 0.7,
+   "n": 47,
+   "stated": 0.6545,
+   "actual": 0.617
+  },
+  {
+   "lo": 0.7,
+   "hi": 0.8,
+   "n": 67,
+   "stated": 0.7637,
+   "actual": 0.6418
+  },
+  {
+   "lo": 0.8,
+   "hi": 0.9,
+   "n": 81,
+   "stated": 0.8609,
+   "actual": 0.8025
+  },
+  {
+   "lo": 0.9,
+   "hi": 1.0,
+   "n": 261,
+   "stated": 0.9657,
+   "actual": 0.9923
+  }
+ ],
+ "latency_median_s": 0.903,
+ "latency_p90_s": 1.128,
+ "input_tokens": 162700,
+ "usd_per_1000_decisions": 0.0137,
+ "kind": "noul",
+ "description": "Are these two requests duplicates? (Quora Question Pairs, EN)"
+}

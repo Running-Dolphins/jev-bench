@@ -1,0 +1,84 @@
+{
+ "name": "sms-spam",
+ "n": 500,
+ "model": "jev-latest",
+ "date": "2026-09-20",
+ "accuracy": 0.986,
+ "ece": 0.058,
+ "brier": 0.0363,
+ "thresholds": {
+  "0.5": {
+   "coverage": 1.0,
+   "accuracy": 0.986,
+   "errors_let_through": 7
+  },
+  "0.7": {
+   "coverage": 0.964,
+   "accuracy": 0.9938,
+   "errors_let_through": 3
+  },
+  "0.8": {
+   "coverage": 0.916,
+   "accuracy": 0.9956,
+   "errors_let_through": 2
+  },
+  "0.9": {
+   "coverage": 0.806,
+   "accuracy": 0.9975,
+   "errors_let_through": 1
+  },
+  "0.95": {
+   "coverage": 0.654,
+   "accuracy": 1.0,
+   "errors_let_through": 0
+  },
+  "0.99": {
+   "coverage": 0.062,
+   "accuracy": 1.0,
+   "errors_let_through": 0
+  }
+ },
+ "reliability": [
+  {
+   "lo": 0.5,
+   "hi": 0.6,
+   "n": 7,
+   "stated": 0.57,
+   "actual": 0.7143
+  },
+  {
+   "lo": 0.6,
+   "hi": 0.7,
+   "n": 13,
+   "stated": 0.6492,
+   "actual": 0.8462
+  },
+  {
+   "lo": 0.7,
+   "hi": 0.8,
+   "n": 26,
+   "stated": 0.76,
+   "actual": 0.9615
+  },
+  {
+   "lo": 0.8,
+   "hi": 0.9,
+   "n": 67,
+   "stated": 0.8718,
+   "actual": 0.9851
+  },
+  {
+   "lo": 0.9,
+   "hi": 1.0,
+   "n": 387,
+   "stated": 0.9649,
+   "actual": 0.9974
+  }
+ ],
+ "latency_median_s": 0.903,
+ "latency_p90_s": 1.107,
+ "input_tokens": 166153,
+ "usd_per_1000_decisions": 0.014,
+ "kind": "noul",
+ "description": "Is this message spam? (UCI SMS Spam Collection, EN)"
+}

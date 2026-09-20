@@ -1,0 +1,10 @@
+{
+ "name": "x-repeat",
+ "n": 300,
+ "repeats": 5,
+ "date": "2026-09-20",
+ "median_spread_of_top_probability": 0.01,
+ "p95_spread": 0.09,
+ "answer_changed_between_repeats": 0.03,
+ "crossed_the_0.9_line_between_repeats": 0.0467
+}

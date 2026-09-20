@@ -1,0 +1,91 @@
+{
+ "name": "doc-yesno",
+ "n": 500,
+ "model": "jev-latest",
+ "date": "2026-09-20",
+ "accuracy": 0.93,
+ "ece": 0.026,
+ "brier": 0.1264,
+ "thresholds": {
+  "0.5": {
+   "coverage": 1.0,
+   "accuracy": 0.93,
+   "errors_let_through": 35
+  },
+  "0.7": {
+   "coverage": 0.904,
+   "accuracy": 0.9513,
+   "errors_let_through": 22
+  },
+  "0.8": {
+   "coverage": 0.854,
+   "accuracy": 0.9532,
+   "errors_let_through": 20
+  },
+  "0.9": {
+   "coverage": 0.736,
+   "accuracy": 0.9647,
+   "errors_let_through": 13
+  },
+  "0.95": {
+   "coverage": 0.64,
+   "accuracy": 0.975,
+   "errors_let_through": 8
+  },
+  "0.99": {
+   "coverage": 0.218,
+   "accuracy": 0.9908,
+   "errors_let_through": 1
+  }
+ },
+ "reliability": [
+  {
+   "lo": 0.4,
+   "hi": 0.5,
+   "n": 1,
+   "stated": 0.5,
+   "actual": 1.0
+  },
+  {
+   "lo": 0.5,
+   "hi": 0.6,
+   "n": 23,
+   "stated": 0.5522,
+   "actual": 0.7826
+  },
+  {
+   "lo": 0.6,
+   "hi": 0.7,
+   "n": 30,
+   "stated": 0.668,
+   "actual": 0.7
+  },
+  {
+   "lo": 0.7,
+   "hi": 0.8,
+   "n": 20,
+   "stated": 0.765,
+   "actual": 0.95
+  },
+  {
+   "lo": 0.8,
+   "hi": 0.9,
+   "n": 63,
+   "stated": 0.863,
+   "actual": 0.873
+  },
+  {
+   "lo": 0.9,
+   "hi": 1.0,
+   "n": 363,
+   "stated": 0.9722,
+   "actual": 0.9669
+  }
+ ],
+ "latency_median_s": 0.893,
+ "latency_p90_s": 1.154,
+ "input_tokens": 213374,
+ "usd_per_1000_decisions": 0.0179,
+ "kind": "noul",
+ "description": "Does the document answer yes to this question? (BoolQ, EN)"
+}

@@ -1,0 +1,20 @@
+{
+ "name": "x-oos",
+ "n_in_scope": 300,
+ "n_out_of_scope": 150,
+ "date": "2026-09-20",
+ "A_no_exit_option": {
+  "in_scope_accuracy": 0.93,
+  "oos_median_top_probability": 0.535,
+  "in_scope_median_top_probability": 1.0,
+  "oos_share_at_or_above_0.9": 0.1533,
+  "oos_share_at_or_above_0.7": 0.3333,
+  "auroc_top_probability_detects_oos": 0.9055,
+  "auroc_confidence_field_detects_oos": 0.9053
+ },
+ "B_with_exit_option": {
+  "in_scope_accuracy": 0.9267,
+  "oos_caught": 0.7267,
+  "in_scope_wrongly_sent_to_exit": 0.0167
+ }
+}

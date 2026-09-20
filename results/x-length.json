@@ -1,0 +1,102 @@
+{
+ "name": "x-length",
+ "date": "2026-09-20",
+ "by_task": {
+  "doc-yesno": {
+   "shortest third": {
+    "median_input_tokens": 358,
+    "accuracy": 0.9337,
+    "ece": 0.0575,
+    "at_0.9": {
+     "coverage": 0.6807,
+     "accuracy": 0.9558,
+     "errors_let_through": 5
+    }
+   },
+   "middle third": {
+    "median_input_tokens": 413,
+    "accuracy": 0.9157,
+    "ece": 0.0187,
+    "at_0.9": {
+     "coverage": 0.753,
+     "accuracy": 0.968,
+     "errors_let_through": 4
+    }
+   },
+   "longest third": {
+    "median_input_tokens": 485,
+    "accuracy": 0.9405,
+    "ece": 0.0273,
+    "at_0.9": {
+     "coverage": 0.7738,
+     "accuracy": 0.9692,
+     "errors_let_through": 4
+    }
+   }
+  },
+  "yelp-stars": {
+   "shortest third": {
+    "median_input_tokens": 388,
+    "accuracy": 0.6928,
+    "ece": 0.162,
+    "at_0.9": {
+     "coverage": 0.488,
+     "accuracy": 0.7778,
+     "errors_let_through": 18
+    }
+   },
+   "middle third": {
+    "median_input_tokens": 467,
+    "accuracy": 0.6687,
+    "ece": 0.1858,
+    "at_0.9": {
+     "coverage": 0.5482,
+     "accuracy": 0.8242,
+     "errors_let_through": 16
+    }
+   },
+   "longest third": {
+    "median_input_tokens": 631,
+    "accuracy": 0.75,
+    "ece": 0.1014,
+    "at_0.9": {
+     "coverage": 0.5,
+     "accuracy": 0.8452,
+     "errors_let_through": 13
+    }
+   }
+  },
+  "ledgar": {
+   "shortest third": {
+    "median_input_tokens": 1908,
+    "accuracy": 0.7831,
+    "ece": 0.1508,
+    "at_0.9": {
+     "coverage": 0.7831,
+     "accuracy": 0.8538,
+     "errors_let_through": 19
+    }
+   },
+   "middle third": {
+    "median_input_tokens": 1966,
+    "accuracy": 0.7651,
+    "ece": 0.1089,
+    "at_0.9": {
+     "coverage": 0.6205,
+     "accuracy": 0.8932,
+     "errors_let_through": 11
+    }
+   },
+   "longest third": {
+    "median_input_tokens": 2111,
+    "accuracy": 0.6726,
+    "ece": 0.1642,
+    "at_0.9": {
+     "coverage": 0.5774,
+     "accuracy": 0.8557,
+     "errors_let_through": 14
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,106 @@
+{
+ "name": "massive-en",
+ "n": 500,
+ "model": "jev-latest",
+ "date": "2026-09-20",
+ "accuracy": 0.844,
+ "ece": 0.0613,
+ "brier": 0.2267,
+ "thresholds": {
+  "0.5": {
+   "coverage": 0.95,
+   "accuracy": 0.8716,
+   "errors_let_through": 61
+  },
+  "0.7": {
+   "coverage": 0.87,
+   "accuracy": 0.9149,
+   "errors_let_through": 37
+  },
+  "0.8": {
+   "coverage": 0.812,
+   "accuracy": 0.9335,
+   "errors_let_through": 27
+  },
+  "0.9": {
+   "coverage": 0.74,
+   "accuracy": 0.9514,
+   "errors_let_through": 18
+  },
+  "0.95": {
+   "coverage": 0.68,
+   "accuracy": 0.9647,
+   "errors_let_through": 12
+  },
+  "0.99": {
+   "coverage": 0.578,
+   "accuracy": 0.9619,
+   "errors_let_through": 11
+  }
+ },
+ "reliability": [
+  {
+   "lo": 0.2,
+   "hi": 0.3,
+   "n": 1,
+   "stated": 0.28,
+   "actual": 0.0
+  },
+  {
+   "lo": 0.3,
+   "hi": 0.4,
+   "n": 9,
+   "stated": 0.3689,
+   "actual": 0.3333
+  },
+  {
+   "lo": 0.4,
+   "hi": 0.5,
+   "n": 17,
+   "stated": 0.4506,
+   "actual": 0.3529
+  },
+  {
+   "lo": 0.5,
+   "hi": 0.6,
+   "n": 19,
+   "stated": 0.5616,
+   "actual": 0.3158
+  },
+  {
+   "lo": 0.6,
+   "hi": 0.7,
+   "n": 19,
+   "stated": 0.6432,
+   "actual": 0.4737
+  },
+  {
+   "lo": 0.7,
+   "hi": 0.8,
+   "n": 29,
+   "stated": 0.75,
+   "actual": 0.6552
+  },
+  {
+   "lo": 0.8,
+   "hi": 0.9,
+   "n": 41,
+   "stated": 0.8656,
+   "actual": 0.7561
+  },
+  {
+   "lo": 0.9,
+   "hi": 1.0,
+   "n": 365,
+   "stated": 0.9897,
+   "actual": 0.9534
+  }
+ ],
+ "latency_median_s": 0.886,
+ "latency_p90_s": 1.067,
+ "input_tokens": 621310,
+ "usd_per_1000_decisions": 0.0522,
+ "ece_confidence_field": 0.057,
+ "kind": "choice · 60 options",
+ "description": "Voice-assistant intent, English (Amazon MASSIVE) — parallel to massive-it"
+}

@@ -1,0 +1,7 @@
+raw/
+data/
+.env
+__pycache__/
+.DS_Store
+.done
+*.log

@@ -1,0 +1,23 @@
+{
+ "name": "x-descriptions",
+ "date": "2026-09-20",
+ "n": 300,
+ "labels_only": {
+  "accuracy": 0.9333,
+  "ece": 0.0361,
+  "at_0.9": {
+   "coverage": 0.8533,
+   "accuracy": 0.9688,
+   "errors_let_through": 8
+  }
+ },
+ "with_descriptions": {
+  "accuracy": 0.9267,
+  "ece": 0.0464,
+  "at_0.9": {
+   "coverage": 0.8767,
+   "accuracy": 0.962,
+   "errors_let_through": 10
+  }
+ }
+}

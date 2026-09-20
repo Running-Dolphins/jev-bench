@@ -1,0 +1,113 @@
+{
+ "name": "clinc150",
+ "n": 500,
+ "model": "jev-latest",
+ "date": "2026-09-20",
+ "accuracy": 0.914,
+ "ece": 0.0282,
+ "brier": 0.1247,
+ "thresholds": {
+  "0.5": {
+   "coverage": 0.982,
+   "accuracy": 0.9267,
+   "errors_let_through": 36
+  },
+  "0.7": {
+   "coverage": 0.922,
+   "accuracy": 0.9566,
+   "errors_let_through": 20
+  },
+  "0.8": {
+   "coverage": 0.878,
+   "accuracy": 0.9636,
+   "errors_let_through": 16
+  },
+  "0.9": {
+   "coverage": 0.822,
+   "accuracy": 0.9732,
+   "errors_let_through": 11
+  },
+  "0.95": {
+   "coverage": 0.776,
+   "accuracy": 0.9768,
+   "errors_let_through": 9
+  },
+  "0.99": {
+   "coverage": 0.682,
+   "accuracy": 0.9824,
+   "errors_let_through": 6
+  }
+ },
+ "reliability": [
+  {
+   "lo": 0.1,
+   "hi": 0.2,
+   "n": 1,
+   "stated": 0.18,
+   "actual": 0.0
+  },
+  {
+   "lo": 0.2,
+   "hi": 0.3,
+   "n": 3,
+   "stated": 0.2433,
+   "actual": 0.3333
+  },
+  {
+   "lo": 0.3,
+   "hi": 0.4,
+   "n": 1,
+   "stated": 0.39,
+   "actual": 0.0
+  },
+  {
+   "lo": 0.4,
+   "hi": 0.5,
+   "n": 6,
+   "stated": 0.4617,
+   "actual": 0.3333
+  },
+  {
+   "lo": 0.5,
+   "hi": 0.6,
+   "n": 12,
+   "stated": 0.5683,
+   "actual": 0.5
+  },
+  {
+   "lo": 0.6,
+   "hi": 0.7,
+   "n": 17,
+   "stated": 0.6582,
+   "actual": 0.4706
+  },
+  {
+   "lo": 0.7,
+   "hi": 0.8,
+   "n": 22,
+   "stated": 0.7545,
+   "actual": 0.7727
+  },
+  {
+   "lo": 0.8,
+   "hi": 0.9,
+   "n": 31,
+   "stated": 0.8577,
+   "actual": 0.871
+  },
+  {
+   "lo": 0.9,
+   "hi": 1.0,
+   "n": 407,
+   "stated": 0.9918,
+   "actual": 0.973
+  }
+ ],
+ "latency_median_s": 0.928,
+ "latency_p90_s": 1.142,
+ "input_tokens": 1243934,
+ "usd_per_1000_decisions": 0.1045,
+ "ece_confidence_field": 0.0349,
+ "kind": "choice · 150 options",
+ "description": "Intent routing with 150 in-scope intents (CLINC150, EN)"
+}

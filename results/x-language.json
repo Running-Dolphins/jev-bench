@@ -1,0 +1,35 @@
+{
+ "name": "x-language",
+ "n": 300,
+ "date": "2026-09-20",
+ "english": {
+  "accuracy": 0.87,
+  "ece": 0.052,
+  "at_0.9": {
+   "coverage": 0.75,
+   "accuracy": 0.9778,
+   "errors_let_through": 5
+  }
+ },
+ "italian": {
+  "accuracy": 0.87,
+  "ece": 0.0353,
+  "at_0.9": {
+   "coverage": 0.71,
+   "accuracy": 0.9812,
+   "errors_let_through": 4
+  }
+ },
+ "italian_text_english_instructions": {
+  "accuracy": 0.8567,
+  "ece": 0.0387,
+  "at_0.9": {
+   "coverage": 0.7,
+   "accuracy": 0.9762,
+   "errors_let_through": 5
+  }
+ },
+ "both_right": 251,
+ "only_english_right": 10,
+ "only_italian_right": 10
+}

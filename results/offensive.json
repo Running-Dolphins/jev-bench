@@ -1,0 +1,91 @@
+{
+ "name": "offensive",
+ "n": 500,
+ "model": "jev-latest",
+ "date": "2026-09-20",
+ "accuracy": 0.766,
+ "ece": 0.0719,
+ "brier": 0.2944,
+ "thresholds": {
+  "0.5": {
+   "coverage": 1.0,
+   "accuracy": 0.766,
+   "errors_let_through": 117
+  },
+  "0.7": {
+   "coverage": 0.782,
+   "accuracy": 0.8517,
+   "errors_let_through": 58
+  },
+  "0.8": {
+   "coverage": 0.682,
+   "accuracy": 0.8768,
+   "errors_let_through": 42
+  },
+  "0.9": {
+   "coverage": 0.474,
+   "accuracy": 0.9494,
+   "errors_let_through": 12
+  },
+  "0.95": {
+   "coverage": 0.344,
+   "accuracy": 0.9884,
+   "errors_let_through": 2
+  },
+  "0.99": {
+   "coverage": 0.126,
+   "accuracy": 1.0,
+   "errors_let_through": 0
+  }
+ },
+ "reliability": [
+  {
+   "lo": 0.4,
+   "hi": 0.5,
+   "n": 1,
+   "stated": 0.5,
+   "actual": 0.0
+  },
+  {
+   "lo": 0.5,
+   "hi": 0.6,
+   "n": 60,
+   "stated": 0.5597,
+   "actual": 0.4333
+  },
+  {
+   "lo": 0.6,
+   "hi": 0.7,
+   "n": 50,
+   "stated": 0.6572,
+   "actual": 0.52
+  },
+  {
+   "lo": 0.7,
+   "hi": 0.8,
+   "n": 61,
+   "stated": 0.761,
+   "actual": 0.6557
+  },
+  {
+   "lo": 0.8,
+   "hi": 0.9,
+   "n": 98,
+   "stated": 0.8559,
+   "actual": 0.7347
+  },
+  {
+   "lo": 0.9,
+   "hi": 1.0,
+   "n": 230,
+   "stated": 0.964,
+   "actual": 0.9522
+  }
+ ],
+ "latency_median_s": 0.89,
+ "latency_p90_s": 1.048,
+ "input_tokens": 162754,
+ "usd_per_1000_decisions": 0.0137,
+ "kind": "noul",
+ "description": "Moderation: is this post offensive? (TweetEval, EN)"
+}

@@ -1,0 +1,15 @@
+{
+ "name": "x-order",
+ "n": 300,
+ "date": "2026-09-20",
+ "accuracy_per_order": [
+  0.7667,
+  0.77,
+  0.7767
+ ],
+ "answer_changed_with_order": 0.0867,
+ "mean_top_probability_when_stable": 0.8967,
+ "mean_top_probability_when_it_flips": 0.5782,
+ "share_always_at_or_above_0.9": 0.5967,
+ "flips_among_always_at_or_above_0.9": 0
+}

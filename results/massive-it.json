@@ -1,0 +1,113 @@
+{
+ "name": "massive-it",
+ "n": 500,
+ "model": "jev-latest",
+ "date": "2026-09-20",
+ "accuracy": 0.836,
+ "ece": 0.057,
+ "brier": 0.251,
+ "thresholds": {
+  "0.5": {
+   "coverage": 0.944,
+   "accuracy": 0.8665,
+   "errors_let_through": 63
+  },
+  "0.7": {
+   "coverage": 0.856,
+   "accuracy": 0.9042,
+   "errors_let_through": 41
+  },
+  "0.8": {
+   "coverage": 0.794,
+   "accuracy": 0.937,
+   "errors_let_through": 25
+  },
+  "0.9": {
+   "coverage": 0.698,
+   "accuracy": 0.9513,
+   "errors_let_through": 17
+  },
+  "0.95": {
+   "coverage": 0.628,
+   "accuracy": 0.9522,
+   "errors_let_through": 15
+  },
+  "0.99": {
+   "coverage": 0.542,
+   "accuracy": 0.9557,
+   "errors_let_through": 12
+  }
+ },
+ "reliability": [
+  {
+   "lo": 0.1,
+   "hi": 0.2,
+   "n": 1,
+   "stated": 0.2,
+   "actual": 0.0
+  },
+  {
+   "lo": 0.2,
+   "hi": 0.3,
+   "n": 4,
+   "stated": 0.2625,
+   "actual": 0.0
+  },
+  {
+   "lo": 0.3,
+   "hi": 0.4,
+   "n": 7,
+   "stated": 0.3514,
+   "actual": 0.2857
+  },
+  {
+   "lo": 0.4,
+   "hi": 0.5,
+   "n": 20,
+   "stated": 0.467,
+   "actual": 0.4
+  },
+  {
+   "lo": 0.5,
+   "hi": 0.6,
+   "n": 18,
+   "stated": 0.5622,
+   "actual": 0.5556
+  },
+  {
+   "lo": 0.6,
+   "hi": 0.7,
+   "n": 24,
+   "stated": 0.6562,
+   "actual": 0.5
+  },
+  {
+   "lo": 0.7,
+   "hi": 0.8,
+   "n": 31,
+   "stated": 0.7613,
+   "actual": 0.4839
+  },
+  {
+   "lo": 0.8,
+   "hi": 0.9,
+   "n": 51,
+   "stated": 0.8586,
+   "actual": 0.8431
+  },
+  {
+   "lo": 0.9,
+   "hi": 1.0,
+   "n": 344,
+   "stated": 0.9889,
+   "actual": 0.9535
+  }
+ ],
+ "latency_median_s": 0.895,
+ "latency_p90_s": 1.099,
+ "input_tokens": 625225,
+ "usd_per_1000_decisions": 0.0525,
+ "ece_confidence_field": 0.0631,
+ "kind": "choice · 60 options",
+ "description": "Same utterances translated to Italian (Amazon MASSIVE)"
+}

@@ -1,0 +1,106 @@
+{
+ "name": "ledgar",
+ "n": 500,
+ "model": "jev-latest",
+ "date": "2026-09-20",
+ "accuracy": 0.74,
+ "ece": 0.1383,
+ "brier": 0.3958,
+ "thresholds": {
+  "0.5": {
+   "coverage": 0.952,
+   "accuracy": 0.7605,
+   "errors_let_through": 114
+  },
+  "0.7": {
+   "coverage": 0.816,
+   "accuracy": 0.8137,
+   "errors_let_through": 76
+  },
+  "0.8": {
+   "coverage": 0.75,
+   "accuracy": 0.8453,
+   "errors_let_through": 58
+  },
+  "0.9": {
+   "coverage": 0.66,
+   "accuracy": 0.8667,
+   "errors_let_through": 44
+  },
+  "0.95": {
+   "coverage": 0.578,
+   "accuracy": 0.8927,
+   "errors_let_through": 31
+  },
+  "0.99": {
+   "coverage": 0.458,
+   "accuracy": 0.9258,
+   "errors_let_through": 17
+  }
+ },
+ "reliability": [
+  {
+   "lo": 0.2,
+   "hi": 0.3,
+   "n": 2,
+   "stated": 0.28,
+   "actual": 0.5
+  },
+  {
+   "lo": 0.3,
+   "hi": 0.4,
+   "n": 11,
+   "stated": 0.3745,
+   "actual": 0.4545
+  },
+  {
+   "lo": 0.4,
+   "hi": 0.5,
+   "n": 14,
+   "stated": 0.4586,
+   "actual": 0.1429
+  },
+  {
+   "lo": 0.5,
+   "hi": 0.6,
+   "n": 41,
+   "stated": 0.5466,
+   "actual": 0.3902
+  },
+  {
+   "lo": 0.6,
+   "hi": 0.7,
+   "n": 26,
+   "stated": 0.655,
+   "actual": 0.5769
+  },
+  {
+   "lo": 0.7,
+   "hi": 0.8,
+   "n": 35,
+   "stated": 0.76,
+   "actual": 0.4857
+  },
+  {
+   "lo": 0.8,
+   "hi": 0.9,
+   "n": 46,
+   "stated": 0.8587,
+   "actual": 0.6739
+  },
+  {
+   "lo": 0.9,
+   "hi": 1.0,
+   "n": 325,
+   "stated": 0.9842,
+   "actual": 0.8708
+  }
+ ],
+ "latency_median_s": 0.892,
+ "latency_p90_s": 1.085,
+ "input_tokens": 1005926,
+ "usd_per_1000_decisions": 0.0845,
+ "ece_confidence_field": 0.1305,
+ "kind": "choice · 100 options",
+ "description": "Contract clause type, from SEC filings (LEDGAR / LexGLUE, EN)"
+}

@@ -1,0 +1,106 @@
+{
+ "name": "yelp-stars",
+ "n": 500,
+ "model": "jev-latest",
+ "date": "2026-09-20",
+ "accuracy": 0.704,
+ "ece": 0.1468,
+ "brier": 0.4392,
+ "thresholds": {
+  "0.5": {
+   "coverage": 0.986,
+   "accuracy": 0.7099,
+   "errors_let_through": 143
+  },
+  "0.7": {
+   "coverage": 0.802,
+   "accuracy": 0.7581,
+   "errors_let_through": 97
+  },
+  "0.8": {
+   "coverage": 0.68,
+   "accuracy": 0.7735,
+   "errors_let_through": 77
+  },
+  "0.9": {
+   "coverage": 0.512,
+   "accuracy": 0.8164,
+   "errors_let_through": 47
+  },
+  "0.95": {
+   "coverage": 0.394,
+   "accuracy": 0.8832,
+   "errors_let_through": 23
+  },
+  "0.99": {
+   "coverage": 0.274,
+   "accuracy": 0.9489,
+   "errors_let_through": 7
+  }
+ },
+ "reliability": [
+  {
+   "lo": 0.2,
+   "hi": 0.3,
+   "n": 1,
+   "stated": 0.3,
+   "actual": 0.0
+  },
+  {
+   "lo": 0.3,
+   "hi": 0.4,
+   "n": 1,
+   "stated": 0.4,
+   "actual": 1.0
+  },
+  {
+   "lo": 0.4,
+   "hi": 0.5,
+   "n": 9,
+   "stated": 0.4889,
+   "actual": 0.3333
+  },
+  {
+   "lo": 0.5,
+   "hi": 0.6,
+   "n": 48,
+   "stated": 0.5642,
+   "actual": 0.5
+  },
+  {
+   "lo": 0.6,
+   "hi": 0.7,
+   "n": 41,
+   "stated": 0.6571,
+   "actual": 0.4878
+  },
+  {
+   "lo": 0.7,
+   "hi": 0.8,
+   "n": 71,
+   "stated": 0.7594,
+   "actual": 0.6479
+  },
+  {
+   "lo": 0.8,
+   "hi": 0.9,
+   "n": 79,
+   "stated": 0.8578,
+   "actual": 0.6835
+  },
+  {
+   "lo": 0.9,
+   "hi": 1.0,
+   "n": 250,
+   "stated": 0.9736,
+   "actual": 0.816
+  }
+ ],
+ "latency_median_s": 0.887,
+ "latency_p90_s": 1.058,
+ "input_tokens": 261735,
+ "usd_per_1000_decisions": 0.022,
+ "ece_confidence_field": 0.1697,
+ "kind": "score · 5 levels",
+ "description": "Predict the 1-5 star rating of a review (Yelp, EN)"
+}

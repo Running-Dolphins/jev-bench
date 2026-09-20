@@ -1,0 +1,85 @@
+{
+ "name": "ag-news",
+ "n": 500,
+ "model": "jev-latest",
+ "date": "2026-09-20",
+ "accuracy": 0.91,
+ "ece": 0.0569,
+ "brier": 0.1425,
+ "thresholds": {
+  "0.5": {
+   "coverage": 1.0,
+   "accuracy": 0.91,
+   "errors_let_through": 45
+  },
+  "0.7": {
+   "coverage": 0.96,
+   "accuracy": 0.9292,
+   "errors_let_through": 34
+  },
+  "0.8": {
+   "coverage": 0.936,
+   "accuracy": 0.9359,
+   "errors_let_through": 30
+  },
+  "0.9": {
+   "coverage": 0.89,
+   "accuracy": 0.9483,
+   "errors_let_through": 23
+  },
+  "0.95": {
+   "coverage": 0.848,
+   "accuracy": 0.9575,
+   "errors_let_through": 18
+  },
+  "0.99": {
+   "coverage": 0.79,
+   "accuracy": 0.9747,
+   "errors_let_through": 10
+  }
+ },
+ "reliability": [
+  {
+   "lo": 0.5,
+   "hi": 0.6,
+   "n": 13,
+   "stated": 0.5523,
+   "actual": 0.3077
+  },
+  {
+   "lo": 0.6,
+   "hi": 0.7,
+   "n": 7,
+   "stated": 0.66,
+   "actual": 0.7143
+  },
+  {
+   "lo": 0.7,
+   "hi": 0.8,
+   "n": 12,
+   "stated": 0.7458,
+   "actual": 0.6667
+  },
+  {
+   "lo": 0.8,
+   "hi": 0.9,
+   "n": 25,
+   "stated": 0.8612,
+   "actual": 0.68
+  },
+  {
+   "lo": 0.9,
+   "hi": 1.0,
+   "n": 443,
+   "stated": 0.9942,
+   "actual": 0.9503
+  }
+ ],
+ "latency_median_s": 0.927,
+ "latency_p90_s": 1.133,
+ "input_tokens": 208355,
+ "usd_per_1000_decisions": 0.0175,
+ "ece_confidence_field": 0.0484,
+ "kind": "choice · 4 options",
+ "description": "Route a news item to a desk (AG News, EN)"
+}

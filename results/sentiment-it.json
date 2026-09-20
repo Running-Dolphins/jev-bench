@@ -1,0 +1,99 @@
+{
+ "name": "sentiment-it",
+ "n": 500,
+ "model": "jev-latest",
+ "date": "2026-09-20",
+ "accuracy": 0.824,
+ "ece": 0.0538,
+ "brier": 0.2589,
+ "thresholds": {
+  "0.5": {
+   "coverage": 0.982,
+   "accuracy": 0.8289,
+   "errors_let_through": 84
+  },
+  "0.7": {
+   "coverage": 0.838,
+   "accuracy": 0.8759,
+   "errors_let_through": 52
+  },
+  "0.8": {
+   "coverage": 0.752,
+   "accuracy": 0.8936,
+   "errors_let_through": 40
+  },
+  "0.9": {
+   "coverage": 0.602,
+   "accuracy": 0.9402,
+   "errors_let_through": 18
+  },
+  "0.95": {
+   "coverage": 0.468,
+   "accuracy": 0.9786,
+   "errors_let_through": 5
+  },
+  "0.99": {
+   "coverage": 0.298,
+   "accuracy": 0.9933,
+   "errors_let_through": 1
+  }
+ },
+ "reliability": [
+  {
+   "lo": 0.3,
+   "hi": 0.4,
+   "n": 1,
+   "stated": 0.39,
+   "actual": 0.0
+  },
+  {
+   "lo": 0.4,
+   "hi": 0.5,
+   "n": 11,
+   "stated": 0.4764,
+   "actual": 0.6364
+  },
+  {
+   "lo": 0.5,
+   "hi": 0.6,
+   "n": 40,
+   "stated": 0.5595,
+   "actual": 0.55
+  },
+  {
+   "lo": 0.6,
+   "hi": 0.7,
+   "n": 30,
+   "stated": 0.653,
+   "actual": 0.5333
+  },
+  {
+   "lo": 0.7,
+   "hi": 0.8,
+   "n": 50,
+   "stated": 0.7616,
+   "actual": 0.72
+  },
+  {
+   "lo": 0.8,
+   "hi": 0.9,
+   "n": 73,
+   "stated": 0.8548,
+   "actual": 0.7123
+  },
+  {
+   "lo": 0.9,
+   "hi": 1.0,
+   "n": 295,
+   "stated": 0.974,
+   "actual": 0.9458
+  }
+ ],
+ "latency_median_s": 0.875,
+ "latency_p90_s": 1.007,
+ "input_tokens": 186069,
+ "usd_per_1000_decisions": 0.0156,
+ "ece_confidence_field": 0.0699,
+ "kind": "score · 3 levels",
+ "description": "Sentiment of Italian tweets (CardiffNLP multilingual)"
+}
