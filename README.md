@@ -39,7 +39,7 @@ Observations, not laws. Each one is a reason to run the table on your own data.
 ## Quick start
 
 ```bash
-git clone <this repo> && cd jev-bench
+git clone https://github.com/Running-Dolphins/jev-bench.git && cd jev-bench
 cp .env.example .env          # paste your TypeSafe API key
 python3 jevbench.py list
 python3 jevbench.py run sms-spam --n 200
