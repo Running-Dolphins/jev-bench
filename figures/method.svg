@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect width="1600" height="900" fill="#fcfcfb"/>
+<text x="70.0" y="92.0" font-size="44" fill="#0b0b0b" text-anchor="start" font-weight="700">How a number on this page is born</text>
+<text x="70.0" y="138.0" font-size="25" fill="#52514e" text-anchor="start" font-weight="400">One task from start to finish: “are these two requests duplicates?”, 500 pairs from Quora Question Pairs.</text>
+<rect x="70" y="185" width="470" height="580" rx="14" fill="#ffffff" stroke="#e1e0d9"/>
+<text x="100.0" y="235.0" font-size="27" fill="#0b0b0b" text-anchor="start" font-weight="700">1 · Ask Jev one question</text>
+<rect x="565" y="185" width="470" height="580" rx="14" fill="#ffffff" stroke="#e1e0d9"/>
+<text x="595.0" y="235.0" font-size="27" fill="#0b0b0b" text-anchor="start" font-weight="700">2 · Do it 500 times</text>
+<rect x="1060" y="185" width="470" height="580" rx="14" fill="#ffffff" stroke="#e1e0d9"/>
+<text x="1090.0" y="235.0" font-size="27" fill="#0b0b0b" text-anchor="start" font-weight="700">3 · Count the wrong ones</text>
+<text x="100.0" y="285.0" font-size="14" fill="#898781" text-anchor="start" font-weight="700">TWO REQUESTS FROM THE DATASET</text>
+<text x="100.0" y="315.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">“Why do I always feel a headache?”</text>
+<text x="100.0" y="342.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">“Why do we feel headache?”</text>
+<text x="100.0" y="401.0" font-size="14" fill="#898781" text-anchor="start" font-weight="700">THE QUESTION</text>
+<text x="100.0" y="431.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">Are these two requests duplicates?</text>
+<text x="100.0" y="490.0" font-size="14" fill="#898781" text-anchor="start" font-weight="700">JEV ANSWERS</text>
+<text x="100.0" y="520.0" font-size="24" fill="#0b0b0b" text-anchor="start" font-weight="700">yes · confidence 0.57</text>
+<text x="100.0" y="579.0" font-size="14" fill="#898781" text-anchor="start" font-weight="700">THE PEOPLE WHO BUILT THE DATASET SAID</text>
+<text x="100.0" y="609.0" font-size="24" fill="#0b0b0b" text-anchor="start" font-weight="700">no</text>
+<line x1="100" x2="510" y1="660" y2="660" stroke="#e1e0d9"/>
+<text x="100.0" y="694.0" font-size="21" fill="#0b0b0b" text-anchor="start" font-weight="700">→ this answer counts as wrong</text>
+<text x="100.0" y="722.0" font-size="17" fill="#52514e" text-anchor="start" font-weight="400">Public datasets come with the right answer</text>
+<text x="100.0" y="745.0" font-size="17" fill="#52514e" text-anchor="start" font-weight="400">already written by people. That is the referee.</text>
+<text x="595.0" y="285.0" font-size="13" fill="#898781" text-anchor="start" font-weight="700">JEV SAID</text>
+<text x="700.0" y="285.0" font-size="13" fill="#898781" text-anchor="start" font-weight="700">CONFIDENCE</text>
+<text x="820.0" y="285.0" font-size="13" fill="#898781" text-anchor="start" font-weight="700">PEOPLE SAID</text>
+<text x="940.0" y="285.0" font-size="13" fill="#898781" text-anchor="start" font-weight="700">RESULT</text>
+<text x="595.0" y="319.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">no</text>
+<text x="700.0" y="319.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">1.00</text>
+<text x="820.0" y="319.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">no</text>
+<circle cx="948" cy="312" r="7" fill="#2a78d6"/>
+<text x="965.0" y="319.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">right</text>
+<text x="595.0" y="347.0" font-size="20" fill="#898781" text-anchor="start" font-weight="400">…</text>
+<text x="595.0" y="375.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">yes</text>
+<text x="700.0" y="375.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">0.97</text>
+<text x="820.0" y="375.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">yes</text>
+<circle cx="948" cy="368" r="7" fill="#2a78d6"/>
+<text x="965.0" y="375.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">right</text>
+<text x="595.0" y="415.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">no</text>
+<text x="700.0" y="415.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">0.90</text>
+<text x="820.0" y="415.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">no</text>
+<circle cx="948" cy="408" r="7" fill="#2a78d6"/>
+<text x="965.0" y="415.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">right</text>
+<line x1="585" x2="1015" y1="459" y2="459" stroke="#52514e" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1015.0" y="451.0" font-size="15" fill="#52514e" text-anchor="end" font-weight="700">the gate: 0.9</text>
+<text x="595.0" y="493.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">yes</text>
+<text x="700.0" y="493.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">0.89</text>
+<text x="820.0" y="493.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">yes</text>
+<circle cx="948" cy="486" r="7" fill="#2a78d6"/>
+<text x="965.0" y="493.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">right</text>
+<text x="595.0" y="521.0" font-size="20" fill="#898781" text-anchor="start" font-weight="400">…</text>
+<text x="595.0" y="549.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">no</text>
+<text x="700.0" y="549.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">0.80</text>
+<text x="820.0" y="549.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">no</text>
+<circle cx="948" cy="542" r="7" fill="#2a78d6"/>
+<text x="965.0" y="549.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">right</text>
+<text x="595.0" y="589.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">no</text>
+<text x="700.0" y="589.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">0.67</text>
+<text x="820.0" y="589.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">no</text>
+<circle cx="948" cy="582" r="7" fill="#2a78d6"/>
+<text x="965.0" y="589.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">right</text>
+<text x="595.0" y="629.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">yes</text>
+<text x="700.0" y="629.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">0.50</text>
+<text x="820.0" y="629.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">no</text>
+<circle cx="948" cy="622" r="7" fill="#eb6834"/>
+<text x="965.0" y="629.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="400">wrong</text>
+<text x="595.0" y="703.0" font-size="17" fill="#52514e" text-anchor="start" font-weight="400">500 real rows, sorted from most to least confident.</text>
+<text x="595.0" y="727.0" font-size="17" fill="#52514e" text-anchor="start" font-weight="400">272 are at 0.9 or more, 228 are below.</text>
+<text x="1090.0" y="285.0" font-size="13" fill="#898781" text-anchor="start" font-weight="700">NO GATE: ACT ON ALL THE ROWS</text>
+<text x="1090.0" y="325.0" font-size="28" fill="#0b0b0b" text-anchor="start" font-weight="700">83 wrong of 500 = 16.6%</text>
+<text x="1090.0" y="353.0" font-size="16" fill="#52514e" text-anchor="start" font-weight="400">Jev used as a plain classifier: top answer, every time.</text>
+<text x="1090.0" y="425.0" font-size="13" fill="#898781" text-anchor="start" font-weight="700">GATE AT 0.9: ACT ONLY ON THE ROWS ABOVE THE LINE</text>
+<text x="1090.0" y="465.0" font-size="28" fill="#0b0b0b" text-anchor="start" font-weight="700">3 wrong of 272 = 1.1%</text>
+<text x="1090.0" y="493.0" font-size="16" fill="#52514e" text-anchor="start" font-weight="400">These run on their own. The error that gets through.</text>
+<text x="1090.0" y="565.0" font-size="13" fill="#898781" text-anchor="start" font-weight="700">THE ROWS BELOW THE LINE GO TO A PERSON</text>
+<text x="1090.0" y="605.0" font-size="28" fill="#0b0b0b" text-anchor="start" font-weight="700">228 rows: 80 wrong, 148 right</text>
+<text x="1090.0" y="633.0" font-size="16" fill="#52514e" text-anchor="start" font-weight="400">Wrong ones stopped. The right ones are the price.</text>
+<text x="70.0" y="811.0" font-size="20" fill="#52514e" text-anchor="start" font-weight="400">Same recipe for every task. The answer is always Jev's most probable option (for yes / no: yes if P(yes) ≥ 0.5) and the confidence is its probability.</text>
+<text x="70.0" y="866.0" font-size="19" fill="#898781" text-anchor="start" font-weight="400">github.com/Running-Dolphins/jev-bench · one run, 20 Sept 2026 · public datasets</text>
+</svg>

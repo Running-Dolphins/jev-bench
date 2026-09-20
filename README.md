@@ -10,6 +10,10 @@ One Python file, standard library only, no dataset to download by hand. A full r
 
 Jev doesn't write text. You give it some state and a closed question, and it returns probabilities plus a confidence number. That number is what makes a decision automatable: above a threshold the step runs on its own, below it a person looks.
 
+That is the pattern this repo is about: **Jev as the gate of a human-in-the-loop process.** Every classification comes with a number; above your threshold the step runs on its own, below it a person decides. On 500 "is this a duplicate?" decisions, acting on every answer let 83 wrong ones through; with a person below 0.9, 3 ([how that is counted](#how-every-number-is-produced)).
+
+A text-generating LLM gives you the answer without the doubt. You can ask it to state a confidence, or read token log-probabilities where the API exposes them, but neither is designed as a calibrated probability over your options, and stated confidences are known to cluster high. We did not measure an LLM here, so this is the motivation, not a result: what we measured is whether Jev's own number is good enough to be that gate.
+
 That only works if the number means what it says. **If the model says 0.9, is it right 9 times out of 10?** Accuracy can't answer that. A reliability table can:
 
 ```
@@ -22,42 +26,79 @@ banking77 · reliability — stated confidence vs actual accuracy
 
 Read it as: "of the answers where Jev claimed 80-90%, 73% were right". On a different task (`sms-spam`) the same band is right 99% of the time: the model is *under*-confident there. Same model, same band, opposite behaviour. That gap, per band, is what tells you where to put your threshold.
 
+## How every number is produced
+
+![One question to Jev, repeated 500 times, then count the wrong answers with and without the gate](figures/method.png)
+
+1. Take **500 random examples** (fixed seed) from a public, labelled dataset. Which one, per task: see [Tasks](#tasks).
+2. For each example make **one API call** with one closed question. Jev has three question types: `choice` (pick one of N options), `noul` (yes / no) and `score` (an ordered scale).
+3. Jev returns a probability for every option. **The answer is the most probable option** (for yes / no: "yes" if P(yes) is 0.5 or more). **Its probability is what this page calls "confidence".**
+4. Compare the answer with the dataset's label: right or wrong.
+
+Every table and chart here is those 500 pairs (confidence, right or wrong) cut a different way. The **gate** is the rule a process would use: answers at 0.9 or more run on their own, the rest go to a person. 0.9 was fixed before looking at the data and is the same everywhere.
+
+One thing to know if you use Jev: for `choice` and `score` the API also returns a separate `confidence` field. We measure the top probability instead because it exists for all three types (`noul` has no such field). On intent routing the two differ by 0.03 at most; on `sentiment-it` and `yelp-stars` they can differ a lot (up to 0.64 and 0.26). `results/*.json` reports the calibration error of both.
+
 ## How to read the charts
 
-Every Jev answer comes with a number between 0 and 1. Two questions decide whether that number is useful, and each chart answers one of them.
+Two questions decide whether the confidence is useful, and each chart answers one of them.
 
 **1. Does the number mean what it says?** (*calibration* — the reliability chart.) Take all the answers where Jev said "about 80% sure" and count how many were right. If 80% were, the number is honest. On the chart, x is what Jev claimed and y is what actually happened; the grey diagonal is a model whose claims are exactly true. A line **below** the diagonal is over-confident (claims 0.85, right 70% of the time). **Above** it is under-confident.
 
-**2. Does the number separate right answers from wrong ones?** (*ranking* — the "ignore the confidence" chart.) Sort the answers from most to least confident and let them through one by one. If the confidence is informative, the first ones are nearly all right and the errors pile up at the end, so the curve stays flat and then climbs. If the confidence were noise, the curve would be a flat line at the task's overall error rate: holding back the "unsure" answers would buy you nothing. The right edge of the chart (100%) is what you get if you ignore the confidence and take the top answer every time.
+**2. Does the number separate right answers from wrong ones?** (*ranking* — the gate chart and the curve in [RESULTS.md](RESULTS.md#with-and-without-the-gate).) If the confidence is informative, the wrong answers pile up below the gate and the right ones above it. If it were noise, the answers below the gate would be as good as the ones above, and holding them back would buy you nothing.
 
 The two are independent. A number can be badly calibrated and still rank well: then you can't read 0.8 as "80%", but you can still find, on your own data, the cut-off above which errors are rare. That is the practical use.
 
 ## What we saw (one run, 20 September 2026)
 
+Observations, not laws. Under each one: where it comes from. Percentages on a few hundred answers carry a 95% interval of roughly ±2 to ±5 points; [RESULTS.md](RESULTS.md) has the intervals.
+
 ![How often Jev was right when it said 0.9 or more, on 12 tasks](figures/threshold.png)
 
-Observations, not laws. Each one is a reason to run the table on your own data.
+- **"0.9" is not one number.** Among the answers at 0.9 or more, Jev was right 99.8% of the time on spam, 98.9% on duplicates, 95-97% on intent routing, 86.7% on contract clauses and 81.6% on exact star ratings. The intervals of the top and the bottom do not overlap (spam 98.6-100%, stars 76-86%). The threshold has to be set per task.
+  <br>*Source: all 12 tasks, 500 examples each → RESULTS § Tasks.*
+- **Used as a gate with a person behind it, the confidence cuts the errors that get through.** Take `duplicates`. Use Jev like a plain classifier, top answer every time, and 83 of 500 answers are wrong (16.6%). Put it in a process with a human in the loop instead: answers at 0.9 or more run on their own, the rest go to a person. Now 272 run on their own and 3 of them are wrong (1.1%); the other 80 errors landed on the person's desk. Across the twelve tasks the error rate without a gate ran from 1.4% (spam) to 29.6% (exact stars), and with it from 0.2% to 18.4%.
+  <br>*Source: all 12 tasks → RESULTS § With and without the gate*
+- **The gate has a price, and it is task-specific.** On `duplicates`, 148 of the 228 answers sent to a person were right: you pay 35% of the right answers to stop 96% of the wrong ones. On `yelp-stars` you pay 41% and still let 18% errors through: there the task is too hard for the confidence to rescue it. Across tasks the price ran from 7% to 41%.
+  <br>*Source: same table, columns "Errors the gate stops" and "Right answers held back".*
 
-- **"0.9" is not one number.** Above 0.9 Jev was right 99.8% of the time on spam, 98.9% on duplicates, 95-97% on intent routing, 86.7% on contract clauses and 81.6% on exact star ratings. The threshold has to be set per task.
-- **You cannot ignore the confidence, except where you barely need it.** Taking the top answer every time, the error rate ran from 1.4% (spam) to 29.6% (exact stars). A gate at 0.9 cut it to 0.2%-18.4%: on `duplicates` from 16.6% to 1.1%, stopping 96% of the errors. When Jev was *not* confident (below 0.7) it was right 37-56% of the time on ten tasks out of twelve: low confidence is a real warning, not modesty. The exceptions were `doc-yesno` (73%) and `sms-spam` (78%).
-- **The gate has a price, and it is task-specific.** At 0.9 it also held back 7% to 41% of the answers that were right. On `duplicates` you pay 35% of the right answers to stop 96% of the wrong ones. On `yelp-stars` you pay 41% and still let 18% errors through: there the task is too hard for the confidence to rescue it.
+![What a gate at 0.9 does to 500 answers, on four tasks](figures/gate.png)
 
-![Error rate as you let through more of the answers, most confident first](figures/ignore-confidence.png)
+- **Low confidence is a real warning.** Among the answers below 0.7 (where Jev claimed about 0.55-0.60) it was right 37-56% of the time on ten tasks out of twelve, on 20 to 109 answers per task. The two exceptions were `doc-yesno` (35 right of 48) and `sms-spam` (14 of 18), too few answers to say more than "not over-confident there".
+  <br>*Source: all 12 tasks → same table, column "Right when confidence < 0.7".*
+- **Between 0.7 and 0.9 the number meant different things on different tasks.** In the 0.8-0.9 band Jev claimed about 0.85 and was right 99% of the time on `sms-spam` (67 answers), 80% on `duplicates` (81), 73% on `offensive` (98) and on `banking77` (45), 68% on `yelp-stars` (79). It does not split cleanly by question type. It is a property of the task, the dataset and the prompt together, which is the argument for measuring yours.
+  <br>*Source: all 12 tasks → RESULTS § Reliability.*
 
-- **Below 0.9 the number meant different things on different tasks.** Between 0.5 and 0.7, intent routing claimed ~0.6 and was right 32-56% of the time; so were `duplicates` (46-62%) and `offensive` (43-52%). In the same band `doc-yesno` was right 70-78% and `sms-spam` 71-85%: *under*-confident. It does not split cleanly by question type. It is a property of the task, which is the argument for measuring yours.
 ![Reliability diagram: stated confidence vs actual accuracy, by question type](figures/reliability.png)
 
-- **More options cost coverage, not safety.** Same examples with 5 / 20 / 59 options: accuracy 97.7% → 92.3% → 86.7%, but accuracy above 0.9 stayed at 99.6% → 98.1% → 97.4%. What dropped is the share of answers that clear the bar (92% → 86% → 76%).
+- **More options cost coverage first.** Same requests with 5 / 20 / 59 options to choose from: accuracy 97.7% → 92.3% → 86.7%, and the share of answers that clear 0.9 fell 92% → 86% → 76%. Above 0.9 the errors went from 1 of 276 to 5 of 258 to 6 of 227: a small drift, within the noise at this sample size. The extra options were random, which is the easy case; queues that resemble each other will cost more.
+  <br>*Source: experiment `options`, Amazon MASSIVE (EN), the same 300 requests → RESULTS § options.*
+
 ![Same requests with 5, 20 and 59 options](figures/options.png)
 
-- **Italian cost nothing here.** Same 300 requests in English and Italian: 87.0% and 87.0%, ten errors unique to each side, 97.8% vs 98.1% above 0.9.
+- **No measurable cost for Italian, on short requests.** Same 300 requests in English and Italian: 87.0% and 87.0%, ten errors unique to each side, 97.8% vs 98.1% above 0.9. With 300 examples a gap under about 4 points would not show. These are one-line voice-assistant commands, translated; long Italian business documents were not tested.
+  <br>*Source: experiment `language`, Amazon MASSIVE parallel corpus → RESULTS § language.*
 - **When the right answer is missing, the confidence mostly says so, but not always.** Out-of-scope requests got a median top probability of 0.54 against 1.00 for in-scope ones (AUROC 0.91), yet 15% of them still came back at 0.9 or more. Adding an explicit "none of these" option caught 73% of them and cost 0.3 points of in-scope accuracy.
+  <br>*Source: experiment `oos`, CLINC150, 300 in-scope and 150 out-of-scope requests → RESULTS § oos.*
+
 ![What happens when the right answer is not among the options](figures/missing-answer.png)
 
-- **Instability lives where confidence is low.** Shuffling the order of 77 options changed the answer 8.7% of the time, never among answers that stayed above 0.9. The same request sent five times changed answer 3% of the time and crossed the 0.9 line 4.7% of the time: a gate at 0.9 is not perfectly deterministic near the line.
+- **Instability lives where confidence is low.** Shuffling the order of 77 options changed the answer on 8.7% of the requests, and on none of the 194 that were at 0.9 or more in the first order (so under 2%, at 95%). The same request sent five times changed answer 3% of the time and crossed the 0.9 line 4.7% of the time: a gate at 0.9 is not perfectly deterministic near the line.
+  <br>*Source: experiments `order` and `repeat`, Banking77, 300 requests → RESULTS § order, § repeat; the 194 is counted from `predictions/x-order.jsonl`.*
 - **On an ordered scale, wrong means slightly wrong.** Star ratings: 70.4% exact, 99.6% within one star, and no error of two stars or more above 0.9.
+  <br>*Source: task `yelp-stars`, 500 Yelp reviews → `predictions/yelp-stars.jsonl`.*
 - **One line of description per option did not help** on a 4-option task (93.3% bare labels, 92.7% described). A null result on one easy task, nothing more.
+  <br>*Source: experiment `descriptions`, AG News, 300 items → RESULTS § descriptions.*
 - **Latency was flat** at about 0.9 s from Italy for every task, against the 70-500 ms on the product page. Cost ran from $0.014 to $0.10 per thousand decisions, driven by how many options you list.
+  <br>*Source: all 12 tasks → RESULTS § Tasks.*
+
+## Limits
+
+- **One run, 500 examples per task, 300 per experiment.** Differences of a few points between tasks are inside the noise. Bands with a dozen answers say almost nothing.
+- **"Wrong" means "disagrees with the dataset's label".** Public datasets have label errors, and there are wrong answers even at probability 1.00 (11 of 191 on `banking77`, 14 of 187 on `ledgar`). We did not check how many of those are the dataset's fault. Label noise lowers measured accuracy and makes calibration look worse than it is.
+- **The datasets are public and old.** Jev may have seen them in training; we cannot check. If so, the numbers here are optimistic compared with your private data.
+- **One prompt per task,** some with a description for each option and some with bare labels. A different wording can move the numbers, so a difference between two tasks is a difference between two task-dataset-prompt bundles.
+- **0.9 is an example, not a recommendation.** The point of the exercise is that the right threshold is per task.
 
 ## Quick start
 
@@ -75,19 +116,23 @@ python3 jevbench.py report    # rebuilds RESULTS.md
 
 ## Tasks
 
-| Task | Jev question type | The business decision it stands for |
-|---|---|---|
-| `banking77` | choice · 77 options | route a customer message to the right queue, many queues |
-| `clinc150` | choice · 150 options | same, with very many intents |
-| `massive-en` / `massive-it` | choice · 59 options | same requests in English and Italian (parallel corpus) |
-| `ledgar` | choice · 100 options | what type of contract clause is this |
-| `ag-news` | choice · 4 options | coarse routing, few options |
-| `sms-spam` | noul (true/false) | filter junk before it reaches a person |
-| `duplicates` | noul | is this ticket a duplicate of that one |
-| `doc-yesno` | noul | does this document say yes to this question (policy checks) |
-| `offensive` | noul | content moderation |
-| `yelp-stars` | score · 5 ordered levels | how satisfied is this customer |
-| `sentiment-it` | score · 3 levels | sentiment, in Italian |
+500 random examples each (fixed seed), from the test or validation split of a public dataset. The question is the one sent to Jev, word for word; the options are the dataset's own label names unless noted.
+
+| Task | Dataset | Question sent to Jev | Type | Stands for |
+|---|---|---|---|---|
+| `banking77` | PolyAI Banking77 · EN | "Which banking support intent does this customer message express?" | choice · 77 options | route a customer message, many queues |
+| `clinc150` | CLINC150 · EN | "Which intent does this user request express?" | choice · 150 options | same, with very many intents |
+| `massive-en` / `massive-it` | Amazon MASSIVE · EN / IT, same requests | "Which intent does this voice-assistant request express?" (in Italian for `-it`) | choice · 59 options | same requests in two languages |
+| `ledgar` | LEDGAR (LexGLUE), clauses from SEC filings · EN | "What type of contract clause is this?" | choice · 100 options | classify a contract clause |
+| `ag-news` | AG News · EN | "Which desk should this news item be routed to?" · one line of description per option | choice · 4 options | coarse routing, few options |
+| `sms-spam` | UCI SMS Spam Collection · EN | "Is this text message spam?" · with a description of yes and no | noul (yes / no) | filter junk before it reaches a person |
+| `duplicates` | Quora Question Pairs (GLUE) · EN | "Are these two requests duplicates, i.e. would the same answer fully resolve both?" | noul | is this ticket a duplicate of that one |
+| `doc-yesno` | BoolQ · EN | "According to the document, is the answer to the question yes?" | noul | policy checks against a document |
+| `offensive` | TweetEval, offensive · EN | "Is this post offensive (insults, slurs, targeted attacks, profanity aimed at someone)?" | noul | content moderation |
+| `yelp-stars` | Yelp reviews · EN | "How many stars did the customer give in this review?" | score · 5 ordered levels | how satisfied is this customer |
+| `sentiment-it` | CardiffNLP multilingual tweets · IT | "Qual è il sentimento espresso da questo tweet?" | score · 3 levels | sentiment, in Italian |
+
+With 500 examples and 150 intents, `clinc150` sees 87 of the intents as the right answer; all 150 are always offered as options. Likewise 89 of 100 for `ledgar` and 56 of 59 for MASSIVE.
 
 ## Experiments
 
@@ -118,9 +163,9 @@ show(summarize("my-inbox", run_examples(examples, question)))
 
 ## What is in the repo, and what is not
 
-- `figures/` — the charts on this page, drawn from `results/` by `figures/make_figures.py` (standard library; PNG export needs `rsvg-convert`).
+- `figures/` — the charts on this page, drawn from `results/` and `predictions/` by `figures/make_figures.py` (standard library; PNG export needs `rsvg-convert`).
 - `results/*.json` — aggregates (accuracy, ECE, thresholds, reliability table). Committed.
-- `predictions/*.jsonl` — every single prediction of our run (label, answer, top probability, confidence field, latency, tokens), **without the dataset text**. Committed: you can recompute every table, or cut the data your own way, without calling the API.
+- `predictions/*.jsonl` — every single prediction of our run (label, answer, top probability, confidence field, latency, tokens), **without the dataset text** (the only dataset text in the repo is the one pair of questions shown in `figures/method.png`). Committed: you can recompute every table, or cut the data your own way, without calling the API.
 - `raw/` — per-example outputs with the input text. **Git-ignored**: they contain dataset text, and yours may contain your data.
 - `data/` — dataset cache. Git-ignored. Datasets are fetched from their public sources (Hugging Face datasets-server, PolyAI's GitHub); check each dataset's licence before reusing the data itself.
 - `.env` — your key. Git-ignored.

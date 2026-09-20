@@ -20,6 +20,7 @@ import argparse
 import csv
 import io
 import json
+import math
 import os
 import random
 import statistics
@@ -572,6 +573,13 @@ def pct(x):
     return "—" if x is None else f"{x:.1%}"
 
 
+def wilson(k, n, z=1.96):
+    """95% interval for k right out of n (Wilson score)."""
+    p, d = k / n, 1 + z * z / n
+    c, h = (p + z * z / (2 * n)) / d, z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d
+    return c - h, c + h
+
+
 def experiment_tables(res):
     """Markdown for each experiment, one small table each."""
     L = []
@@ -603,7 +611,7 @@ def experiment_tables(res):
     if "x-options" in res:
         r = res["x-options"]
         L += [f"### `options` — {EXPERIMENTS['options'][1]}", "",
-              f"MASSIVE (EN), the same {r['n']} requests; the right option plus random distractors.", "",
+              f"MASSIVE (EN), the same {r['n']} requests; the right option plus random distractors. Random distractors are the easy case: real queues resemble each other more.", "",
               "![Accuracy and coverage with 5, 20 and 59 options](figures/options.png)", "",
               "| Options | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 | $ / 1,000 |", "|---|---|---|---|---|---|"]
         for k, v in r["by_number_of_options"].items():
@@ -643,18 +651,35 @@ def report():
     L = ["# Results", "",
          f"Model `{tasks[0]['model']}`, run on {tasks[0]['date']}. One run per task, random sample with a fixed seed. "
          "Measurements on *these* datasets with *these* prompts: examples of what you can measure, not properties of the model.", "",
+         "How a number is produced, which dataset and which question each task uses, and the limits of all this: see the "
+         "[README](README.md#how-every-number-is-produced). Throughout, **the answer is Jev's most probable option and "
+         "\"confidence\" is that option's probability**; right or wrong is judged against the dataset's own label.", "",
          "![How often Jev was right above 0.9, per task](figures/threshold.png)", "",
-         "## Tasks", "", "Sorted by accuracy above the 0.9 line.", "",
-         "| Task | Type | n | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 | Median latency | $ / 1,000 |",
-         "|---|---|---|---|---|---|---|---|---|"]
+         "## Tasks", "", "Sorted by accuracy above the 0.9 line. *Coverage ≥0.9* is the share of answers at 0.9 or more; "
+         "*Accuracy ≥0.9* is how many of those were right, with its 95% interval (Wilson): with a few hundred answers "
+         "the last digit is not to be trusted.", "",
+         "| Task | Type | n | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 | 95% interval | Median latency | $ / 1,000 |",
+         "|---|---|---|---|---|---|---|---|---|---|"]
     for r in tasks:
         t = r["thresholds"]["0.9"]
-        L.append(f"| `{r['name']}` | {r.get('kind', '')} | {r['n']} | {pct(r['accuracy'])} | {r['ece']:.3f} | {pct(t['coverage'])} | "
-                 f"**{pct(t['accuracy'])}** | {r['latency_median_s']:.2f} s | {r['usd_per_1000_decisions']:.4f} |")
-    L += ["", "## Can you just ignore the confidence?", "",
-          "Take the top answer every time and you get the first column. Put a gate at 0.9 (answers below it go to a person) "
-          "and you get the second. The gate is not free: the last column is the share of answers that were right and got "
-          "held back anyway.", "", "![Error rate as you automate more of the answers](figures/ignore-confidence.png)", "",
+        above = round(t["coverage"] * r["n"])
+        lo, hi = wilson(above - t["errors_let_through"], above)
+        kind = TASKS[r["name"]][1] if r["name"] in TASKS else r.get("kind", "")
+        L.append(f"| `{r['name']}` | {kind} | {r['n']} | {pct(r['accuracy'])} | {r['ece']:.3f} | {pct(t['coverage'])} | "
+                 f"**{pct(t['accuracy'])}** | {lo:.1%} – {hi:.1%} | {r['latency_median_s']:.2f} s | {r['usd_per_1000_decisions']:.4f} |")
+    L += ["", "## With and without the gate", "",
+          "One row per task, 500 answers each. Two ways to use Jev are compared. **Ignore the confidence**: take the most "
+          "probable answer every time and act on all 500. **Gate at 0.9**: act only on the answers whose probability is "
+          "0.9 or more, send the rest to a person.", "",
+          "Worked example, `duplicates` (500 pairs from Quora Question Pairs): ignoring the confidence, 83 answers of 500 "
+          "are wrong (16.6%). With the gate, 272 answers run on their own and 3 of them are wrong (1.1%): the gate stopped "
+          "80 of the 83 errors (96.4%). The price: of the 228 answers sent to a person, 148 were right, which is 35.5% of "
+          "all the right answers.", "",
+          "![What a gate at 0.9 does to 500 answers, four tasks](figures/gate.png)", "",
+          "Columns: *Wrong if you ignore it* = error rate on all 500 · *Wrong above 0.9* = error rate among the answers the "
+          "gate lets through · *Errors the gate stops* = share of all errors that fell below 0.9 · *Right answers held "
+          "back* = share of all right answers that fell below 0.9 · *Right when confidence < 0.7* = accuracy among the "
+          "least confident answers.", "",
           "| Task | Wrong if you ignore it | Wrong above 0.9 | Errors the gate stops | Right answers held back | Right when confidence < 0.7 | AUROC |",
           "|---|---|---|---|---|---|---|"]
     for r in sorted(tasks, key=lambda r: -(r["confidence_value"]["error_if_you_ignore_confidence"])):
@@ -662,10 +687,17 @@ def report():
         L.append(f"| `{r['name']}` | {pct(c['error_if_you_ignore_confidence'])} | {pct(c['error_among_answers_above_gate'])} | "
                  f"{pct(c['share_of_errors_stopped_by_gate'])} | {pct(c['share_of_right_answers_held_back'])} | "
                  f"{pct(c['accuracy_below_0.7'])} (n={c['n_below_0.7']}) | {c['auroc_confidence_separates_right_from_wrong']:.2f} |")
-    L += ["", "AUROC: the chance that a right answer carries a higher confidence than a wrong one. 0.5 means the number is noise, 1.0 means it sorts them perfectly.", ""]
+    L += ["", "AUROC: the chance that a right answer carries a higher confidence than a wrong one. 0.5 means the number is noise, 1.0 means it sorts them perfectly.", "",
+          "The same comparison for every possible gate, not just 0.9. Answers are sorted from most to least confident; at "
+          "x = 60% you act on the most confident 60% and y is the error rate among them. The hollow dot is the gate at 0.9, "
+          "the right edge is no gate at all. The curves start at 25% because with fewer answers one error moves the line by "
+          "whole points. Some curves do not start at zero: there are wrong answers even at probability 1.00 (11 of 191 on "
+          "`banking77`, 14 of 187 on `ledgar`), and how many of those are errors in the dataset's labels we did not check.", "",
+          "![Error rate as you automate more of the answers, 12 tasks](figures/ignore-confidence.png)", ""]
     L += ["", "## Reliability: stated confidence vs actual accuracy", "", "![Reliability diagram](figures/reliability.png)", "",
           "Each cell: how often Jev was right among the answers whose top probability fell in that band (n in brackets). "
-          "A calibrated model shows ~0.55 under 0.5-0.6 and ~0.95 under 0.9-1.0.", "",
+          "A calibrated model shows ~0.55 under 0.5-0.6 and ~0.95 under 0.9-1.0. Mind the n: a cell with 13 answers has a "
+          "95% interval of about ±25 points, and the chart leaves out cells with fewer than 10.", "",
           "| Task | " + " | ".join(f"{b / 10:.1f}-{(b + 1) / 10:.1f}" for b in range(5, 10)) + " |", "|---|" + "---|" * 5]
     for r in tasks:
         cells = {round(b["lo"], 1): f"{b['actual']:.2f} ({b['n']})" for b in r["reliability"]}

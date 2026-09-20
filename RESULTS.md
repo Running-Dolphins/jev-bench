@@ -2,32 +2,38 @@
 
 Model `jev-latest`, run on 2026-09-20. One run per task, random sample with a fixed seed. Measurements on *these* datasets with *these* prompts: examples of what you can measure, not properties of the model.
 
+How a number is produced, which dataset and which question each task uses, and the limits of all this: see the [README](README.md#how-every-number-is-produced). Throughout, **the answer is Jev's most probable option and "confidence" is that option's probability**; right or wrong is judged against the dataset's own label.
+
 ![How often Jev was right above 0.9, per task](figures/threshold.png)
 
 ## Tasks
 
-Sorted by accuracy above the 0.9 line.
+Sorted by accuracy above the 0.9 line. *Coverage ≥0.9* is the share of answers at 0.9 or more; *Accuracy ≥0.9* is how many of those were right, with its 95% interval (Wilson): with a few hundred answers the last digit is not to be trusted.
 
-| Task | Type | n | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 | Median latency | $ / 1,000 |
-|---|---|---|---|---|---|---|---|---|
-| `sms-spam` | noul | 500 | 98.6% | 0.058 | 80.6% | **99.8%** | 0.90 s | 0.0140 |
-| `duplicates` | noul | 500 | 83.4% | 0.051 | 54.4% | **98.9%** | 0.90 s | 0.0137 |
-| `clinc150` | choice · 150 options | 500 | 91.4% | 0.028 | 82.2% | **97.3%** | 0.93 s | 0.1045 |
-| `doc-yesno` | noul | 500 | 93.0% | 0.026 | 73.6% | **96.5%** | 0.89 s | 0.0179 |
-| `massive-en` | choice · 60 options | 500 | 84.4% | 0.061 | 74.0% | **95.1%** | 0.89 s | 0.0522 |
-| `massive-it` | choice · 60 options | 500 | 83.6% | 0.057 | 69.8% | **95.1%** | 0.90 s | 0.0525 |
-| `offensive` | noul | 500 | 76.6% | 0.072 | 47.4% | **94.9%** | 0.89 s | 0.0137 |
-| `ag-news` | choice · 4 options | 500 | 91.0% | 0.057 | 89.0% | **94.8%** | 0.93 s | 0.0175 |
-| `sentiment-it` | score · 3 levels | 500 | 82.4% | 0.054 | 60.2% | **94.0%** | 0.88 s | 0.0156 |
-| `banking77` | choice · 77 options | 500 | 78.2% | 0.099 | 67.6% | **89.9%** | 0.91 s | 0.0709 |
-| `ledgar` | choice · 100 options | 500 | 74.0% | 0.138 | 66.0% | **86.7%** | 0.89 s | 0.0845 |
-| `yelp-stars` | score · 5 levels | 500 | 70.4% | 0.147 | 51.2% | **81.6%** | 0.89 s | 0.0220 |
+| Task | Type | n | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 | 95% interval | Median latency | $ / 1,000 |
+|---|---|---|---|---|---|---|---|---|---|
+| `sms-spam` | noul | 500 | 98.6% | 0.058 | 80.6% | **99.8%** | 98.6% – 100.0% | 0.90 s | 0.0140 |
+| `duplicates` | noul | 500 | 83.4% | 0.051 | 54.4% | **98.9%** | 96.8% – 99.6% | 0.90 s | 0.0137 |
+| `clinc150` | choice · 150 options | 500 | 91.4% | 0.028 | 82.2% | **97.3%** | 95.3% – 98.5% | 0.93 s | 0.1045 |
+| `doc-yesno` | noul | 500 | 93.0% | 0.026 | 73.6% | **96.5%** | 94.1% – 97.9% | 0.89 s | 0.0179 |
+| `massive-en` | choice · 59 options | 500 | 84.4% | 0.061 | 74.0% | **95.1%** | 92.4% – 96.9% | 0.89 s | 0.0522 |
+| `massive-it` | choice · 59 options | 500 | 83.6% | 0.057 | 69.8% | **95.1%** | 92.3% – 96.9% | 0.90 s | 0.0525 |
+| `offensive` | noul | 500 | 76.6% | 0.072 | 47.4% | **94.9%** | 91.4% – 97.1% | 0.89 s | 0.0137 |
+| `ag-news` | choice · 4 options | 500 | 91.0% | 0.057 | 89.0% | **94.8%** | 92.4% – 96.5% | 0.93 s | 0.0175 |
+| `sentiment-it` | score · 3 levels | 500 | 82.4% | 0.054 | 60.2% | **94.0%** | 90.7% – 96.2% | 0.88 s | 0.0156 |
+| `banking77` | choice · 77 options | 500 | 78.2% | 0.099 | 67.6% | **89.9%** | 86.3% – 92.7% | 0.91 s | 0.0709 |
+| `ledgar` | choice · 100 options | 500 | 74.0% | 0.138 | 66.0% | **86.7%** | 82.6% – 89.9% | 0.89 s | 0.0845 |
+| `yelp-stars` | score · 5 levels | 500 | 70.4% | 0.147 | 51.2% | **81.6%** | 76.4% – 85.9% | 0.89 s | 0.0220 |
 
-## Can you just ignore the confidence?
+## With and without the gate
 
-Take the top answer every time and you get the first column. Put a gate at 0.9 (answers below it go to a person) and you get the second. The gate is not free: the last column is the share of answers that were right and got held back anyway.
+One row per task, 500 answers each. Two ways to use Jev are compared. **Ignore the confidence**: take the most probable answer every time and act on all 500. **Gate at 0.9**: act only on the answers whose probability is 0.9 or more, send the rest to a person.
 
-![Error rate as you automate more of the answers](figures/ignore-confidence.png)
+Worked example, `duplicates` (500 pairs from Quora Question Pairs): ignoring the confidence, 83 answers of 500 are wrong (16.6%). With the gate, 272 answers run on their own and 3 of them are wrong (1.1%): the gate stopped 80 of the 83 errors (96.4%). The price: of the 228 answers sent to a person, 148 were right, which is 35.5% of all the right answers.
+
+![What a gate at 0.9 does to 500 answers, four tasks](figures/gate.png)
+
+Columns: *Wrong if you ignore it* = error rate on all 500 · *Wrong above 0.9* = error rate among the answers the gate lets through · *Errors the gate stops* = share of all errors that fell below 0.9 · *Right answers held back* = share of all right answers that fell below 0.9 · *Right when confidence < 0.7* = accuracy among the least confident answers.
 
 | Task | Wrong if you ignore it | Wrong above 0.9 | Errors the gate stops | Right answers held back | Right when confidence < 0.7 | AUROC |
 |---|---|---|---|---|---|---|
@@ -46,12 +52,16 @@ Take the top answer every time and you get the first column. Put a gate at 0.9 (
 
 AUROC: the chance that a right answer carries a higher confidence than a wrong one. 0.5 means the number is noise, 1.0 means it sorts them perfectly.
 
+The same comparison for every possible gate, not just 0.9. Answers are sorted from most to least confident; at x = 60% you act on the most confident 60% and y is the error rate among them. The hollow dot is the gate at 0.9, the right edge is no gate at all. The curves start at 25% because with fewer answers one error moves the line by whole points. Some curves do not start at zero: there are wrong answers even at probability 1.00 (11 of 191 on `banking77`, 14 of 187 on `ledgar`), and how many of those are errors in the dataset's labels we did not check.
+
+![Error rate as you automate more of the answers, 12 tasks](figures/ignore-confidence.png)
+
 
 ## Reliability: stated confidence vs actual accuracy
 
 ![Reliability diagram](figures/reliability.png)
 
-Each cell: how often Jev was right among the answers whose top probability fell in that band (n in brackets). A calibrated model shows ~0.55 under 0.5-0.6 and ~0.95 under 0.9-1.0.
+Each cell: how often Jev was right among the answers whose top probability fell in that band (n in brackets). A calibrated model shows ~0.55 under 0.5-0.6 and ~0.95 under 0.9-1.0. Mind the n: a cell with 13 answers has a 95% interval of about ±25 points, and the chart leaves out cells with fewer than 10.
 
 | Task | 0.5-0.6 | 0.6-0.7 | 0.7-0.8 | 0.8-0.9 | 0.9-1.0 |
 |---|---|---|---|---|---|
@@ -104,7 +114,7 @@ Both right: 251 · only English right: 10 · only Italian right: 10.
 
 ### `options` — Same examples with 5, 20 and 59 options
 
-MASSIVE (EN), the same 300 requests; the right option plus random distractors.
+MASSIVE (EN), the same 300 requests; the right option plus random distractors. Random distractors are the easy case: real queues resemble each other more.
 
 ![Accuracy and coverage with 5, 20 and 59 options](figures/options.png)
 
