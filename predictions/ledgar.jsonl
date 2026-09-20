@@ -1,0 +1,500 @@
+{"i": 0, "label": "Sales", "pred": "Sales", "p_top": 0.39, "confidence": 0.38, "correct": 1, "latency_s": 1.16, "input_tokens": 1919}
+{"i": 1, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.131, "input_tokens": 1902}
+{"i": 2, "label": "Death", "pred": "Death", "p_top": 0.77, "confidence": 0.77, "correct": 1, "latency_s": 1.102, "input_tokens": 2014}
+{"i": 3, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.161, "input_tokens": 1916}
+{"i": 4, "label": "Venues", "pred": "Venues", "p_top": 0.4, "confidence": 0.39, "correct": 1, "latency_s": 1.092, "input_tokens": 2024}
+{"i": 5, "label": "Disclosures", "pred": "Representations", "p_top": 0.59, "confidence": 0.57, "correct": 0, "latency_s": 1.048, "input_tokens": 2184}
+{"i": 6, "label": "Headings", "pred": "Headings", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 1.154, "input_tokens": 1908}
+{"i": 7, "label": "Death", "pred": "Death", "p_top": 0.72, "confidence": 0.71, "correct": 1, "latency_s": 1.154, "input_tokens": 1914}
+{"i": 8, "label": "Integration", "pred": "Entire Agreements", "p_top": 0.98, "confidence": 0.98, "correct": 0, "latency_s": 0.872, "input_tokens": 1962}
+{"i": 9, "label": "Litigations", "pred": "Litigations", "p_top": 0.93, "confidence": 0.93, "correct": 1, "latency_s": 0.855, "input_tokens": 2008}
+{"i": 10, "label": "No Waivers", "pred": "No Waivers", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.901, "input_tokens": 1966}
+{"i": 11, "label": "Tax Withholdings", "pred": "Tax Withholdings", "p_top": 0.93, "confidence": 0.92, "correct": 1, "latency_s": 1.851, "input_tokens": 1969}
+{"i": 12, "label": "Assignments", "pred": "Binding Effects", "p_top": 1.0, "confidence": 0.99, "correct": 0, "latency_s": 0.912, "input_tokens": 1901}
+{"i": 13, "label": "Effectiveness", "pred": "Effectiveness", "p_top": 0.79, "confidence": 0.77, "correct": 1, "latency_s": 0.935, "input_tokens": 1915}
+{"i": 14, "label": "Authorizations", "pred": "Compliance With Laws", "p_top": 0.39, "confidence": 0.37, "correct": 0, "latency_s": 0.93, "input_tokens": 2094}
+{"i": 15, "label": "Withholdings", "pred": "Tax Withholdings", "p_top": 0.96, "confidence": 0.95, "correct": 0, "latency_s": 0.882, "input_tokens": 2109}
+{"i": 16, "label": "Payments", "pred": "Payments", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.91, "input_tokens": 1940}
+{"i": 17, "label": "Fees", "pred": "Fees", "p_top": 0.53, "confidence": 0.51, "correct": 1, "latency_s": 0.996, "input_tokens": 1901}
+{"i": 18, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.885, "input_tokens": 2036}
+{"i": 19, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.919, "input_tokens": 1964}
+{"i": 20, "label": "Arbitration", "pred": "Arbitration", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 3.085, "input_tokens": 1953}
+{"i": 21, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.451, "input_tokens": 1929}
+{"i": 22, "label": "Waivers", "pred": "Releases", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 1.45, "input_tokens": 1992}
+{"i": 23, "label": "Construction", "pred": "Construction", "p_top": 0.79, "confidence": 0.78, "correct": 1, "latency_s": 0.827, "input_tokens": 1984}
+{"i": 24, "label": "Taxes", "pred": "Taxes", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.794, "input_tokens": 2215}
+{"i": 25, "label": "Capitalization", "pred": "Capitalization", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.901, "input_tokens": 2426}
+{"i": 26, "label": "Construction", "pred": "Construction", "p_top": 0.53, "confidence": 0.51, "correct": 1, "latency_s": 1.46, "input_tokens": 1967}
+{"i": 27, "label": "Litigations", "pred": "Cooperation", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 0.934, "input_tokens": 2076}
+{"i": 28, "label": "Terms", "pred": "Terms", "p_top": 0.81, "confidence": 0.81, "correct": 1, "latency_s": 0.864, "input_tokens": 1980}
+{"i": 29, "label": "Successors", "pred": "Binding Effects", "p_top": 0.91, "confidence": 0.9, "correct": 0, "latency_s": 0.943, "input_tokens": 1911}
+{"i": 30, "label": "Survival", "pred": "Survival", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.927, "input_tokens": 1924}
+{"i": 31, "label": "Assignments", "pred": "Assignments", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.789, "input_tokens": 1960}
+{"i": 32, "label": "Further Assurances", "pred": "Further Assurances", "p_top": 0.66, "confidence": 0.65, "correct": 1, "latency_s": 0.806, "input_tokens": 1991}
+{"i": 33, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.799, "input_tokens": 1954}
+{"i": 34, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.931, "input_tokens": 1956}
+{"i": 35, "label": "General", "pred": "Compliance With Laws", "p_top": 0.48, "confidence": 0.46, "correct": 0, "latency_s": 0.826, "input_tokens": 2025}
+{"i": 36, "label": "Indemnity", "pred": "Indemnifications", "p_top": 0.55, "confidence": 0.54, "correct": 0, "latency_s": 0.813, "input_tokens": 2171}
+{"i": 37, "label": "Indemnifications", "pred": "Indemnifications", "p_top": 0.79, "confidence": 0.78, "correct": 1, "latency_s": 0.843, "input_tokens": 1964}
+{"i": 38, "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 3.281, "input_tokens": 2266}
+{"i": 39, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.988, "input_tokens": 1903}
+{"i": 40, "label": "Specific Performance", "pred": "Specific Performance", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.022, "input_tokens": 2022}
+{"i": 41, "label": "Authority", "pred": "Authority", "p_top": 0.83, "confidence": 0.82, "correct": 1, "latency_s": 0.901, "input_tokens": 1962}
+{"i": 42, "label": "Organizations", "pred": "Existence", "p_top": 0.91, "confidence": 0.91, "correct": 0, "latency_s": 0.979, "input_tokens": 1894}
+{"i": 43, "label": "Interests", "pred": "Interests", "p_top": 0.66, "confidence": 0.64, "correct": 1, "latency_s": 0.952, "input_tokens": 1902}
+{"i": 44, "label": "Capitalization", "pred": "Capitalization", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 3.538, "input_tokens": 2354}
+{"i": 45, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.949, "input_tokens": 2004}
+{"i": 46, "label": "Taxes", "pred": "Taxes", "p_top": 0.52, "confidence": 0.51, "correct": 1, "latency_s": 0.889, "input_tokens": 1939}
+{"i": 47, "label": "Payments", "pred": "Payments", "p_top": 0.52, "confidence": 0.5, "correct": 1, "latency_s": 2.367, "input_tokens": 1934}
+{"i": 48, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.892, "input_tokens": 1901}
+{"i": 49, "label": "Compliance With Laws", "pred": "Compliance With Laws", "p_top": 0.64, "confidence": 0.62, "correct": 1, "latency_s": 1.845, "input_tokens": 2053}
+{"i": 50, "label": "Positions", "pred": "Positions", "p_top": 0.59, "confidence": 0.57, "correct": 1, "latency_s": 0.872, "input_tokens": 1910}
+{"i": 51, "label": "Base Salary", "pred": "Base Salary", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.813, "input_tokens": 1946}
+{"i": 52, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.886, "input_tokens": 1905}
+{"i": 53, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.97, "confidence": 0.96, "correct": 1, "latency_s": 0.905, "input_tokens": 1940}
+{"i": 54, "label": "Payments", "pred": "Payments", "p_top": 0.9, "confidence": 0.89, "correct": 1, "latency_s": 0.861, "input_tokens": 2031}
+{"i": 55, "label": "Compliance With Laws", "pred": "Compliance With Laws", "p_top": 0.83, "confidence": 0.82, "correct": 1, "latency_s": 1.026, "input_tokens": 1937}
+{"i": 56, "label": "Liens", "pred": "Liens", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.944, "input_tokens": 1938}
+{"i": 57, "label": "Terms", "pred": "Effective Dates", "p_top": 0.44, "confidence": 0.42, "correct": 0, "latency_s": 0.927, "input_tokens": 1942}
+{"i": 58, "label": "Miscellaneous", "pred": "Miscellaneous", "p_top": 0.97, "confidence": 0.96, "correct": 1, "latency_s": 0.822, "input_tokens": 2038}
+{"i": 59, "label": "Authority", "pred": "Authority", "p_top": 0.54, "confidence": 0.52, "correct": 1, "latency_s": 0.85, "input_tokens": 2086}
+{"i": 60, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.827, "input_tokens": 2029}
+{"i": 61, "label": "Terms", "pred": "Vesting", "p_top": 0.68, "confidence": 0.67, "correct": 0, "latency_s": 0.839, "input_tokens": 2011}
+{"i": 62, "label": "Interpretations", "pred": "Interpretations", "p_top": 0.61, "confidence": 0.59, "correct": 1, "latency_s": 0.813, "input_tokens": 1899}
+{"i": 63, "label": "Consent To Jurisdiction", "pred": "Consent To Jurisdiction", "p_top": 0.6, "confidence": 0.59, "correct": 1, "latency_s": 0.806, "input_tokens": 1980}
+{"i": 64, "label": "Benefits", "pred": "Benefits", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.93, "input_tokens": 1940}
+{"i": 65, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.826, "input_tokens": 2154}
+{"i": 66, "label": "Participations", "pred": "Participations", "p_top": 0.82, "confidence": 0.81, "correct": 1, "latency_s": 0.849, "input_tokens": 1941}
+{"i": 67, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.838, "input_tokens": 1930}
+{"i": 68, "label": "Remedies", "pred": "Remedies", "p_top": 0.91, "confidence": 0.91, "correct": 1, "latency_s": 0.928, "input_tokens": 2308}
+{"i": 69, "label": "No Defaults", "pred": "No Defaults", "p_top": 0.99, "confidence": 0.98, "correct": 1, "latency_s": 0.885, "input_tokens": 1913}
+{"i": 70, "label": "Successors", "pred": "Binding Effects", "p_top": 0.91, "confidence": 0.91, "correct": 0, "latency_s": 0.899, "input_tokens": 1896}
+{"i": 71, "label": "Applicable Laws", "pred": "Governing Laws", "p_top": 0.78, "confidence": 0.77, "correct": 0, "latency_s": 0.993, "input_tokens": 1925}
+{"i": 72, "label": "Construction", "pred": "Construction", "p_top": 0.29, "confidence": 0.27, "correct": 1, "latency_s": 1.041, "input_tokens": 1958}
+{"i": 73, "label": "Consents", "pred": "Consents", "p_top": 0.98, "confidence": 0.97, "correct": 1, "latency_s": 1.097, "input_tokens": 2013}
+{"i": 74, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.046, "input_tokens": 1879}
+{"i": 75, "label": "Compliance With Laws", "pred": "Compliance With Laws", "p_top": 0.58, "confidence": 0.56, "correct": 1, "latency_s": 0.934, "input_tokens": 2121}
+{"i": 76, "label": "Compliance With Laws", "pred": "Taxes", "p_top": 0.88, "confidence": 0.87, "correct": 0, "latency_s": 1.064, "input_tokens": 1929}
+{"i": 77, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.046, "input_tokens": 1921}
+{"i": 78, "label": "Authority", "pred": "Authority", "p_top": 0.69, "confidence": 0.68, "correct": 1, "latency_s": 1.045, "input_tokens": 2244}
+{"i": 79, "label": "Indemnity", "pred": "Indemnifications", "p_top": 0.59, "confidence": 0.58, "correct": 0, "latency_s": 0.988, "input_tokens": 2013}
+{"i": 80, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.96, "confidence": 0.95, "correct": 1, "latency_s": 0.826, "input_tokens": 1903}
+{"i": 81, "label": "Binding Effects", "pred": "Binding Effects", "p_top": 0.96, "confidence": 0.95, "correct": 1, "latency_s": 0.894, "input_tokens": 1893}
+{"i": 82, "label": "Cooperation", "pred": "Cooperation", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.928, "input_tokens": 2253}
+{"i": 83, "label": "Non-Disparagement", "pred": "Non-Disparagement", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.776, "input_tokens": 1967}
+{"i": 84, "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.882, "input_tokens": 1957}
+{"i": 85, "label": "Base Salary", "pred": "Base Salary", "p_top": 0.61, "confidence": 0.6, "correct": 1, "latency_s": 0.873, "input_tokens": 1917}
+{"i": 86, "label": "Indemnifications", "pred": "Indemnifications", "p_top": 0.85, "confidence": 0.85, "correct": 1, "latency_s": 0.812, "input_tokens": 2122}
+{"i": 87, "label": "Expenses", "pred": "Expenses", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.812, "input_tokens": 1930}
+{"i": 88, "label": "Insurances", "pred": "Insurances", "p_top": 0.98, "confidence": 0.98, "correct": 1, "latency_s": 0.788, "input_tokens": 2110}
+{"i": 89, "label": "Headings", "pred": "Headings", "p_top": 0.93, "confidence": 0.93, "correct": 1, "latency_s": 0.858, "input_tokens": 1897}
+{"i": 90, "label": "Erisa", "pred": "Erisa", "p_top": 0.63, "confidence": 0.62, "correct": 1, "latency_s": 0.837, "input_tokens": 2289}
+{"i": 91, "label": "Disclosures", "pred": "Representations", "p_top": 0.7, "confidence": 0.69, "correct": 0, "latency_s": 0.87, "input_tokens": 2085}
+{"i": 92, "label": "Survival", "pred": "Survival", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.879, "input_tokens": 2404}
+{"i": 93, "label": "Existence", "pred": "Existence", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.88, "input_tokens": 1952}
+{"i": 94, "label": "Subsidiaries", "pred": "Subsidiaries", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.847, "input_tokens": 1973}
+{"i": 95, "label": "Taxes", "pred": "Representations", "p_top": 0.79, "confidence": 0.78, "correct": 0, "latency_s": 1.027, "input_tokens": 1971}
+{"i": 96, "label": "Erisa", "pred": "Erisa", "p_top": 0.83, "confidence": 0.82, "correct": 1, "latency_s": 0.861, "input_tokens": 1952}
+{"i": 97, "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.864, "input_tokens": 1884}
+{"i": 98, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.932, "input_tokens": 1969}
+{"i": 99, "label": "Successors", "pred": "Assignments", "p_top": 0.75, "confidence": 0.74, "correct": 0, "latency_s": 0.838, "input_tokens": 2128}
+{"i": 100, "label": "Confidentiality", "pred": "Confidentiality", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.865, "input_tokens": 2193}
+{"i": 101, "label": "No Waivers", "pred": "No Waivers", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 0.979, "input_tokens": 1928}
+{"i": 102, "label": "Participations", "pred": "Participations", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.072, "input_tokens": 2682}
+{"i": 103, "label": "Cooperation", "pred": "Cooperation", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.884, "input_tokens": 1950}
+{"i": 104, "label": "Solvency", "pred": "Solvency", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.91, "input_tokens": 2137}
+{"i": 105, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.902, "input_tokens": 1968}
+{"i": 106, "label": "Amendments", "pred": "Amendments", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.819, "input_tokens": 2310}
+{"i": 107, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.863, "input_tokens": 1995}
+{"i": 108, "label": "Miscellaneous", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 0.996, "input_tokens": 1922}
+{"i": 109, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 0.95, "confidence": 0.94, "correct": 1, "latency_s": 0.822, "input_tokens": 1908}
+{"i": 110, "label": "Expenses", "pred": "Expenses", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 0.92, "input_tokens": 1941}
+{"i": 111, "label": "Authorizations", "pred": "Authorizations", "p_top": 0.37, "confidence": 0.35, "correct": 1, "latency_s": 0.865, "input_tokens": 2068}
+{"i": 112, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.88, "confidence": 0.87, "correct": 1, "latency_s": 0.848, "input_tokens": 1980}
+{"i": 113, "label": "No Defaults", "pred": "No Defaults", "p_top": 0.85, "confidence": 0.84, "correct": 1, "latency_s": 0.954, "input_tokens": 1988}
+{"i": 114, "label": "Adjustments", "pred": "Adjustments", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 0.954, "input_tokens": 1900}
+{"i": 115, "label": "Waivers", "pred": "No Waivers", "p_top": 0.9, "confidence": 0.89, "correct": 0, "latency_s": 0.918, "input_tokens": 1957}
+{"i": 116, "label": "Base Salary", "pred": "Base Salary", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.885, "input_tokens": 2005}
+{"i": 117, "label": "Survival", "pred": "Survival", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.113, "input_tokens": 1888}
+{"i": 118, "label": "Binding Effects", "pred": "Arbitration", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 0.823, "input_tokens": 2155}
+{"i": 119, "label": "Applicable Laws", "pred": "Governing Laws", "p_top": 0.96, "confidence": 0.96, "correct": 0, "latency_s": 0.966, "input_tokens": 1919}
+{"i": 120, "label": "Expenses", "pred": "Expenses", "p_top": 0.86, "confidence": 0.85, "correct": 1, "latency_s": 0.868, "input_tokens": 1917}
+{"i": 121, "label": "Warranties", "pred": "Warranties", "p_top": 0.96, "confidence": 0.95, "correct": 1, "latency_s": 1.064, "input_tokens": 1918}
+{"i": 122, "label": "Tax Withholdings", "pred": "Taxes", "p_top": 0.97, "confidence": 0.96, "correct": 0, "latency_s": 1.051, "input_tokens": 2264}
+{"i": 123, "label": "Warranties", "pred": "Representations", "p_top": 0.61, "confidence": 0.6, "correct": 0, "latency_s": 0.883, "input_tokens": 1953}
+{"i": 124, "label": "Liens", "pred": "Liens", "p_top": 0.52, "confidence": 0.51, "correct": 1, "latency_s": 0.909, "input_tokens": 1984}
+{"i": 125, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.813, "input_tokens": 1921}
+{"i": 126, "label": "Titles", "pred": "Headings", "p_top": 0.9, "confidence": 0.89, "correct": 0, "latency_s": 0.951, "input_tokens": 1897}
+{"i": 127, "label": "Amendments", "pred": "Amendments", "p_top": 0.98, "confidence": 0.98, "correct": 1, "latency_s": 0.907, "input_tokens": 1974}
+{"i": 128, "label": "Releases", "pred": "Releases", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.859, "input_tokens": 1928}
+{"i": 129, "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.865, "input_tokens": 2321}
+{"i": 130, "label": "Warranties", "pred": "Survival", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 0.885, "input_tokens": 2013}
+{"i": 131, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.893, "input_tokens": 1896}
+{"i": 132, "label": "Payments", "pred": "Payments", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.963, "input_tokens": 1888}
+{"i": 133, "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.953, "input_tokens": 2114}
+{"i": 134, "label": "Forfeitures", "pred": "Forfeitures", "p_top": 0.97, "confidence": 0.97, "correct": 1, "latency_s": 0.862, "input_tokens": 1921}
+{"i": 135, "label": "Authority", "pred": "Authority", "p_top": 0.93, "confidence": 0.92, "correct": 1, "latency_s": 0.869, "input_tokens": 1898}
+{"i": 136, "label": "Change In Control", "pred": "Change In Control", "p_top": 0.87, "confidence": 0.86, "correct": 1, "latency_s": 0.969, "input_tokens": 2041}
+{"i": 137, "label": "Venues", "pred": "Venues", "p_top": 0.77, "confidence": 0.76, "correct": 1, "latency_s": 0.911, "input_tokens": 1950}
+{"i": 138, "label": "Taxes", "pred": "Taxes", "p_top": 0.95, "confidence": 0.94, "correct": 1, "latency_s": 0.807, "input_tokens": 2060}
+{"i": 139, "label": "Miscellaneous", "pred": "Miscellaneous", "p_top": 0.68, "confidence": 0.67, "correct": 1, "latency_s": 0.874, "input_tokens": 2042}
+{"i": 140, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 0.98, "confidence": 0.98, "correct": 1, "latency_s": 0.863, "input_tokens": 1905}
+{"i": 141, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.878, "input_tokens": 1945}
+{"i": 142, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.843, "input_tokens": 2043}
+{"i": 143, "label": "Further Assurances", "pred": "Further Assurances", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.858, "input_tokens": 1950}
+{"i": 144, "label": "Definitions", "pred": "Confidentiality", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 0.837, "input_tokens": 2105}
+{"i": 145, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.835, "input_tokens": 1905}
+{"i": 146, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.98, "confidence": 0.97, "correct": 1, "latency_s": 0.891, "input_tokens": 2003}
+{"i": 147, "label": "Terminations", "pred": "Survival", "p_top": 0.91, "confidence": 0.9, "correct": 0, "latency_s": 1.034, "input_tokens": 1908}
+{"i": 148, "label": "Adjustments", "pred": "Adjustments", "p_top": 0.74, "confidence": 0.72, "correct": 1, "latency_s": 0.922, "input_tokens": 2015}
+{"i": 149, "label": "Assignments", "pred": "Assignments", "p_top": 0.96, "confidence": 0.96, "correct": 1, "latency_s": 1.546, "input_tokens": 1976}
+{"i": 150, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 1.047, "input_tokens": 1922}
+{"i": 151, "label": "Survival", "pred": "Survival", "p_top": 0.9, "confidence": 0.89, "correct": 1, "latency_s": 1.156, "input_tokens": 1903}
+{"i": 152, "label": "Brokers", "pred": "Brokers", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 1.112, "input_tokens": 1926}
+{"i": 153, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.024, "input_tokens": 1958}
+{"i": 154, "label": "Amendments", "pred": "Amendments", "p_top": 0.77, "confidence": 0.76, "correct": 1, "latency_s": 1.076, "input_tokens": 2066}
+{"i": 155, "label": "Further Assurances", "pred": "Further Assurances", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.907, "input_tokens": 2217}
+{"i": 156, "label": "Definitions", "pred": "Defined Terms", "p_top": 0.79, "confidence": 0.78, "correct": 0, "latency_s": 0.925, "input_tokens": 1891}
+{"i": 157, "label": "Governing Laws", "pred": "Submission To Jurisdiction", "p_top": 0.36, "confidence": 0.34, "correct": 0, "latency_s": 0.93, "input_tokens": 2035}
+{"i": 158, "label": "Fees", "pred": "Expenses", "p_top": 0.54, "confidence": 0.52, "correct": 0, "latency_s": 0.981, "input_tokens": 2089}
+{"i": 159, "label": "Disclosures", "pred": "Representations", "p_top": 0.66, "confidence": 0.64, "correct": 0, "latency_s": 1.836, "input_tokens": 2099}
+{"i": 160, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.044, "input_tokens": 2298}
+{"i": 161, "label": "Indemnity", "pred": "Warranties", "p_top": 0.52, "confidence": 0.5, "correct": 0, "latency_s": 0.976, "input_tokens": 2520}
+{"i": 162, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.038, "input_tokens": 1911}
+{"i": 163, "label": "Financial Statements", "pred": "Financial Statements", "p_top": 0.84, "confidence": 0.83, "correct": 1, "latency_s": 0.93, "input_tokens": 2167}
+{"i": 164, "label": "Survival", "pred": "Survival", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.018, "input_tokens": 1913}
+{"i": 165, "label": "Indemnifications", "pred": "Survival", "p_top": 0.98, "confidence": 0.97, "correct": 0, "latency_s": 0.922, "input_tokens": 1932}
+{"i": 166, "label": "Payments", "pred": "Payments", "p_top": 0.63, "confidence": 0.62, "correct": 1, "latency_s": 0.899, "input_tokens": 1996}
+{"i": 167, "label": "Expenses", "pred": "Expenses", "p_top": 0.92, "confidence": 0.91, "correct": 1, "latency_s": 0.815, "input_tokens": 2208}
+{"i": 168, "label": "Change In Control", "pred": "Change In Control", "p_top": 0.7, "confidence": 0.69, "correct": 1, "latency_s": 0.9, "input_tokens": 1913}
+{"i": 169, "label": "Litigations", "pred": "Litigations", "p_top": 0.96, "confidence": 0.96, "correct": 1, "latency_s": 0.889, "input_tokens": 2059}
+{"i": 170, "label": "Capitalization", "pred": "Capitalization", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.916, "input_tokens": 2256}
+{"i": 171, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.872, "input_tokens": 1944}
+{"i": 172, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.84, "input_tokens": 1939}
+{"i": 173, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.837, "input_tokens": 1966}
+{"i": 174, "label": "Fees", "pred": "Interests", "p_top": 0.75, "confidence": 0.73, "correct": 0, "latency_s": 0.891, "input_tokens": 1981}
+{"i": 175, "label": "Terms", "pred": "Terms", "p_top": 0.67, "confidence": 0.67, "correct": 1, "latency_s": 0.89, "input_tokens": 2101}
+{"i": 176, "label": "Liens", "pred": "Liens", "p_top": 0.67, "confidence": 0.66, "correct": 1, "latency_s": 0.823, "input_tokens": 1960}
+{"i": 177, "label": "Titles", "pred": "Duties", "p_top": 0.86, "confidence": 0.85, "correct": 0, "latency_s": 0.802, "input_tokens": 1904}
+{"i": 178, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 0.45, "confidence": 0.43, "correct": 1, "latency_s": 0.79, "input_tokens": 2236}
+{"i": 179, "label": "Notices", "pred": "Assignments", "p_top": 0.69, "confidence": 0.67, "correct": 0, "latency_s": 0.803, "input_tokens": 2054}
+{"i": 180, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.819, "input_tokens": 1934}
+{"i": 181, "label": "Disclosures", "pred": "Representations", "p_top": 0.81, "confidence": 0.8, "correct": 0, "latency_s": 0.865, "input_tokens": 1948}
+{"i": 182, "label": "Governing Laws", "pred": "Submission To Jurisdiction", "p_top": 0.5, "confidence": 0.49, "correct": 0, "latency_s": 0.886, "input_tokens": 2247}
+{"i": 183, "label": "Compliance With Laws", "pred": "Compliance With Laws", "p_top": 0.98, "confidence": 0.97, "correct": 1, "latency_s": 0.95, "input_tokens": 1938}
+{"i": 184, "label": "General", "pred": "Agreements", "p_top": 0.5, "confidence": 0.48, "correct": 0, "latency_s": 0.873, "input_tokens": 2009}
+{"i": 185, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.887, "input_tokens": 1987}
+{"i": 186, "label": "Compliance With Laws", "pred": "Compliance With Laws", "p_top": 0.96, "confidence": 0.96, "correct": 1, "latency_s": 0.922, "input_tokens": 1926}
+{"i": 187, "label": "Interpretations", "pred": "Construction", "p_top": 0.72, "confidence": 0.7, "correct": 0, "latency_s": 0.928, "input_tokens": 1983}
+{"i": 188, "label": "Forfeitures", "pred": "Forfeitures", "p_top": 0.88, "confidence": 0.88, "correct": 1, "latency_s": 0.843, "input_tokens": 1897}
+{"i": 189, "label": "Closings", "pred": "Closings", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.95, "input_tokens": 1924}
+{"i": 190, "label": "Amendments", "pred": "Amendments", "p_top": 0.97, "confidence": 0.96, "correct": 1, "latency_s": 0.918, "input_tokens": 1895}
+{"i": 191, "label": "Disability", "pred": "Terminations", "p_top": 0.96, "confidence": 0.96, "correct": 0, "latency_s": 1.413, "input_tokens": 1989}
+{"i": 192, "label": "Survival", "pred": "Survival", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.37, "input_tokens": 1913}
+{"i": 193, "label": "Closings", "pred": "Closings", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.871, "input_tokens": 1997}
+{"i": 194, "label": "Taxes", "pred": "Taxes", "p_top": 0.93, "confidence": 0.93, "correct": 1, "latency_s": 0.913, "input_tokens": 2010}
+{"i": 195, "label": "Survival", "pred": "Survival", "p_top": 0.96, "confidence": 0.96, "correct": 1, "latency_s": 0.861, "input_tokens": 2265}
+{"i": 196, "label": "Terminations", "pred": "Terminations", "p_top": 0.92, "confidence": 0.91, "correct": 1, "latency_s": 0.96, "input_tokens": 2084}
+{"i": 197, "label": "Miscellaneous", "pred": "Remedies", "p_top": 0.41, "confidence": 0.39, "correct": 0, "latency_s": 0.977, "input_tokens": 1971}
+{"i": 198, "label": "Survival", "pred": "Survival", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.81, "input_tokens": 1911}
+{"i": 199, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.873, "input_tokens": 1944}
+{"i": 200, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 0.87, "confidence": 0.87, "correct": 1, "latency_s": 0.839, "input_tokens": 1981}
+{"i": 201, "label": "Terminations", "pred": "Terminations", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.901, "input_tokens": 2177}
+{"i": 202, "label": "Assignments", "pred": "Assignments", "p_top": 0.98, "confidence": 0.97, "correct": 1, "latency_s": 0.849, "input_tokens": 1997}
+{"i": 203, "label": "Governing Laws", "pred": "Arbitration", "p_top": 0.51, "confidence": 0.5, "correct": 0, "latency_s": 0.901, "input_tokens": 1904}
+{"i": 204, "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.867, "input_tokens": 1960}
+{"i": 205, "label": "Survival", "pred": "Survival", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.06, "input_tokens": 1903}
+{"i": 206, "label": "Survival", "pred": "Survival", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.914, "input_tokens": 1907}
+{"i": 207, "label": "Payments", "pred": "Payments", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 0.84, "input_tokens": 2206}
+{"i": 208, "label": "Modifications", "pred": "Modifications", "p_top": 0.6, "confidence": 0.59, "correct": 1, "latency_s": 0.937, "input_tokens": 2174}
+{"i": 209, "label": "Headings", "pred": "Headings", "p_top": 0.99, "confidence": 0.98, "correct": 1, "latency_s": 0.846, "input_tokens": 1900}
+{"i": 210, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.878, "input_tokens": 1927}
+{"i": 211, "label": "Interpretations", "pred": "Severability", "p_top": 0.98, "confidence": 0.97, "correct": 0, "latency_s": 0.83, "input_tokens": 1948}
+{"i": 212, "label": "Arbitration", "pred": "Arbitration", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.851, "input_tokens": 2487}
+{"i": 213, "label": "Insurances", "pred": "Insurances", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.902, "input_tokens": 2045}
+{"i": 214, "label": "Payments", "pred": "Payments", "p_top": 0.95, "confidence": 0.95, "correct": 1, "latency_s": 0.898, "input_tokens": 1905}
+{"i": 215, "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.803, "input_tokens": 2123}
+{"i": 216, "label": "Construction", "pred": "Construction", "p_top": 0.84, "confidence": 0.83, "correct": 1, "latency_s": 0.829, "input_tokens": 1975}
+{"i": 217, "label": "Positions", "pred": "Employment", "p_top": 0.91, "confidence": 0.91, "correct": 0, "latency_s": 0.789, "input_tokens": 1944}
+{"i": 218, "label": "Specific Performance", "pred": "Specific Performance", "p_top": 0.98, "confidence": 0.98, "correct": 1, "latency_s": 1.079, "input_tokens": 2016}
+{"i": 219, "label": "Notices", "pred": "Adjustments", "p_top": 0.98, "confidence": 0.97, "correct": 0, "latency_s": 0.954, "input_tokens": 1977}
+{"i": 220, "label": "Terminations", "pred": "Terminations", "p_top": 0.98, "confidence": 0.97, "correct": 1, "latency_s": 0.872, "input_tokens": 2046}
+{"i": 221, "label": "Headings", "pred": "Headings", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.082, "input_tokens": 1905}
+{"i": 222, "label": "Governing Laws", "pred": "Submission To Jurisdiction", "p_top": 0.75, "confidence": 0.74, "correct": 0, "latency_s": 1.891, "input_tokens": 2137}
+{"i": 223, "label": "Base Salary", "pred": "Base Salary", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.871, "input_tokens": 2054}
+{"i": 224, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.061, "input_tokens": 1925}
+{"i": 225, "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.123, "input_tokens": 2089}
+{"i": 226, "label": "Tax Withholdings", "pred": "Tax Withholdings", "p_top": 0.93, "confidence": 0.93, "correct": 1, "latency_s": 1.066, "input_tokens": 2228}
+{"i": 227, "label": "Indemnity", "pred": "Indemnifications", "p_top": 0.51, "confidence": 0.5, "correct": 0, "latency_s": 1.041, "input_tokens": 2770}
+{"i": 228, "label": "Releases", "pred": "Terminations", "p_top": 0.85, "confidence": 0.85, "correct": 0, "latency_s": 0.986, "input_tokens": 1979}
+{"i": 229, "label": "Financial Statements", "pred": "Financial Statements", "p_top": 0.88, "confidence": 0.87, "correct": 1, "latency_s": 0.933, "input_tokens": 2035}
+{"i": 230, "label": "No Defaults", "pred": "No Defaults", "p_top": 0.98, "confidence": 0.98, "correct": 1, "latency_s": 0.818, "input_tokens": 1896}
+{"i": 231, "label": "Indemnifications", "pred": "Indemnifications", "p_top": 0.78, "confidence": 0.77, "correct": 1, "latency_s": 0.878, "input_tokens": 1944}
+{"i": 232, "label": "Financial Statements", "pred": "Financial Statements", "p_top": 0.89, "confidence": 0.88, "correct": 1, "latency_s": 0.862, "input_tokens": 1971}
+{"i": 233, "label": "Severability", "pred": "Severability", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 1.155, "input_tokens": 2433}
+{"i": 234, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.973, "input_tokens": 1902}
+{"i": 235, "label": "Jurisdictions", "pred": "Submission To Jurisdiction", "p_top": 0.96, "confidence": 0.96, "correct": 0, "latency_s": 0.781, "input_tokens": 2112}
+{"i": 236, "label": "Indemnifications", "pred": "Indemnifications", "p_top": 0.87, "confidence": 0.86, "correct": 1, "latency_s": 0.851, "input_tokens": 2177}
+{"i": 237, "label": "Payments", "pred": "Payments", "p_top": 0.92, "confidence": 0.92, "correct": 1, "latency_s": 0.809, "input_tokens": 1988}
+{"i": 238, "label": "Confidentiality", "pred": "Confidentiality", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.819, "input_tokens": 1953}
+{"i": 239, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.798, "input_tokens": 2029}
+{"i": 240, "label": "Confidentiality", "pred": "Confidentiality", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.927, "input_tokens": 2083}
+{"i": 241, "label": "Compliance With Laws", "pred": "Compliance With Laws", "p_top": 0.91, "confidence": 0.91, "correct": 1, "latency_s": 0.82, "input_tokens": 1928}
+{"i": 242, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.959, "input_tokens": 1898}
+{"i": 243, "label": "Litigations", "pred": "Litigations", "p_top": 0.95, "confidence": 0.94, "correct": 1, "latency_s": 0.939, "input_tokens": 1924}
+{"i": 244, "label": "Construction", "pred": "Construction", "p_top": 0.8, "confidence": 0.8, "correct": 1, "latency_s": 0.826, "input_tokens": 1986}
+{"i": 245, "label": "Authority", "pred": "Authority", "p_top": 0.39, "confidence": 0.38, "correct": 1, "latency_s": 0.832, "input_tokens": 1967}
+{"i": 246, "label": "Survival", "pred": "Survival", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.822, "input_tokens": 1916}
+{"i": 247, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.9, "input_tokens": 1961}
+{"i": 248, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.906, "input_tokens": 1909}
+{"i": 249, "label": "Enforcements", "pred": "Remedies", "p_top": 0.8, "confidence": 0.79, "correct": 0, "latency_s": 0.937, "input_tokens": 2031}
+{"i": 250, "label": "Withholdings", "pred": "Tax Withholdings", "p_top": 0.97, "confidence": 0.96, "correct": 0, "latency_s": 0.967, "input_tokens": 2646}
+{"i": 251, "label": "Confidentiality", "pred": "Confidentiality", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.045, "input_tokens": 2072}
+{"i": 252, "label": "Participations", "pred": "Participations", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.011, "input_tokens": 2171}
+{"i": 253, "label": "Terms", "pred": "Terms", "p_top": 0.65, "confidence": 0.64, "correct": 1, "latency_s": 1.023, "input_tokens": 1926}
+{"i": 254, "label": "General", "pred": "Participations", "p_top": 0.87, "confidence": 0.86, "correct": 0, "latency_s": 1.96, "input_tokens": 1910}
+{"i": 255, "label": "Organizations", "pred": "Representations", "p_top": 0.52, "confidence": 0.51, "correct": 0, "latency_s": 1.034, "input_tokens": 2062}
+{"i": 256, "label": "Change In Control", "pred": "Change In Control", "p_top": 0.92, "confidence": 0.91, "correct": 1, "latency_s": 0.861, "input_tokens": 2001}
+{"i": 257, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.953, "input_tokens": 1989}
+{"i": 258, "label": "Arbitration", "pred": "Arbitration", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.876, "input_tokens": 2009}
+{"i": 259, "label": "Headings", "pred": "Headings", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.779, "input_tokens": 1902}
+{"i": 260, "label": "Waivers", "pred": "No Waivers", "p_top": 0.93, "confidence": 0.92, "correct": 0, "latency_s": 0.823, "input_tokens": 1913}
+{"i": 261, "label": "No Defaults", "pred": "No Defaults", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.962, "input_tokens": 1974}
+{"i": 262, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.774, "input_tokens": 1923}
+{"i": 263, "label": "Insurances", "pred": "Insurances", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.837, "input_tokens": 2087}
+{"i": 264, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.854, "input_tokens": 1947}
+{"i": 265, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.944, "input_tokens": 1937}
+{"i": 266, "label": "Disability", "pred": "Disability", "p_top": 0.59, "confidence": 0.58, "correct": 1, "latency_s": 0.924, "input_tokens": 2094}
+{"i": 267, "label": "Duties", "pred": "Employment", "p_top": 0.71, "confidence": 0.7, "correct": 0, "latency_s": 0.981, "input_tokens": 2166}
+{"i": 268, "label": "Capitalization", "pred": "Capitalization", "p_top": 0.98, "confidence": 0.98, "correct": 1, "latency_s": 0.857, "input_tokens": 2452}
+{"i": 269, "label": "Terminations", "pred": "Terminations", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.867, "input_tokens": 2086}
+{"i": 270, "label": "Disclosures", "pred": "Representations", "p_top": 0.86, "confidence": 0.85, "correct": 0, "latency_s": 0.833, "input_tokens": 2091}
+{"i": 271, "label": "Survival", "pred": "Survival", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.84, "input_tokens": 1885}
+{"i": 272, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.872, "input_tokens": 1995}
+{"i": 273, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.835, "input_tokens": 1923}
+{"i": 274, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 0.839, "input_tokens": 1924}
+{"i": 275, "label": "Successors", "pred": "Successors", "p_top": 0.96, "confidence": 0.95, "correct": 1, "latency_s": 0.858, "input_tokens": 2010}
+{"i": 276, "label": "Litigations", "pred": "Litigations", "p_top": 0.97, "confidence": 0.97, "correct": 1, "latency_s": 0.869, "input_tokens": 2149}
+{"i": 277, "label": "Existence", "pred": "Existence", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 0.874, "input_tokens": 1967}
+{"i": 278, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.837, "input_tokens": 1957}
+{"i": 279, "label": "Approvals", "pred": "Cooperation", "p_top": 0.76, "confidence": 0.75, "correct": 0, "latency_s": 0.806, "input_tokens": 1940}
+{"i": 280, "label": "Headings", "pred": "Headings", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.864, "input_tokens": 1902}
+{"i": 281, "label": "Adjustments", "pred": "Adjustments", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.013, "input_tokens": 1902}
+{"i": 282, "label": "Withholdings", "pred": "Tax Withholdings", "p_top": 0.74, "confidence": 0.73, "correct": 0, "latency_s": 0.992, "input_tokens": 1906}
+{"i": 283, "label": "Indemnifications", "pred": "Indemnifications", "p_top": 0.64, "confidence": 0.63, "correct": 1, "latency_s": 0.881, "input_tokens": 2033}
+{"i": 284, "label": "Definitions", "pred": "Defined Terms", "p_top": 0.67, "confidence": 0.66, "correct": 0, "latency_s": 0.856, "input_tokens": 1896}
+{"i": 285, "label": "Representations", "pred": "Representations", "p_top": 0.8, "confidence": 0.79, "correct": 1, "latency_s": 0.853, "input_tokens": 1957}
+{"i": 286, "label": "Vacations", "pred": "Vacations", "p_top": 0.98, "confidence": 0.98, "correct": 1, "latency_s": 0.885, "input_tokens": 1897}
+{"i": 287, "label": "Erisa", "pred": "Erisa", "p_top": 0.98, "confidence": 0.97, "correct": 1, "latency_s": 0.805, "input_tokens": 1959}
+{"i": 288, "label": "Agreements", "pred": "Definitions", "p_top": 0.49, "confidence": 0.47, "correct": 0, "latency_s": 0.945, "input_tokens": 1879}
+{"i": 289, "label": "Headings", "pred": "Headings", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.839, "input_tokens": 1898}
+{"i": 290, "label": "Adjustments", "pred": "Adjustments", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.807, "input_tokens": 2160}
+{"i": 291, "label": "Terms", "pred": "Effectiveness", "p_top": 0.52, "confidence": 0.51, "correct": 0, "latency_s": 0.878, "input_tokens": 2170}
+{"i": 292, "label": "Construction", "pred": "Construction", "p_top": 0.45, "confidence": 0.44, "correct": 1, "latency_s": 0.828, "input_tokens": 1984}
+{"i": 293, "label": "Consents", "pred": "Amendments", "p_top": 0.37, "confidence": 0.36, "correct": 0, "latency_s": 0.856, "input_tokens": 2011}
+{"i": 294, "label": "Vacations", "pred": "Vacations", "p_top": 0.98, "confidence": 0.98, "correct": 1, "latency_s": 0.802, "input_tokens": 1951}
+{"i": 295, "label": "Insurances", "pred": "Insurances", "p_top": 0.95, "confidence": 0.95, "correct": 1, "latency_s": 0.871, "input_tokens": 2027}
+{"i": 296, "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.909, "input_tokens": 2092}
+{"i": 297, "label": "Further Assurances", "pred": "Further Assurances", "p_top": 0.98, "confidence": 0.98, "correct": 1, "latency_s": 0.958, "input_tokens": 1900}
+{"i": 298, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.952, "input_tokens": 1921}
+{"i": 299, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.902, "input_tokens": 1910}
+{"i": 300, "label": "Change In Control", "pred": "Change In Control", "p_top": 0.82, "confidence": 0.81, "correct": 1, "latency_s": 0.893, "input_tokens": 1944}
+{"i": 301, "label": "Financial Statements", "pred": "Representations", "p_top": 0.78, "confidence": 0.77, "correct": 0, "latency_s": 0.941, "input_tokens": 2256}
+{"i": 302, "label": "Governing Laws", "pred": "Submission To Jurisdiction", "p_top": 0.42, "confidence": 0.41, "correct": 0, "latency_s": 0.909, "input_tokens": 2329}
+{"i": 303, "label": "Indemnifications", "pred": "Indemnifications", "p_top": 0.88, "confidence": 0.87, "correct": 1, "latency_s": 1.027, "input_tokens": 1987}
+{"i": 304, "label": "Authority", "pred": "Arbitration", "p_top": 0.99, "confidence": 0.98, "correct": 0, "latency_s": 1.113, "input_tokens": 1929}
+{"i": 305, "label": "Interpretations", "pred": "Construction", "p_top": 0.53, "confidence": 0.52, "correct": 0, "latency_s": 1.0, "input_tokens": 2009}
+{"i": 306, "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p_top": 0.92, "confidence": 0.91, "correct": 1, "latency_s": 1.059, "input_tokens": 2315}
+{"i": 307, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.996, "input_tokens": 1968}
+{"i": 308, "label": "Headings", "pred": "Headings", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.008, "input_tokens": 1923}
+{"i": 309, "label": "Consent To Jurisdiction", "pred": "Submission To Jurisdiction", "p_top": 0.98, "confidence": 0.98, "correct": 0, "latency_s": 0.982, "input_tokens": 2337}
+{"i": 310, "label": "Notices", "pred": "Notices", "p_top": 0.73, "confidence": 0.72, "correct": 1, "latency_s": 0.991, "input_tokens": 2033}
+{"i": 311, "label": "Adjustments", "pred": "Adjustments", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.049, "input_tokens": 1952}
+{"i": 312, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.947, "input_tokens": 1896}
+{"i": 313, "label": "Remedies", "pred": "Remedies", "p_top": 0.82, "confidence": 0.81, "correct": 1, "latency_s": 0.853, "input_tokens": 2075}
+{"i": 314, "label": "Survival", "pred": "Survival", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.855, "input_tokens": 2170}
+{"i": 315, "label": "Modifications", "pred": "Amendments", "p_top": 0.75, "confidence": 0.74, "correct": 0, "latency_s": 0.868, "input_tokens": 1916}
+{"i": 316, "label": "Compliance With Laws", "pred": "Compliance With Laws", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 0.818, "input_tokens": 1940}
+{"i": 317, "label": "Effective Dates", "pred": "Effectiveness", "p_top": 0.84, "confidence": 0.84, "correct": 0, "latency_s": 0.94, "input_tokens": 1915}
+{"i": 318, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.94, "confidence": 0.93, "correct": 1, "latency_s": 0.988, "input_tokens": 2057}
+{"i": 319, "label": "Consents", "pred": "Consents", "p_top": 0.99, "confidence": 0.98, "correct": 1, "latency_s": 0.801, "input_tokens": 2017}
+{"i": 320, "label": "Death", "pred": "Death", "p_top": 0.56, "confidence": 0.55, "correct": 1, "latency_s": 0.838, "input_tokens": 1974}
+{"i": 321, "label": "Definitions", "pred": "Defined Terms", "p_top": 0.65, "confidence": 0.64, "correct": 0, "latency_s": 0.851, "input_tokens": 2087}
+{"i": 322, "label": "Benefits", "pred": "Benefits", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.816, "input_tokens": 1998}
+{"i": 323, "label": "Binding Effects", "pred": "Binding Effects", "p_top": 0.94, "confidence": 0.94, "correct": 1, "latency_s": 0.785, "input_tokens": 1901}
+{"i": 324, "label": "Assignments", "pred": "Binding Effects", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 0.931, "input_tokens": 1909}
+{"i": 325, "label": "Death", "pred": "Vesting", "p_top": 0.94, "confidence": 0.93, "correct": 0, "latency_s": 0.863, "input_tokens": 1897}
+{"i": 326, "label": "Definitions", "pred": "Definitions", "p_top": 0.51, "confidence": 0.49, "correct": 1, "latency_s": 0.848, "input_tokens": 2176}
+{"i": 327, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.885, "input_tokens": 1917}
+{"i": 328, "label": "Headings", "pred": "Headings", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.857, "input_tokens": 1900}
+{"i": 329, "label": "Waivers", "pred": "No Waivers", "p_top": 0.98, "confidence": 0.98, "correct": 0, "latency_s": 0.837, "input_tokens": 1911}
+{"i": 330, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.907, "input_tokens": 1956}
+{"i": 331, "label": "Change In Control", "pred": "Change In Control", "p_top": 0.78, "confidence": 0.77, "correct": 1, "latency_s": 0.849, "input_tokens": 1952}
+{"i": 332, "label": "Releases", "pred": "Releases", "p_top": 0.85, "confidence": 0.83, "correct": 1, "latency_s": 0.837, "input_tokens": 2087}
+{"i": 333, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.879, "input_tokens": 1932}
+{"i": 334, "label": "Effective Dates", "pred": "Effectiveness", "p_top": 0.54, "confidence": 0.53, "correct": 0, "latency_s": 0.931, "input_tokens": 1968}
+{"i": 335, "label": "Compliance With Laws", "pred": "Compliance With Laws", "p_top": 0.97, "confidence": 0.97, "correct": 1, "latency_s": 0.81, "input_tokens": 1940}
+{"i": 336, "label": "Positions", "pred": "No Conflicts", "p_top": 0.51, "confidence": 0.49, "correct": 0, "latency_s": 0.902, "input_tokens": 1987}
+{"i": 337, "label": "General", "pred": "Benefits", "p_top": 0.55, "confidence": 0.54, "correct": 0, "latency_s": 2.734, "input_tokens": 2066}
+{"i": 338, "label": "Agreements", "pred": "Benefits", "p_top": 0.51, "confidence": 0.5, "correct": 0, "latency_s": 0.828, "input_tokens": 1893}
+{"i": 339, "label": "Sales", "pred": "Sales", "p_top": 0.54, "confidence": 0.52, "correct": 1, "latency_s": 1.34, "input_tokens": 1968}
+{"i": 340, "label": "Withholdings", "pred": "Tax Withholdings", "p_top": 0.95, "confidence": 0.95, "correct": 0, "latency_s": 0.884, "input_tokens": 1996}
+{"i": 341, "label": "Defined Terms", "pred": "Defined Terms", "p_top": 0.65, "confidence": 0.64, "correct": 1, "latency_s": 0.967, "input_tokens": 1891}
+{"i": 342, "label": "Survival", "pred": "Indemnifications", "p_top": 0.51, "confidence": 0.49, "correct": 0, "latency_s": 1.188, "input_tokens": 1986}
+{"i": 343, "label": "Compliance With Laws", "pred": "Representations", "p_top": 0.71, "confidence": 0.7, "correct": 0, "latency_s": 1.085, "input_tokens": 2191}
+{"i": 344, "label": "No Waivers", "pred": "No Waivers", "p_top": 0.99, "confidence": 0.98, "correct": 1, "latency_s": 1.059, "input_tokens": 1932}
+{"i": 345, "label": "Definitions", "pred": "Defined Terms", "p_top": 0.65, "confidence": 0.64, "correct": 0, "latency_s": 1.056, "input_tokens": 1892}
+{"i": 346, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.081, "input_tokens": 1982}
+{"i": 347, "label": "Payments", "pred": "Payments", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.117, "input_tokens": 2232}
+{"i": 348, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.249, "input_tokens": 1925}
+{"i": 349, "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.892, "input_tokens": 1964}
+{"i": 350, "label": "Payments", "pred": "Assignments", "p_top": 0.5, "confidence": 0.49, "correct": 0, "latency_s": 0.972, "input_tokens": 1930}
+{"i": 351, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 0.84, "confidence": 0.83, "correct": 1, "latency_s": 1.657, "input_tokens": 2243}
+{"i": 352, "label": "Litigations", "pred": "Litigations", "p_top": 0.99, "confidence": 0.98, "correct": 1, "latency_s": 0.927, "input_tokens": 2109}
+{"i": 353, "label": "Cooperation", "pred": "Enforcements", "p_top": 0.56, "confidence": 0.54, "correct": 0, "latency_s": 1.018, "input_tokens": 2235}
+{"i": 354, "label": "Specific Performance", "pred": "Specific Performance", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.88, "input_tokens": 1946}
+{"i": 355, "label": "Organizations", "pred": "Representations", "p_top": 0.58, "confidence": 0.57, "correct": 0, "latency_s": 0.924, "input_tokens": 2105}
+{"i": 356, "label": "Erisa", "pred": "Erisa", "p_top": 0.95, "confidence": 0.94, "correct": 1, "latency_s": 0.928, "input_tokens": 2119}
+{"i": 357, "label": "Jurisdictions", "pred": "Submission To Jurisdiction", "p_top": 0.65, "confidence": 0.65, "correct": 0, "latency_s": 0.876, "input_tokens": 2262}
+{"i": 358, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.868, "input_tokens": 1914}
+{"i": 359, "label": "Survival", "pred": "Survival", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.833, "input_tokens": 1903}
+{"i": 360, "label": "General", "pred": "Agreements", "p_top": 0.39, "confidence": 0.38, "correct": 0, "latency_s": 0.876, "input_tokens": 2339}
+{"i": 361, "label": "Insurances", "pred": "Insurances", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.008, "input_tokens": 1957}
+{"i": 362, "label": "Litigations", "pred": "Litigations", "p_top": 0.97, "confidence": 0.96, "correct": 1, "latency_s": 0.894, "input_tokens": 1907}
+{"i": 363, "label": "Releases", "pred": "Releases", "p_top": 0.91, "confidence": 0.91, "correct": 1, "latency_s": 0.803, "input_tokens": 1941}
+{"i": 364, "label": "Financial Statements", "pred": "Financial Statements", "p_top": 0.86, "confidence": 0.85, "correct": 1, "latency_s": 0.814, "input_tokens": 2041}
+{"i": 365, "label": "Waivers", "pred": "No Waivers", "p_top": 0.92, "confidence": 0.92, "correct": 0, "latency_s": 1.004, "input_tokens": 1912}
+{"i": 366, "label": "Expenses", "pred": "Death", "p_top": 0.75, "confidence": 0.74, "correct": 0, "latency_s": 0.872, "input_tokens": 2118}
+{"i": 367, "label": "Compliance With Laws", "pred": "Compliance With Laws", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.824, "input_tokens": 2006}
+{"i": 368, "label": "Waiver Of Jury Trials", "pred": "Submission To Jurisdiction", "p_top": 0.91, "confidence": 0.9, "correct": 0, "latency_s": 0.944, "input_tokens": 2356}
+{"i": 369, "label": "Definitions", "pred": "Defined Terms", "p_top": 0.72, "confidence": 0.71, "correct": 0, "latency_s": 0.93, "input_tokens": 1896}
+{"i": 370, "label": "Taxes", "pred": "Taxes", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 0.86, "input_tokens": 1940}
+{"i": 371, "label": "Insurances", "pred": "Indemnifications", "p_top": 0.57, "confidence": 0.56, "correct": 0, "latency_s": 0.852, "input_tokens": 2057}
+{"i": 372, "label": "Assignments", "pred": "Assignments", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.823, "input_tokens": 1926}
+{"i": 373, "label": "Adjustments", "pred": "Adjustments", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.882, "input_tokens": 1940}
+{"i": 374, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.867, "input_tokens": 2016}
+{"i": 375, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 0.822, "input_tokens": 1925}
+{"i": 376, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.854, "input_tokens": 1943}
+{"i": 377, "label": "Terminations", "pred": "Payments", "p_top": 0.87, "confidence": 0.86, "correct": 0, "latency_s": 0.886, "input_tokens": 1980}
+{"i": 378, "label": "Insurances", "pred": "Insurances", "p_top": 0.88, "confidence": 0.87, "correct": 1, "latency_s": 0.864, "input_tokens": 1915}
+{"i": 379, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.828, "input_tokens": 1991}
+{"i": 380, "label": "Terminations", "pred": "Terminations", "p_top": 0.98, "confidence": 0.97, "correct": 1, "latency_s": 0.84, "input_tokens": 1933}
+{"i": 381, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.826, "input_tokens": 1942}
+{"i": 382, "label": "Benefits", "pred": "Benefits", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.922, "input_tokens": 2013}
+{"i": 383, "label": "Applicable Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 0.88, "input_tokens": 1901}
+{"i": 384, "label": "Subsidiaries", "pred": "Subsidiaries", "p_top": 0.93, "confidence": 0.92, "correct": 1, "latency_s": 0.882, "input_tokens": 2084}
+{"i": 385, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.934, "input_tokens": 1897}
+{"i": 386, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.89, "input_tokens": 2006}
+{"i": 387, "label": "Subsidiaries", "pred": "Subsidiaries", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 0.856, "input_tokens": 1912}
+{"i": 388, "label": "Remedies", "pred": "Remedies", "p_top": 0.59, "confidence": 0.58, "correct": 1, "latency_s": 0.866, "input_tokens": 2067}
+{"i": 389, "label": "Confidentiality", "pred": "Confidentiality", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.848, "input_tokens": 2253}
+{"i": 390, "label": "Notices", "pred": "Payments", "p_top": 0.77, "confidence": 0.76, "correct": 0, "latency_s": 0.902, "input_tokens": 2072}
+{"i": 391, "label": "Representations", "pred": "Representations", "p_top": 0.36, "confidence": 0.34, "correct": 1, "latency_s": 0.905, "input_tokens": 1958}
+{"i": 392, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.901, "input_tokens": 1976}
+{"i": 393, "label": "Intellectual Property", "pred": "Assignments", "p_top": 0.67, "confidence": 0.66, "correct": 0, "latency_s": 0.84, "input_tokens": 2185}
+{"i": 394, "label": "Brokers", "pred": "Brokers", "p_top": 0.88, "confidence": 0.88, "correct": 1, "latency_s": 0.883, "input_tokens": 1890}
+{"i": 395, "label": "Solvency", "pred": "Solvency", "p_top": 0.96, "confidence": 0.96, "correct": 1, "latency_s": 0.918, "input_tokens": 1888}
+{"i": 396, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.953, "input_tokens": 1949}
+{"i": 397, "label": "Binding Effects", "pred": "Enforceability", "p_top": 0.89, "confidence": 0.89, "correct": 0, "latency_s": 0.881, "input_tokens": 2009}
+{"i": 398, "label": "Expenses", "pred": "Expenses", "p_top": 0.96, "confidence": 0.96, "correct": 1, "latency_s": 0.956, "input_tokens": 1979}
+{"i": 399, "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.84, "input_tokens": 2369}
+{"i": 400, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.839, "input_tokens": 1980}
+{"i": 401, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.958, "input_tokens": 1985}
+{"i": 402, "label": "Applicable Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 0.882, "input_tokens": 1903}
+{"i": 403, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.815, "input_tokens": 1904}
+{"i": 404, "label": "Solvency", "pred": "Solvency", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.883, "input_tokens": 1913}
+{"i": 405, "label": "Amendments", "pred": "Amendments", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.956, "input_tokens": 1898}
+{"i": 406, "label": "Insurances", "pred": "Duties", "p_top": 0.88, "confidence": 0.87, "correct": 0, "latency_s": 0.828, "input_tokens": 2044}
+{"i": 407, "label": "Terms", "pred": "Terminations", "p_top": 0.46, "confidence": 0.45, "correct": 0, "latency_s": 1.04, "input_tokens": 1884}
+{"i": 408, "label": "Titles", "pred": "Duties", "p_top": 0.88, "confidence": 0.87, "correct": 0, "latency_s": 2.386, "input_tokens": 1942}
+{"i": 409, "label": "Further Assurances", "pred": "Further Assurances", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.431, "input_tokens": 1915}
+{"i": 410, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.46, "input_tokens": 1900}
+{"i": 411, "label": "Definitions", "pred": "Defined Terms", "p_top": 0.61, "confidence": 0.6, "correct": 0, "latency_s": 0.805, "input_tokens": 1896}
+{"i": 412, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.84, "input_tokens": 1994}
+{"i": 413, "label": "Capitalization", "pred": "Capitalization", "p_top": 0.96, "confidence": 0.96, "correct": 1, "latency_s": 0.916, "input_tokens": 2405}
+{"i": 414, "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.826, "input_tokens": 2172}
+{"i": 415, "label": "Miscellaneous", "pred": "Entire Agreements", "p_top": 0.44, "confidence": 0.43, "correct": 0, "latency_s": 0.896, "input_tokens": 2030}
+{"i": 416, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.809, "input_tokens": 1897}
+{"i": 417, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.875, "input_tokens": 1933}
+{"i": 418, "label": "Assignments", "pred": "Assignments", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.879, "input_tokens": 1892}
+{"i": 419, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.978, "input_tokens": 1935}
+{"i": 420, "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.902, "input_tokens": 2108}
+{"i": 421, "label": "Tax Withholdings", "pred": "Tax Withholdings", "p_top": 0.92, "confidence": 0.92, "correct": 1, "latency_s": 0.863, "input_tokens": 1913}
+{"i": 422, "label": "Payments", "pred": "Payments", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.861, "input_tokens": 1892}
+{"i": 423, "label": "Notices", "pred": "Further Assurances", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 2.754, "input_tokens": 2372}
+{"i": 424, "label": "Solvency", "pred": "Solvency", "p_top": 0.98, "confidence": 0.98, "correct": 1, "latency_s": 0.985, "input_tokens": 1890}
+{"i": 425, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.972, "input_tokens": 1892}
+{"i": 426, "label": "Effective Dates", "pred": "Effective Dates", "p_top": 0.83, "confidence": 0.82, "correct": 1, "latency_s": 1.063, "input_tokens": 1894}
+{"i": 427, "label": "Litigations", "pred": "Litigations", "p_top": 0.96, "confidence": 0.96, "correct": 1, "latency_s": 1.023, "input_tokens": 1968}
+{"i": 428, "label": "Disclosures", "pred": "Representations", "p_top": 0.84, "confidence": 0.83, "correct": 0, "latency_s": 0.975, "input_tokens": 1981}
+{"i": 429, "label": "Insurances", "pred": "Insurances", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 1.001, "input_tokens": 1955}
+{"i": 430, "label": "Payments", "pred": "Payments", "p_top": 0.92, "confidence": 0.9, "correct": 1, "latency_s": 0.971, "input_tokens": 2216}
+{"i": 431, "label": "Intellectual Property", "pred": "Intellectual Property", "p_top": 0.91, "confidence": 0.91, "correct": 1, "latency_s": 0.872, "input_tokens": 2103}
+{"i": 432, "label": "Integration", "pred": "Entire Agreements", "p_top": 0.99, "confidence": 0.99, "correct": 0, "latency_s": 0.878, "input_tokens": 1944}
+{"i": 433, "label": "Vesting", "pred": "Vesting", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.798, "input_tokens": 1926}
+{"i": 434, "label": "Waiver Of Jury Trials", "pred": "Waiver Of Jury Trials", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.794, "input_tokens": 2111}
+{"i": 435, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.862, "input_tokens": 1881}
+{"i": 436, "label": "Publicity", "pred": "Publicity", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.857, "input_tokens": 2018}
+{"i": 437, "label": "Taxes", "pred": "Taxes", "p_top": 0.92, "confidence": 0.91, "correct": 1, "latency_s": 0.878, "input_tokens": 2161}
+{"i": 438, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.854, "input_tokens": 1921}
+{"i": 439, "label": "Withholdings", "pred": "Tax Withholdings", "p_top": 0.91, "confidence": 0.9, "correct": 0, "latency_s": 0.787, "input_tokens": 1893}
+{"i": 440, "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.905, "input_tokens": 1919}
+{"i": 441, "label": "Interpretations", "pred": "Construction", "p_top": 0.71, "confidence": 0.7, "correct": 0, "latency_s": 0.885, "input_tokens": 1991}
+{"i": 442, "label": "Severability", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.892, "input_tokens": 2076}
+{"i": 443, "label": "Enforceability", "pred": "Representations", "p_top": 0.56, "confidence": 0.55, "correct": 0, "latency_s": 0.87, "input_tokens": 1969}
+{"i": 444, "label": "Amendments", "pred": "Amendments", "p_top": 0.82, "confidence": 0.81, "correct": 1, "latency_s": 0.905, "input_tokens": 1887}
+{"i": 445, "label": "Interpretations", "pred": "Severability", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 0.963, "input_tokens": 1942}
+{"i": 446, "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 2.026, "input_tokens": 2145}
+{"i": 447, "label": "Vesting", "pred": "Vesting", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.091, "input_tokens": 1942}
+{"i": 448, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 1.12, "input_tokens": 1966}
+{"i": 449, "label": "Change In Control", "pred": "Change In Control", "p_top": 0.93, "confidence": 0.92, "correct": 1, "latency_s": 1.048, "input_tokens": 1949}
+{"i": 450, "label": "Adjustments", "pred": "Capitalization", "p_top": 0.47, "confidence": 0.46, "correct": 0, "latency_s": 1.009, "input_tokens": 1948}
+{"i": 451, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.92, "input_tokens": 1899}
+{"i": 452, "label": "Terminations", "pred": "Definitions", "p_top": 0.6, "confidence": 0.58, "correct": 0, "latency_s": 1.063, "input_tokens": 2135}
+{"i": 453, "label": "Liens", "pred": "Representations", "p_top": 0.52, "confidence": 0.51, "correct": 0, "latency_s": 0.924, "input_tokens": 2053}
+{"i": 454, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.85, "input_tokens": 2152}
+{"i": 455, "label": "Duties", "pred": "Duties", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 0.826, "input_tokens": 2084}
+{"i": 456, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.868, "input_tokens": 2029}
+{"i": 457, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.818, "input_tokens": 2001}
+{"i": 458, "label": "Assignments", "pred": "Assignments", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.937, "input_tokens": 2022}
+{"i": 459, "label": "Litigations", "pred": "Litigations", "p_top": 0.97, "confidence": 0.97, "correct": 1, "latency_s": 0.859, "input_tokens": 1985}
+{"i": 460, "label": "Terminations", "pred": "Terminations", "p_top": 0.97, "confidence": 0.96, "correct": 1, "latency_s": 0.903, "input_tokens": 1932}
+{"i": 461, "label": "Notices", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.906, "input_tokens": 1908}
+{"i": 462, "label": "Transactions With Affiliates", "pred": "Transactions With Affiliates", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.827, "input_tokens": 2109}
+{"i": 463, "label": "General", "pred": "Notices", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 1.153, "input_tokens": 2033}
+{"i": 464, "label": "Publicity", "pred": "Publicity", "p_top": 0.88, "confidence": 0.87, "correct": 1, "latency_s": 0.849, "input_tokens": 2364}
+{"i": 465, "label": "Use Of Proceeds", "pred": "Use Of Proceeds", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.86, "input_tokens": 2143}
+{"i": 466, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.83, "input_tokens": 1954}
+{"i": 467, "label": "Base Salary", "pred": "Base Salary", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.779, "input_tokens": 1922}
+{"i": 468, "label": "Participations", "pred": "Participations", "p_top": 0.8, "confidence": 0.79, "correct": 1, "latency_s": 0.857, "input_tokens": 2003}
+{"i": 469, "label": "General", "pred": "Taxes", "p_top": 0.96, "confidence": 0.95, "correct": 0, "latency_s": 2.839, "input_tokens": 2164}
+{"i": 470, "label": "Expenses", "pred": "Costs", "p_top": 0.27, "confidence": 0.25, "correct": 0, "latency_s": 0.925, "input_tokens": 1940}
+{"i": 471, "label": "Disability", "pred": "Disability", "p_top": 0.51, "confidence": 0.5, "correct": 1, "latency_s": 0.88, "input_tokens": 1936}
+{"i": 472, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.884, "input_tokens": 1927}
+{"i": 473, "label": "Authority", "pred": "Authority", "p_top": 0.93, "confidence": 0.92, "correct": 1, "latency_s": 2.405, "input_tokens": 1957}
+{"i": 474, "label": "Consents", "pred": "Representations", "p_top": 0.41, "confidence": 0.4, "correct": 0, "latency_s": 0.865, "input_tokens": 2138}
+{"i": 475, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.804, "input_tokens": 1944}
+{"i": 476, "label": "Entire Agreements", "pred": "Entire Agreements", "p_top": 1.0, "confidence": 0.99, "correct": 1, "latency_s": 0.862, "input_tokens": 1940}
+{"i": 477, "label": "Closings", "pred": "Closings", "p_top": 0.96, "confidence": 0.95, "correct": 1, "latency_s": 0.776, "input_tokens": 2078}
+{"i": 478, "label": "Financial Statements", "pred": "Adjustments", "p_top": 0.81, "confidence": 0.79, "correct": 0, "latency_s": 0.859, "input_tokens": 2105}
+{"i": 479, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.889, "input_tokens": 1897}
+{"i": 480, "label": "Brokers", "pred": "Brokers", "p_top": 0.96, "confidence": 0.96, "correct": 1, "latency_s": 0.852, "input_tokens": 2075}
+{"i": 481, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 2.458, "input_tokens": 1909}
+{"i": 482, "label": "Organizations", "pred": "Authority", "p_top": 0.59, "confidence": 0.58, "correct": 0, "latency_s": 0.931, "input_tokens": 1951}
+{"i": 483, "label": "Taxes", "pred": "Taxes", "p_top": 0.94, "confidence": 0.94, "correct": 1, "latency_s": 0.97, "input_tokens": 1952}
+{"i": 484, "label": "Sales", "pred": "Taxes", "p_top": 0.53, "confidence": 0.52, "correct": 0, "latency_s": 1.163, "input_tokens": 1979}
+{"i": 485, "label": "Solvency", "pred": "Solvency", "p_top": 0.75, "confidence": 0.74, "correct": 1, "latency_s": 1.071, "input_tokens": 1898}
+{"i": 486, "label": "Warranties", "pred": "Representations", "p_top": 0.54, "confidence": 0.53, "correct": 0, "latency_s": 1.027, "input_tokens": 1952}
+{"i": 487, "label": "Applicable Laws", "pred": "Governing Laws", "p_top": 0.99, "confidence": 0.99, "correct": 0, "latency_s": 0.975, "input_tokens": 1917}
+{"i": 488, "label": "General", "pred": "Payments", "p_top": 1.0, "confidence": 1.0, "correct": 0, "latency_s": 0.86, "input_tokens": 2204}
+{"i": 489, "label": "Consents", "pred": "Consents", "p_top": 0.77, "confidence": 0.76, "correct": 1, "latency_s": 0.833, "input_tokens": 1938}
+{"i": 490, "label": "General", "pred": "Binding Effects", "p_top": 0.33, "confidence": 0.31, "correct": 0, "latency_s": 0.791, "input_tokens": 2078}
+{"i": 491, "label": "Waivers", "pred": "Modifications", "p_top": 0.37, "confidence": 0.35, "correct": 0, "latency_s": 0.853, "input_tokens": 1957}
+{"i": 492, "label": "Disability", "pred": "Disability", "p_top": 0.92, "confidence": 0.91, "correct": 1, "latency_s": 0.943, "input_tokens": 2033}
+{"i": 493, "label": "Governing Laws", "pred": "Governing Laws", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.934, "input_tokens": 1919}
+{"i": 494, "label": "Successors", "pred": "Successors", "p_top": 0.9, "confidence": 0.9, "correct": 1, "latency_s": 0.834, "input_tokens": 1932}
+{"i": 495, "label": "Counterparts", "pred": "Counterparts", "p_top": 1.0, "confidence": 1.0, "correct": 1, "latency_s": 0.869, "input_tokens": 1913}
+{"i": 496, "label": "Governing Laws", "pred": "Miscellaneous", "p_top": 0.53, "confidence": 0.51, "correct": 0, "latency_s": 0.984, "input_tokens": 2283}
+{"i": 497, "label": "Change In Control", "pred": "Change In Control", "p_top": 0.99, "confidence": 0.99, "correct": 1, "latency_s": 0.948, "input_tokens": 2356}
+{"i": 498, "label": "Indemnifications", "pred": "Arbitration", "p_top": 0.92, "confidence": 0.91, "correct": 0, "latency_s": 1.21, "input_tokens": 2008}
+{"i": 499, "label": "Authority", "pred": "Authority", "p_top": 0.72, "confidence": 0.71, "correct": 1, "latency_s": 0.832, "input_tokens": 2219}

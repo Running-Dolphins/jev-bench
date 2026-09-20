@@ -383,6 +383,23 @@ def save(name, rows, summary, dry_run):
         for r in rows:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
     (ROOT / "results" / f"{name}.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False))
+    export_predictions(name, rows)
+
+
+KEEP = ("id", "label", "pred", "p_top", "confidence", "correct", "k", "order", "repeat", "variant")
+
+
+def export_predictions(name, rows):
+    """Per-example predictions WITHOUT the dataset text: safe to commit, enough to recompute
+    every table (accuracy, reliability, thresholds) without calling the API again."""
+    (ROOT / "predictions").mkdir(exist_ok=True)
+    with open(ROOT / "predictions" / f"{name}.jsonl", "w") as f:
+        for i, r in enumerate(rows):
+            slim = {"i": i, **{k: r[k] for k in KEEP if k in r}}
+            slim["p_top"] = round(slim["p_top"], 4)
+            slim["latency_s"] = round(r["latency_s"], 3)
+            slim["input_tokens"] = r["usage"].get("input_tokens", 0)
+            f.write(json.dumps(slim, ensure_ascii=False) + "\n")
 
 
 def run_task(name, n, dry_run):

@@ -97,7 +97,8 @@ show(summarize("my-inbox", run_examples(examples, question)))
 ## What is in the repo, and what is not
 
 - `results/*.json` — aggregates (accuracy, ECE, thresholds, reliability table). Committed.
-- `raw/` — per-example outputs. **Git-ignored**: they contain dataset text, and yours may contain your data.
+- `predictions/*.jsonl` — every single prediction of our run (label, answer, top probability, confidence field, latency, tokens), **without the dataset text**. Committed: you can recompute every table, or cut the data your own way, without calling the API.
+- `raw/` — per-example outputs with the input text. **Git-ignored**: they contain dataset text, and yours may contain your data.
 - `data/` — dataset cache. Git-ignored. Datasets are fetched from their public sources (Hugging Face datasets-server, PolyAI's GitHub); check each dataset's licence before reusing the data itself.
 - `.env` — your key. Git-ignored.
 
