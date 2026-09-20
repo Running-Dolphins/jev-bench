@@ -309,6 +309,25 @@ def auroc(scores_pos, scores_neg):
     return wins / (len(scores_pos) * len(scores_neg))
 
 
+def confidence_value(rows, gate=0.9):
+    """What the confidence is worth on a task. `rows` need p_top and correct."""
+    n = len(rows)
+    right = [r["p_top"] for r in rows if r["correct"]]
+    wrong = [r["p_top"] for r in rows if not r["correct"]]
+    passed = [r for r in rows if r["p_top"] >= gate]
+    low = [r for r in rows if r["p_top"] < 0.7]
+    wrong_passed = sum(1 - r["correct"] for r in passed)
+    return {
+        "error_if_you_ignore_confidence": round(len(wrong) / n, 4),
+        "error_among_answers_above_gate": round(wrong_passed / len(passed), 4) if passed else None,
+        "share_of_errors_stopped_by_gate": round(1 - wrong_passed / len(wrong), 4) if wrong else None,
+        "share_of_right_answers_held_back": round(1 - (len(passed) - wrong_passed) / len(right), 4) if right else None,
+        "accuracy_below_0.7": round(statistics.fmean(r["correct"] for r in low), 4) if low else None,
+        "n_below_0.7": len(low),
+        "auroc_confidence_separates_right_from_wrong": round(auroc(right, wrong), 4) if right and wrong else None,
+    }
+
+
 def summarize(name, rows, meta=None):
     n = len(rows)
     e, table = ece([(r["p_top"], r["correct"]) for r in rows])
@@ -335,6 +354,7 @@ def summarize(name, rows, meta=None):
             "errors_let_through": sum(1 - r["correct"] for r in above)}
     if all(r.get("confidence") is not None for r in rows):
         out["ece_confidence_field"] = round(ece([(r["confidence"], r["correct"]) for r in rows])[0], 4)
+    out["confidence_value"] = confidence_value(rows)
     if meta:
         out.update(meta)
     return out
@@ -631,6 +651,18 @@ def report():
         t = r["thresholds"]["0.9"]
         L.append(f"| `{r['name']}` | {r.get('kind', '')} | {r['n']} | {pct(r['accuracy'])} | {r['ece']:.3f} | {pct(t['coverage'])} | "
                  f"**{pct(t['accuracy'])}** | {r['latency_median_s']:.2f} s | {r['usd_per_1000_decisions']:.4f} |")
+    L += ["", "## Can you just ignore the confidence?", "",
+          "Take the top answer every time and you get the first column. Put a gate at 0.9 (answers below it go to a person) "
+          "and you get the second. The gate is not free: the last column is the share of answers that were right and got "
+          "held back anyway.", "", "![Error rate as you automate more of the answers](figures/ignore-confidence.png)", "",
+          "| Task | Wrong if you ignore it | Wrong above 0.9 | Errors the gate stops | Right answers held back | Right when confidence < 0.7 | AUROC |",
+          "|---|---|---|---|---|---|---|"]
+    for r in sorted(tasks, key=lambda r: -(r["confidence_value"]["error_if_you_ignore_confidence"])):
+        c = r["confidence_value"]
+        L.append(f"| `{r['name']}` | {pct(c['error_if_you_ignore_confidence'])} | {pct(c['error_among_answers_above_gate'])} | "
+                 f"{pct(c['share_of_errors_stopped_by_gate'])} | {pct(c['share_of_right_answers_held_back'])} | "
+                 f"{pct(c['accuracy_below_0.7'])} (n={c['n_below_0.7']}) | {c['auroc_confidence_separates_right_from_wrong']:.2f} |")
+    L += ["", "AUROC: the chance that a right answer carries a higher confidence than a wrong one. 0.5 means the number is noise, 1.0 means it sorts them perfectly.", ""]
     L += ["", "## Reliability: stated confidence vs actual accuracy", "", "![Reliability diagram](figures/reliability.png)", "",
           "Each cell: how often Jev was right among the answers whose top probability fell in that band (n in brackets). "
           "A calibrated model shows ~0.55 under 0.5-0.6 and ~0.95 under 0.9-1.0.", "",

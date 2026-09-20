@@ -95,5 +95,14 @@
  "usd_per_1000_decisions": 0.0156,
  "ece_confidence_field": 0.0699,
  "kind": "score · 3 levels",
- "description": "Sentiment of Italian tweets (CardiffNLP multilingual)"
+ "description": "Sentiment of Italian tweets (CardiffNLP multilingual)",
+ "confidence_value": {
+  "error_if_you_ignore_confidence": 0.176,
+  "error_among_answers_above_gate": 0.0598,
+  "share_of_errors_stopped_by_gate": 0.7955,
+  "share_of_right_answers_held_back": 0.3131,
+  "accuracy_below_0.7": 0.5556,
+  "n_below_0.7": 81,
+  "auroc_confidence_separates_right_from_wrong": 0.8072
+ }
 }

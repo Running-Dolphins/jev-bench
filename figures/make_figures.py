@@ -158,7 +158,57 @@ def fig_missing():
                  "Jev always picks one. Mostly its confidence drops. Not always.", b)
 
 
+def fig_ignore():
+    """Risk-coverage: automate the most confident answers first; how wrong are you as you automate more?"""
+    pred = HERE.parent / "predictions"
+    x0, x1, top, bot = 150, 1080, 215, 740
+    px = lambda v: x0 + (v - 0.10) / 0.90 * (x1 - x0)
+    py = lambda v: bot - v / 0.30 * (bot - top)
+    b = []
+    for v in (0, 0.10, 0.20, 0.30):
+        b.append(f'<line x1="{x0}" x2="{x1}" y1="{py(v):.1f}" y2="{py(v):.1f}" stroke="{GRID}"/>')
+        b.append(t(x0 - 16, py(v) + 7, f"{v:.0%}", 20, MUTED, "end"))
+    for v in (0.10, 0.25, 0.5, 0.75, 1.0):
+        b.append(t(px(v), bot + 36, f"{v:.0%}", 20, MUTED, "middle"))
+    b.append(t((x0 + x1) / 2, bot + 78, "share of answers you let through without a person, most confident first", 21, INK2, "middle"))
+    b.append(t(x0 - 96, top - 28, "wrong answers among them", 21, INK2))
+    b.append(t(px(1.0), top - 28, "100% = ignore the confidence", 19, INK2, "middle"))
+    b.append(f'<line x1="{px(1):.1f}" x2="{px(1):.1f}" y1="{top - 14}" y2="{bot}" stroke="{AXIS}" stroke-width="2"/>')
+    focus = ["sms-spam", "duplicates", "banking77", "yelp-stars"]
+    curves = {}
+    for f in sorted(pred.glob("*.jsonl")):
+        if f.stem.startswith("x-"):
+            continue
+        rows = sorted((json.loads(l) for l in f.read_text().splitlines()), key=lambda r: -r["p_top"])
+        pts, wrong, gate = [], 0, None
+        for i, r in enumerate(rows, 1):
+            wrong += 1 - r["correct"]
+            if i >= len(rows) // 10:
+                pts.append((i / len(rows), wrong / i))
+            if gate is None and r["p_top"] < 0.9:
+                gate = ((i - 1) / len(rows), (wrong - (1 - r["correct"])) / max(1, i - 1))
+        curves[f.stem] = (pts, gate)
+    def line(name, color, width, opacity=1.0):
+        pts = curves[name][0]
+        return (f'<polyline fill="none" stroke="{color}" stroke-width="{width}" stroke-linejoin="round" opacity="{opacity}" points="'
+                + " ".join(f"{px(a):.1f},{py(min(v, 0.30)):.1f}" for a, v in pts) + '"/>')
+    b += [line(n, GRID, 2) for n in curves if n not in focus]
+    for i, n in enumerate(focus):
+        pts, gate = curves[n]
+        b.append(line(n, SERIES[i], 3))
+        b.append(f'<circle cx="{px(gate[0]):.1f}" cy="{py(gate[1]):.1f}" r="8" fill="{SURFACE}" stroke="{SERIES[i]}" stroke-width="3"/>')
+        end = pts[-1][1]
+        b.append(f'<circle cx="{px(1):.1f}" cy="{py(end):.1f}" r="7" fill="{SERIES[i]}" stroke="{SURFACE}" stroke-width="2"/>')
+        b.append(t(px(1) + 22, py(end) + 7, f"{end:.1%}", 22, INK, weight=700))
+        b.append(t(px(1) + 100, py(end) + 7, NAMES[n], 20, INK2))
+    b.append(f'<circle cx="{x1 + 110}" cy="{bot + 71}" r="8" fill="{SURFACE}" stroke="{INK2}" stroke-width="3"/>')
+    b.append(t(x1 + 130, bot + 78, "= where a gate at 0.9 stops", 20, INK2))
+    b.append(t(x1 + 130, bot + 108, "grey lines: the other 8 tasks", 20, MUTED))
+    return frame("Can you just ignore the confidence?",
+                 "Sort the answers by confidence and let through more and more of them. The further right, the more errors get in.", b)
+
+
 if __name__ == "__main__":
-    for name, fn in (("threshold", fig_threshold), ("reliability", fig_reliability), ("options", fig_options), ("missing-answer", fig_missing)):
+    for name, fn in (("ignore-confidence", fig_ignore), ("threshold", fig_threshold), ("reliability", fig_reliability), ("options", fig_options), ("missing-answer", fig_missing)):
         write(name, fn())
         print("wrote", name)

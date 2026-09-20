@@ -87,5 +87,14 @@
  "input_tokens": 162700,
  "usd_per_1000_decisions": 0.0137,
  "kind": "noul",
- "description": "Are these two requests duplicates? (Quora Question Pairs, EN)"
+ "description": "Are these two requests duplicates? (Quora Question Pairs, EN)",
+ "confidence_value": {
+  "error_if_you_ignore_confidence": 0.166,
+  "error_among_answers_above_gate": 0.011,
+  "share_of_errors_stopped_by_gate": 0.9639,
+  "share_of_right_answers_held_back": 0.3549,
+  "accuracy_below_0.7": 0.5455,
+  "n_below_0.7": 88,
+  "auroc_confidence_separates_right_from_wrong": 0.8555
+ }
 }

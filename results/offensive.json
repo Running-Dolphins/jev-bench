@@ -87,5 +87,14 @@
  "input_tokens": 162754,
  "usd_per_1000_decisions": 0.0137,
  "kind": "noul",
- "description": "Moderation: is this post offensive? (TweetEval, EN)"
+ "description": "Moderation: is this post offensive? (TweetEval, EN)",
+ "confidence_value": {
+  "error_if_you_ignore_confidence": 0.234,
+  "error_among_answers_above_gate": 0.0506,
+  "share_of_errors_stopped_by_gate": 0.8974,
+  "share_of_right_answers_held_back": 0.4125,
+  "accuracy_below_0.7": 0.4587,
+  "n_below_0.7": 109,
+  "auroc_confidence_separates_right_from_wrong": 0.8189
+ }
 }

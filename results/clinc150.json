@@ -109,5 +109,14 @@
  "usd_per_1000_decisions": 0.1045,
  "ece_confidence_field": 0.0349,
  "kind": "choice · 150 options",
- "description": "Intent routing with 150 in-scope intents (CLINC150, EN)"
+ "description": "Intent routing with 150 in-scope intents (CLINC150, EN)",
+ "confidence_value": {
+  "error_if_you_ignore_confidence": 0.086,
+  "error_among_answers_above_gate": 0.0268,
+  "share_of_errors_stopped_by_gate": 0.7442,
+  "share_of_right_answers_held_back": 0.1247,
+  "accuracy_below_0.7": 0.4103,
+  "n_below_0.7": 39,
+  "auroc_confidence_separates_right_from_wrong": 0.8729
+ }
 }

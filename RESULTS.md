@@ -23,6 +23,30 @@ Sorted by accuracy above the 0.9 line.
 | `ledgar` | choice · 100 options | 500 | 74.0% | 0.138 | 66.0% | **86.7%** | 0.89 s | 0.0845 |
 | `yelp-stars` | score · 5 levels | 500 | 70.4% | 0.147 | 51.2% | **81.6%** | 0.89 s | 0.0220 |
 
+## Can you just ignore the confidence?
+
+Take the top answer every time and you get the first column. Put a gate at 0.9 (answers below it go to a person) and you get the second. The gate is not free: the last column is the share of answers that were right and got held back anyway.
+
+![Error rate as you automate more of the answers](figures/ignore-confidence.png)
+
+| Task | Wrong if you ignore it | Wrong above 0.9 | Errors the gate stops | Right answers held back | Right when confidence < 0.7 | AUROC |
+|---|---|---|---|---|---|---|
+| `yelp-stars` | 29.6% | 18.4% | 68.2% | 40.6% | 48.5% (n=99) | 0.72 |
+| `ledgar` | 26.0% | 13.3% | 66.1% | 22.7% | 41.3% (n=92) | 0.79 |
+| `offensive` | 23.4% | 5.1% | 89.7% | 41.2% | 45.9% (n=109) | 0.82 |
+| `banking77` | 21.8% | 10.1% | 68.8% | 22.2% | 39.5% (n=86) | 0.81 |
+| `sentiment-it` | 17.6% | 6.0% | 79.5% | 31.3% | 55.6% (n=81) | 0.81 |
+| `duplicates` | 16.6% | 1.1% | 96.4% | 35.5% | 54.5% (n=88) | 0.86 |
+| `massive-it` | 16.4% | 4.9% | 79.3% | 20.6% | 43.1% (n=72) | 0.84 |
+| `massive-en` | 15.6% | 4.9% | 76.9% | 16.6% | 36.9% (n=65) | 0.85 |
+| `ag-news` | 9.0% | 5.2% | 48.9% | 7.2% | 45.0% (n=20) | 0.84 |
+| `clinc150` | 8.6% | 2.7% | 74.4% | 12.5% | 41.0% (n=39) | 0.87 |
+| `doc-yesno` | 7.0% | 3.5% | 62.9% | 23.7% | 72.9% (n=48) | 0.79 |
+| `sms-spam` | 1.4% | 0.2% | 85.7% | 18.5% | 77.8% (n=18) | 0.93 |
+
+AUROC: the chance that a right answer carries a higher confidence than a wrong one. 0.5 means the number is noise, 1.0 means it sorts them perfectly.
+
+
 ## Reliability: stated confidence vs actual accuracy
 
 ![Reliability diagram](figures/reliability.png)

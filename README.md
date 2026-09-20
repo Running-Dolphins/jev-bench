@@ -22,6 +22,16 @@ banking77 · reliability — stated confidence vs actual accuracy
 
 Read it as: "of the answers where Jev claimed 80-90%, 73% were right". On a different task (`sms-spam`) the same band is right 99% of the time: the model is *under*-confident there. Same model, same band, opposite behaviour. That gap, per band, is what tells you where to put your threshold.
 
+## How to read the charts
+
+Every Jev answer comes with a number between 0 and 1. Two questions decide whether that number is useful, and each chart answers one of them.
+
+**1. Does the number mean what it says?** (*calibration* — the reliability chart.) Take all the answers where Jev said "about 80% sure" and count how many were right. If 80% were, the number is honest. On the chart, x is what Jev claimed and y is what actually happened; the grey diagonal is a model whose claims are exactly true. A line **below** the diagonal is over-confident (claims 0.85, right 70% of the time). **Above** it is under-confident.
+
+**2. Does the number separate right answers from wrong ones?** (*ranking* — the "ignore the confidence" chart.) Sort the answers from most to least confident and let them through one by one. If the confidence is informative, the first ones are nearly all right and the errors pile up at the end, so the curve stays flat and then climbs. If the confidence were noise, the curve would be a flat line at the task's overall error rate: holding back the "unsure" answers would buy you nothing. The right edge of the chart (100%) is what you get if you ignore the confidence and take the top answer every time.
+
+The two are independent. A number can be badly calibrated and still rank well: then you can't read 0.8 as "80%", but you can still find, on your own data, the cut-off above which errors are rare. That is the practical use.
+
 ## What we saw (one run, 20 September 2026)
 
 ![How often Jev was right when it said 0.9 or more, on 12 tasks](figures/threshold.png)
@@ -29,6 +39,11 @@ Read it as: "of the answers where Jev claimed 80-90%, 73% were right". On a diff
 Observations, not laws. Each one is a reason to run the table on your own data.
 
 - **"0.9" is not one number.** Above 0.9 Jev was right 99.8% of the time on spam, 98.9% on duplicates, 95-97% on intent routing, 86.7% on contract clauses and 81.6% on exact star ratings. The threshold has to be set per task.
+- **You cannot ignore the confidence, except where you barely need it.** Taking the top answer every time, the error rate ran from 1.4% (spam) to 29.6% (exact stars). A gate at 0.9 cut it to 0.2%-18.4%: on `duplicates` from 16.6% to 1.1%, stopping 96% of the errors. When Jev was *not* confident (below 0.7) it was right 37-56% of the time on ten tasks out of twelve: low confidence is a real warning, not modesty. The exceptions were `doc-yesno` (73%) and `sms-spam` (78%).
+- **The gate has a price, and it is task-specific.** At 0.9 it also held back 7% to 41% of the answers that were right. On `duplicates` you pay 35% of the right answers to stop 96% of the wrong ones. On `yelp-stars` you pay 41% and still let 18% errors through: there the task is too hard for the confidence to rescue it.
+
+![Error rate as you let through more of the answers, most confident first](figures/ignore-confidence.png)
+
 - **Below 0.9 the number meant different things on different tasks.** Between 0.5 and 0.7, intent routing claimed ~0.6 and was right 32-56% of the time; so were `duplicates` (46-62%) and `offensive` (43-52%). In the same band `doc-yesno` was right 70-78% and `sms-spam` 71-85%: *under*-confident. It does not split cleanly by question type. It is a property of the task, which is the argument for measuring yours.
 ![Reliability diagram: stated confidence vs actual accuracy, by question type](figures/reliability.png)
 

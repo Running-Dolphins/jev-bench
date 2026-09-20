@@ -80,5 +80,14 @@
  "input_tokens": 166153,
  "usd_per_1000_decisions": 0.014,
  "kind": "noul",
- "description": "Is this message spam? (UCI SMS Spam Collection, EN)"
+ "description": "Is this message spam? (UCI SMS Spam Collection, EN)",
+ "confidence_value": {
+  "error_if_you_ignore_confidence": 0.014,
+  "error_among_answers_above_gate": 0.0025,
+  "share_of_errors_stopped_by_gate": 0.8571,
+  "share_of_right_answers_held_back": 0.1846,
+  "accuracy_below_0.7": 0.7778,
+  "n_below_0.7": 18,
+  "auroc_confidence_separates_right_from_wrong": 0.9344
+ }
 }

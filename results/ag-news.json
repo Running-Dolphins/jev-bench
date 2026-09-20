@@ -81,5 +81,14 @@
  "usd_per_1000_decisions": 0.0175,
  "ece_confidence_field": 0.0484,
  "kind": "choice · 4 options",
- "description": "Route a news item to a desk (AG News, EN)"
+ "description": "Route a news item to a desk (AG News, EN)",
+ "confidence_value": {
+  "error_if_you_ignore_confidence": 0.09,
+  "error_among_answers_above_gate": 0.0517,
+  "share_of_errors_stopped_by_gate": 0.4889,
+  "share_of_right_answers_held_back": 0.0725,
+  "accuracy_below_0.7": 0.45,
+  "n_below_0.7": 20,
+  "auroc_confidence_separates_right_from_wrong": 0.8401
+ }
 }

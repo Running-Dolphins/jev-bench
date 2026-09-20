@@ -102,5 +102,14 @@
  "usd_per_1000_decisions": 0.0845,
  "ece_confidence_field": 0.1305,
  "kind": "choice · 100 options",
- "description": "Contract clause type, from SEC filings (LEDGAR / LexGLUE, EN)"
+ "description": "Contract clause type, from SEC filings (LEDGAR / LexGLUE, EN)",
+ "confidence_value": {
+  "error_if_you_ignore_confidence": 0.26,
+  "error_among_answers_above_gate": 0.1333,
+  "share_of_errors_stopped_by_gate": 0.6615,
+  "share_of_right_answers_held_back": 0.227,
+  "accuracy_below_0.7": 0.413,
+  "n_below_0.7": 92,
+  "auroc_confidence_separates_right_from_wrong": 0.7885
+ }
 }

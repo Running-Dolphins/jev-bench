@@ -109,5 +109,14 @@
  "usd_per_1000_decisions": 0.0525,
  "ece_confidence_field": 0.0631,
  "kind": "choice · 60 options",
- "description": "Same utterances translated to Italian (Amazon MASSIVE)"
+ "description": "Same utterances translated to Italian (Amazon MASSIVE)",
+ "confidence_value": {
+  "error_if_you_ignore_confidence": 0.164,
+  "error_among_answers_above_gate": 0.0487,
+  "share_of_errors_stopped_by_gate": 0.7927,
+  "share_of_right_answers_held_back": 0.2057,
+  "accuracy_below_0.7": 0.4306,
+  "n_below_0.7": 72,
+  "auroc_confidence_separates_right_from_wrong": 0.836
+ }
 }
