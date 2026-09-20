@@ -7,7 +7,7 @@ Standard library only. Needs TYPESAFE_API_KEY in the environment or in a local `
     python3 jevbench.py run sms-spam --n 500
     python3 jevbench.py run all --n 300
     python3 jevbench.py experiment oos            # see `list` for all experiments
-    python3 jevbench.py report                    # rebuilds RESULTS.md and reliability.svg
+    python3 jevbench.py report                    # rebuilds RESULTS.md from results/*.json
     python3 jevbench.py run banking77 --dry-run   # no API calls, fake answers: tests the code
 
 Per-example outputs go to raw/ (git-ignored: they contain dataset text). Aggregates go to
@@ -559,6 +559,7 @@ def experiment_tables(res):
         r = res["x-oos"]; a, b = r["A_no_exit_option"], r["B_with_exit_option"]
         L += [f"### `oos` — {EXPERIMENTS['oos'][1]}", "",
               f"CLINC150, {r['n_in_scope']} in-scope and {r['n_out_of_scope']} out-of-scope requests.", "",
+              "![What happens when the right answer is missing](figures/missing-answer.png)", "",
               "| Without a \"none of these\" option | |", "|---|---|",
               f"| Median top probability, in-scope requests | {a['in_scope_median_top_probability']:.2f} |",
               f"| Median top probability, out-of-scope requests | {a['oos_median_top_probability']:.2f} |",
@@ -583,6 +584,7 @@ def experiment_tables(res):
         r = res["x-options"]
         L += [f"### `options` — {EXPERIMENTS['options'][1]}", "",
               f"MASSIVE (EN), the same {r['n']} requests; the right option plus random distractors.", "",
+              "![Accuracy and coverage with 5, 20 and 59 options](figures/options.png)", "",
               "| Options | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 | $ / 1,000 |", "|---|---|---|---|---|---|"]
         for k, v in r["by_number_of_options"].items():
             L.append(f"| {k} | {pct(v['accuracy'])} | {v['ece']:.3f} | {pct(v['at_0.9']['coverage'])} | "
@@ -615,51 +617,13 @@ def experiment_tables(res):
     return L
 
 
-def reliability_svg(tasks):
-    """Reliability diagram, one panel per question type. Pure SVG, no dependencies."""
-    groups = [("yes / no (noul)", "noul"), ("pick one of N (choice)", "choice"), ("ordered scale (score)", "score")]
-    colors = ["#2563eb", "#dc2626", "#059669", "#d97706", "#7c3aed", "#0891b2"]
-    S, pad, gap = 230, 44, 36
-    rows_legend = max(sum(1 for t in tasks if t.get("kind", "").startswith(k)) for _, k in groups)
-    W, H = pad + len(groups) * (S + gap), S + 80 + rows_legend * 14
-    o = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" font-family="system-ui,sans-serif" font-size="11">',
-         f'<rect width="{W}" height="{H}" fill="white"/>']
-    for g, (title, kind) in enumerate(groups):
-        x0, y0 = pad + g * (S + gap), 30
-        px = lambda v: x0 + (v - 0.5) / 0.5 * S
-        py = lambda v: y0 + S - (v - 0.25) / 0.75 * S
-        o.append(f'<text x="{x0}" y="18" font-size="13" font-weight="600" fill="#111">{title}</text>')
-        o.append(f'<rect x="{x0}" y="{y0}" width="{S}" height="{S}" fill="none" stroke="#d4d4d8"/>')
-        for v in (0.5, 0.75):
-            o.append(f'<line x1="{x0}" x2="{x0 + S}" y1="{py(v)}" y2="{py(v)}" stroke="#f0f0f2"/>')
-        for v in (0.25, 0.5, 0.75, 1):
-            o.append(f'<text x="{x0 - 6}" y="{py(v) + 4}" text-anchor="end" fill="#71717a">{v:.2f}</text>')
-        for v in (0.5, 0.75, 1.0):
-            o.append(f'<text x="{px(v)}" y="{y0 + S + 14}" text-anchor="middle" fill="#71717a">{v:.2f}</text>')
-        o.append(f'<line x1="{px(0.5)}" y1="{py(0.5)}" x2="{px(1)}" y2="{py(1)}" stroke="#a1a1aa" stroke-dasharray="4 3"/>')
-        mine = [t for t in tasks if t.get("kind", "").startswith(kind)]
-        for i, t in enumerate(mine):
-            pts = [(b["stated"], b["actual"]) for b in t["reliability"] if b["lo"] >= 0.5 and b["n"] >= 10]
-            c = colors[i % len(colors)]
-            o.append(f'<polyline fill="none" stroke="{c}" stroke-width="1.8" points="' +
-                     " ".join(f"{px(a):.1f},{py(b):.1f}" for a, b in pts) + '"/>')
-            o += [f'<circle cx="{px(a):.1f}" cy="{py(b):.1f}" r="2.6" fill="{c}"/>' for a, b in pts]
-            ly = y0 + S + 32 + i * 14
-            o.append(f'<rect x="{x0}" y="{ly - 8}" width="9" height="9" fill="{c}"/>'
-                     f'<text x="{x0 + 14}" y="{ly}" fill="#27272a">{t["name"]}</text>')
-    o.append(f'<text x="{pad}" y="{H - 4}" fill="#71717a">x: confidence Jev stated · y: how often it was right · '
-             f'dashed: perfectly calibrated · below the line = over-confident · bands with n ≥ 10</text>')
-    o.append("</svg>")
-    (ROOT / "reliability.svg").write_text("\n".join(o))
-
-
 def report():
     res = {p.stem: json.loads(p.read_text()) for p in sorted((ROOT / "results").glob("*.json"))}
     tasks = sorted((r for k, r in res.items() if not k.startswith("x-")), key=lambda r: -(r["thresholds"]["0.9"]["accuracy"] or 0))
     L = ["# Results", "",
          f"Model `{tasks[0]['model']}`, run on {tasks[0]['date']}. One run per task, random sample with a fixed seed. "
          "Measurements on *these* datasets with *these* prompts: examples of what you can measure, not properties of the model.", "",
-         "![Reliability diagram](reliability.svg)", "",
+         "![How often Jev was right above 0.9, per task](figures/threshold.png)", "",
          "## Tasks", "", "Sorted by accuracy above the 0.9 line.", "",
          "| Task | Type | n | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 | Median latency | $ / 1,000 |",
          "|---|---|---|---|---|---|---|---|---|"]
@@ -667,7 +631,7 @@ def report():
         t = r["thresholds"]["0.9"]
         L.append(f"| `{r['name']}` | {r.get('kind', '')} | {r['n']} | {pct(r['accuracy'])} | {r['ece']:.3f} | {pct(t['coverage'])} | "
                  f"**{pct(t['accuracy'])}** | {r['latency_median_s']:.2f} s | {r['usd_per_1000_decisions']:.4f} |")
-    L += ["", "## Reliability: stated confidence vs actual accuracy", "",
+    L += ["", "## Reliability: stated confidence vs actual accuracy", "", "![Reliability diagram](figures/reliability.png)", "",
           "Each cell: how often Jev was right among the answers whose top probability fell in that band (n in brackets). "
           "A calibrated model shows ~0.55 under 0.5-0.6 and ~0.95 under 0.9-1.0.", "",
           "| Task | " + " | ".join(f"{b / 10:.1f}-{(b + 1) / 10:.1f}" for b in range(5, 10)) + " |", "|---|" + "---|" * 5]
@@ -676,8 +640,7 @@ def report():
         L.append(f"| `{r['name']}` | " + " | ".join(cells.get(round(b / 10, 1), "—") for b in range(5, 10)) + " |")
     L += ["", "## Experiments", ""] + experiment_tables(res)
     (ROOT / "RESULTS.md").write_text("\n".join(L) + "\n")
-    reliability_svg(tasks)
-    print(f"RESULTS.md and reliability.svg written ({len(tasks)} tasks)")
+    print(f"RESULTS.md written ({len(tasks)} tasks) — figures: python3 figures/make_figures.py")
 
 
 # ----------------------------------------------------------------------------- cli

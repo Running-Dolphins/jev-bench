@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect width="1600" height="900" fill="#fcfcfb"/>
+<text x="70.0" y="92.0" font-size="44" fill="#0b0b0b" text-anchor="start" font-weight="700">What if the right answer isn't among the options?</text>
+<text x="70.0" y="138.0" font-size="25" fill="#52514e" text-anchor="start" font-weight="400">Jev always picks one. Mostly its confidence drops. Not always.</text>
+<rect x="70" y="230" width="460" height="400" rx="14" fill="#ffffff" stroke="#e1e0d9"/>
+<text x="110.0" y="400.0" font-size="130" fill="#0b0b0b" text-anchor="start" font-weight="700">0.54</text>
+<text x="110.0" y="480.0" font-size="23" fill="#52514e" text-anchor="start" font-weight="400">median confidence when the right</text>
+<text x="110.0" y="514.0" font-size="23" fill="#52514e" text-anchor="start" font-weight="400">answer is missing (1.00 when it is there)</text>
+<rect x="570" y="230" width="460" height="400" rx="14" fill="#ffffff" stroke="#e1e0d9"/>
+<text x="610.0" y="400.0" font-size="130" fill="#0b0b0b" text-anchor="start" font-weight="700">15%</text>
+<text x="610.0" y="480.0" font-size="23" fill="#52514e" text-anchor="start" font-weight="400">of those impossible questions still</text>
+<text x="610.0" y="514.0" font-size="23" fill="#52514e" text-anchor="start" font-weight="400">got an answer at 0.9 or more</text>
+<rect x="1070" y="230" width="460" height="400" rx="14" fill="#ffffff" stroke="#e1e0d9"/>
+<text x="1110.0" y="400.0" font-size="130" fill="#0b0b0b" text-anchor="start" font-weight="700">73%</text>
+<text x="1110.0" y="480.0" font-size="23" fill="#52514e" text-anchor="start" font-weight="400">caught once “none of these” is</text>
+<text x="1110.0" y="514.0" font-size="23" fill="#52514e" text-anchor="start" font-weight="400">written in as an option</text>
+<text x="70.0" y="710.0" font-size="22" fill="#898781" text-anchor="start" font-weight="400">CLINC150: 300 requests with a right answer among 150 options, 150 without one. Adding the exit cost 0.3% of accuracy on the rest.</text>
+<text x="70.0" y="866.0" font-size="19" fill="#898781" text-anchor="start" font-weight="400">github.com/Running-Dolphins/jev-bench · one run, 20 Sept 2026 · public datasets</text>
+</svg>

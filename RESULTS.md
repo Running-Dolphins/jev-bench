@@ -2,7 +2,7 @@
 
 Model `jev-latest`, run on 2026-09-20. One run per task, random sample with a fixed seed. Measurements on *these* datasets with *these* prompts: examples of what you can measure, not properties of the model.
 
-![Reliability diagram](reliability.svg)
+![How often Jev was right above 0.9, per task](figures/threshold.png)
 
 ## Tasks
 
@@ -24,6 +24,8 @@ Sorted by accuracy above the 0.9 line.
 | `yelp-stars` | score · 5 levels | 500 | 70.4% | 0.147 | 51.2% | **81.6%** | 0.89 s | 0.0220 |
 
 ## Reliability: stated confidence vs actual accuracy
+
+![Reliability diagram](figures/reliability.png)
 
 Each cell: how often Jev was right among the answers whose top probability fell in that band (n in brackets). A calibrated model shows ~0.55 under 0.5-0.6 and ~0.95 under 0.9-1.0.
 
@@ -47,6 +49,8 @@ Each cell: how often Jev was right among the answers whose top probability fell 
 ### `oos` — The right answer is not among the options: does the confidence tell you?
 
 CLINC150, 300 in-scope and 150 out-of-scope requests.
+
+![What happens when the right answer is missing](figures/missing-answer.png)
 
 | Without a "none of these" option | |
 |---|---|
@@ -77,6 +81,8 @@ Both right: 251 · only English right: 10 · only Italian right: 10.
 ### `options` — Same examples with 5, 20 and 59 options
 
 MASSIVE (EN), the same 300 requests; the right option plus random distractors.
+
+![Accuracy and coverage with 5, 20 and 59 options](figures/options.png)
 
 | Options | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 | $ / 1,000 |
 |---|---|---|---|---|---|

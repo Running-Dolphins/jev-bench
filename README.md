@@ -24,15 +24,21 @@ Read it as: "of the answers where Jev claimed 80-90%, 73% were right". On a diff
 
 ## What we saw (one run, 20 September 2026)
 
-![Reliability diagram: stated confidence vs actual accuracy, by question type](reliability.svg)
+![How often Jev was right when it said 0.9 or more, on 12 tasks](figures/threshold.png)
 
 Observations, not laws. Each one is a reason to run the table on your own data.
 
 - **"0.9" is not one number.** Above 0.9 Jev was right 99.8% of the time on spam, 98.9% on duplicates, 95-97% on intent routing, 86.7% on contract clauses and 81.6% on exact star ratings. The threshold has to be set per task.
 - **Below 0.9 the number meant different things on different tasks.** Between 0.5 and 0.7, intent routing claimed ~0.6 and was right 32-56% of the time; so were `duplicates` (46-62%) and `offensive` (43-52%). In the same band `doc-yesno` was right 70-78% and `sms-spam` 71-85%: *under*-confident. It does not split cleanly by question type. It is a property of the task, which is the argument for measuring yours.
+![Reliability diagram: stated confidence vs actual accuracy, by question type](figures/reliability.png)
+
 - **More options cost coverage, not safety.** Same examples with 5 / 20 / 59 options: accuracy 97.7% → 92.3% → 86.7%, but accuracy above 0.9 stayed at 99.6% → 98.1% → 97.4%. What dropped is the share of answers that clear the bar (92% → 86% → 76%).
+![Same requests with 5, 20 and 59 options](figures/options.png)
+
 - **Italian cost nothing here.** Same 300 requests in English and Italian: 87.0% and 87.0%, ten errors unique to each side, 97.8% vs 98.1% above 0.9.
 - **When the right answer is missing, the confidence mostly says so, but not always.** Out-of-scope requests got a median top probability of 0.54 against 1.00 for in-scope ones (AUROC 0.91), yet 15% of them still came back at 0.9 or more. Adding an explicit "none of these" option caught 73% of them and cost 0.3 points of in-scope accuracy.
+![What happens when the right answer is not among the options](figures/missing-answer.png)
+
 - **Instability lives where confidence is low.** Shuffling the order of 77 options changed the answer 8.7% of the time, never among answers that stayed above 0.9. The same request sent five times changed answer 3% of the time and crossed the 0.9 line 4.7% of the time: a gate at 0.9 is not perfectly deterministic near the line.
 - **On an ordered scale, wrong means slightly wrong.** Star ratings: 70.4% exact, 99.6% within one star, and no error of two stars or more above 0.9.
 - **One line of description per option did not help** on a 4-option task (93.3% bare labels, 92.7% described). A null result on one easy task, nothing more.
@@ -97,6 +103,7 @@ show(summarize("my-inbox", run_examples(examples, question)))
 
 ## What is in the repo, and what is not
 
+- `figures/` — the charts on this page, drawn from `results/` by `figures/make_figures.py` (standard library; PNG export needs `rsvg-convert`).
 - `results/*.json` — aggregates (accuracy, ECE, thresholds, reliability table). Committed.
 - `predictions/*.jsonl` — every single prediction of our run (label, answer, top probability, confidence field, latency, tokens), **without the dataset text**. Committed: you can recompute every table, or cut the data your own way, without calling the API.
 - `raw/` — per-example outputs with the input text. **Git-ignored**: they contain dataset text, and yours may contain your data.

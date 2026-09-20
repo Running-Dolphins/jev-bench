@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect width="1600" height="900" fill="#fcfcfb"/>
+<text x="70.0" y="92.0" font-size="44" fill="#0b0b0b" text-anchor="start" font-weight="700">More options cost coverage, not safety</text>
+<text x="70.0" y="138.0" font-size="25" fill="#52514e" text-anchor="start" font-weight="400">The same 300 requests, asked with 5, 20 and 59 options to choose from.</text>
+<line x1="290" x2="1170" y1="730.0" y2="730.0" stroke="#e1e0d9"/>
+<text x="274.0" y="737.0" font-size="20" fill="#898781" text-anchor="end" font-weight="400">70%</text>
+<line x1="290" x2="1170" y1="558.3" y2="558.3" stroke="#e1e0d9"/>
+<text x="274.0" y="565.3" font-size="20" fill="#898781" text-anchor="end" font-weight="400">80%</text>
+<line x1="290" x2="1170" y1="386.7" y2="386.7" stroke="#e1e0d9"/>
+<text x="274.0" y="393.7" font-size="20" fill="#898781" text-anchor="end" font-weight="400">90%</text>
+<line x1="290" x2="1170" y1="215.0" y2="215.0" stroke="#e1e0d9"/>
+<text x="274.0" y="222.0" font-size="20" fill="#898781" text-anchor="end" font-weight="400">100%</text>
+<text x="330.0" y="774.0" font-size="23" fill="#52514e" text-anchor="middle" font-weight="400">5 options</text>
+<text x="730.0" y="774.0" font-size="23" fill="#52514e" text-anchor="middle" font-weight="400">20 options</text>
+<text x="1130.0" y="774.0" font-size="23" fill="#52514e" text-anchor="middle" font-weight="400">59 options</text>
+<polyline fill="none" stroke="#2a78d6" stroke-width="3" stroke-linejoin="round" points="330.0,221.2 730.0,248.3 1130.0,260.3"/>
+<circle cx="330.0" cy="221.2" r="7" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="730.0" cy="248.3" r="7" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1130.0" cy="260.3" r="7" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text x="334.0" y="203.2" font-size="20" fill="#0b0b0b" text-anchor="middle" font-weight="700">99.6%</text>
+<text x="1150.0" y="267.3" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">97.4%</text>
+<text x="1230.0" y="267.3" font-size="20" fill="#52514e" text-anchor="start" font-weight="400">Right, among answers at 0.9 or more</text>
+<polyline fill="none" stroke="#eb6834" stroke-width="3" stroke-linejoin="round" points="330.0,255.0 730.0,346.7 1130.0,443.8"/>
+<circle cx="330.0" cy="255.0" r="7" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="730.0" cy="346.7" r="7" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1130.0" cy="443.8" r="7" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<text x="334.0" y="289.0" font-size="20" fill="#0b0b0b" text-anchor="middle" font-weight="700">97.7%</text>
+<text x="1150.0" y="450.8" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">86.7%</text>
+<text x="1230.0" y="450.8" font-size="20" fill="#52514e" text-anchor="start" font-weight="400">Right, all answers</text>
+<polyline fill="none" stroke="#1baf7a" stroke-width="3" stroke-linejoin="round" points="330.0,352.3 730.0,455.3 1130.0,632.7"/>
+<circle cx="330.0" cy="352.3" r="7" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="730.0" cy="455.3" r="7" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1130.0" cy="632.7" r="7" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<text x="334.0" y="386.3" font-size="20" fill="#0b0b0b" text-anchor="middle" font-weight="700">92.0%</text>
+<text x="1150.0" y="639.7" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">75.7%</text>
+<text x="1230.0" y="639.7" font-size="20" fill="#52514e" text-anchor="start" font-weight="400">Share of answers that clear 0.9</text>
+<text x="70.0" y="866.0" font-size="19" fill="#898781" text-anchor="start" font-weight="400">github.com/Running-Dolphins/jev-bench · one run, 20 Sept 2026 · public datasets</text>
+</svg>

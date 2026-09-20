@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect width="1600" height="900" fill="#fcfcfb"/>
+<text x="70.0" y="92.0" font-size="44" fill="#0b0b0b" text-anchor="start" font-weight="700">“90% sure” is not one number</text>
+<text x="70.0" y="138.0" font-size="25" fill="#52514e" text-anchor="start" font-weight="400">How often Jev was right when it said 0.9 or more. 12 tasks, 500 examples each, same model, same threshold.</text>
+<line x1="600.0" x2="600.0" y1="183" y2="785" stroke="#e1e0d9"/>
+<text x="600.0" y="815.0" font-size="19" fill="#898781" text-anchor="middle" font-weight="400">75%</text>
+<line x1="716.0" x2="716.0" y1="183" y2="785" stroke="#e1e0d9"/>
+<text x="716.0" y="815.0" font-size="19" fill="#898781" text-anchor="middle" font-weight="400">80%</text>
+<line x1="832.0" x2="832.0" y1="183" y2="785" stroke="#e1e0d9"/>
+<text x="832.0" y="815.0" font-size="19" fill="#898781" text-anchor="middle" font-weight="400">85%</text>
+<line x1="948.0" x2="948.0" y1="183" y2="785" stroke="#e1e0d9"/>
+<text x="948.0" y="815.0" font-size="19" fill="#898781" text-anchor="middle" font-weight="400">90%</text>
+<line x1="1064.0" x2="1064.0" y1="183" y2="785" stroke="#e1e0d9"/>
+<text x="1064.0" y="815.0" font-size="19" fill="#898781" text-anchor="middle" font-weight="400">95%</text>
+<line x1="1180.0" x2="1180.0" y1="183" y2="785" stroke="#e1e0d9"/>
+<text x="1180.0" y="815.0" font-size="19" fill="#898781" text-anchor="middle" font-weight="400">100%</text>
+<line x1="948.0" x2="948.0" y1="183" y2="785" stroke="#52514e" stroke-width="2"/>
+<text x="940.0" y="175.0" font-size="19" fill="#52514e" text-anchor="end" font-weight="400">what “0.9” promises</text>
+<text x="1310.0" y="175.0" font-size="19" fill="#52514e" text-anchor="start" font-weight="400">share of answers at 0.9+</text>
+<text x="570.0" y="212.0" font-size="22" fill="#0b0b0b" text-anchor="end" font-weight="400">Is this message spam?</text>
+<line x1="600.0" x2="1174.2" y1="205" y2="205" stroke="#2a78d6" stroke-width="2" opacity="0.28"/>
+<circle cx="1174.2" cy="205" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text stroke="#fcfcfb" stroke-width="7" paint-order="stroke" x="1192.2" y="212.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">99.8%</text>
+<text x="1310.0" y="212.0" font-size="22" fill="#52514e" text-anchor="start" font-weight="400">81%</text>
+<text x="570.0" y="262.0" font-size="22" fill="#0b0b0b" text-anchor="end" font-weight="400">Are these two requests duplicates?</text>
+<line x1="600.0" x2="1154.5" y1="255" y2="255" stroke="#2a78d6" stroke-width="2" opacity="0.28"/>
+<circle cx="1154.5" cy="255" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text stroke="#fcfcfb" stroke-width="7" paint-order="stroke" x="1172.5" y="262.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">98.9%</text>
+<text x="1310.0" y="262.0" font-size="22" fill="#52514e" text-anchor="start" font-weight="400">54%</text>
+<text x="570.0" y="312.0" font-size="22" fill="#0b0b0b" text-anchor="end" font-weight="400">Route a request · 150 queues</text>
+<line x1="600.0" x2="1117.8" y1="305" y2="305" stroke="#2a78d6" stroke-width="2" opacity="0.28"/>
+<circle cx="1117.8" cy="305" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text stroke="#fcfcfb" stroke-width="7" paint-order="stroke" x="1135.8" y="312.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">97.3%</text>
+<text x="1310.0" y="312.0" font-size="22" fill="#52514e" text-anchor="start" font-weight="400">82%</text>
+<text x="570.0" y="362.0" font-size="22" fill="#0b0b0b" text-anchor="end" font-weight="400">Does the document say yes?</text>
+<line x1="600.0" x2="1098.1" y1="355" y2="355" stroke="#2a78d6" stroke-width="2" opacity="0.28"/>
+<circle cx="1098.1" cy="355" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text stroke="#fcfcfb" stroke-width="7" paint-order="stroke" x="1116.1" y="362.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">96.5%</text>
+<text x="1310.0" y="362.0" font-size="22" fill="#52514e" text-anchor="start" font-weight="400">74%</text>
+<text x="570.0" y="412.0" font-size="22" fill="#0b0b0b" text-anchor="end" font-weight="400">Route a request · 59 queues · English</text>
+<line x1="600.0" x2="1067.2" y1="405" y2="405" stroke="#2a78d6" stroke-width="2" opacity="0.28"/>
+<circle cx="1067.2" cy="405" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text stroke="#fcfcfb" stroke-width="7" paint-order="stroke" x="1085.2" y="412.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">95.1%</text>
+<text x="1310.0" y="412.0" font-size="22" fill="#52514e" text-anchor="start" font-weight="400">74%</text>
+<text x="570.0" y="462.0" font-size="22" fill="#0b0b0b" text-anchor="end" font-weight="400">Route a request · 59 queues · Italian</text>
+<line x1="600.0" x2="1067.0" y1="455" y2="455" stroke="#2a78d6" stroke-width="2" opacity="0.28"/>
+<circle cx="1067.0" cy="455" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text stroke="#fcfcfb" stroke-width="7" paint-order="stroke" x="1085.0" y="462.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">95.1%</text>
+<text x="1310.0" y="462.0" font-size="22" fill="#52514e" text-anchor="start" font-weight="400">70%</text>
+<text x="570.0" y="512.0" font-size="22" fill="#0b0b0b" text-anchor="end" font-weight="400">Is this post offensive?</text>
+<line x1="600.0" x2="1062.6" y1="505" y2="505" stroke="#2a78d6" stroke-width="2" opacity="0.28"/>
+<circle cx="1062.6" cy="505" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text stroke="#fcfcfb" stroke-width="7" paint-order="stroke" x="1080.6" y="512.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">94.9%</text>
+<text x="1310.0" y="512.0" font-size="22" fill="#52514e" text-anchor="start" font-weight="400">47%</text>
+<text x="570.0" y="562.0" font-size="22" fill="#0b0b0b" text-anchor="end" font-weight="400">Route a news item · 4 desks</text>
+<line x1="600.0" x2="1060.1" y1="555" y2="555" stroke="#2a78d6" stroke-width="2" opacity="0.28"/>
+<circle cx="1060.1" cy="555" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text stroke="#fcfcfb" stroke-width="7" paint-order="stroke" x="1078.1" y="562.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">94.8%</text>
+<text x="1310.0" y="562.0" font-size="22" fill="#52514e" text-anchor="start" font-weight="400">89%</text>
+<text x="570.0" y="612.0" font-size="22" fill="#0b0b0b" text-anchor="end" font-weight="400">Sentiment of a tweet · Italian</text>
+<line x1="600.0" x2="1041.3" y1="605" y2="605" stroke="#2a78d6" stroke-width="2" opacity="0.28"/>
+<circle cx="1041.3" cy="605" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text stroke="#fcfcfb" stroke-width="7" paint-order="stroke" x="1059.3" y="612.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">94.0%</text>
+<text x="1310.0" y="612.0" font-size="22" fill="#52514e" text-anchor="start" font-weight="400">60%</text>
+<text x="570.0" y="662.0" font-size="22" fill="#0b0b0b" text-anchor="end" font-weight="400">Route a bank customer · 77 queues</text>
+<line x1="600.0" x2="946.6" y1="655" y2="655" stroke="#2a78d6" stroke-width="2" opacity="0.28"/>
+<circle cx="946.6" cy="655" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text stroke="#fcfcfb" stroke-width="7" paint-order="stroke" x="964.6" y="662.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">89.9%</text>
+<text x="1310.0" y="662.0" font-size="22" fill="#52514e" text-anchor="start" font-weight="400">68%</text>
+<text x="570.0" y="712.0" font-size="22" fill="#0b0b0b" text-anchor="end" font-weight="400">Type of contract clause · 100 types</text>
+<line x1="600.0" x2="870.7" y1="705" y2="705" stroke="#2a78d6" stroke-width="2" opacity="0.28"/>
+<circle cx="870.7" cy="705" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text stroke="#fcfcfb" stroke-width="7" paint-order="stroke" x="888.7" y="712.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">86.7%</text>
+<text x="1310.0" y="712.0" font-size="22" fill="#52514e" text-anchor="start" font-weight="400">66%</text>
+<text x="570.0" y="762.0" font-size="22" fill="#0b0b0b" text-anchor="end" font-weight="400">Exact star rating of a review · 1-5</text>
+<line x1="600.0" x2="754.0" y1="755" y2="755" stroke="#2a78d6" stroke-width="2" opacity="0.28"/>
+<circle cx="754.0" cy="755" r="9" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<text stroke="#fcfcfb" stroke-width="7" paint-order="stroke" x="772.0" y="762.0" font-size="22" fill="#0b0b0b" text-anchor="start" font-weight="700">81.6%</text>
+<text x="1310.0" y="762.0" font-size="22" fill="#52514e" text-anchor="start" font-weight="400">51%</text>
+<text x="70.0" y="866.0" font-size="19" fill="#898781" text-anchor="start" font-weight="400">github.com/Running-Dolphins/jev-bench · one run, 20 Sept 2026 · public datasets</text>
+</svg>

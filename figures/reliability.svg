@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect width="1600" height="900" fill="#fcfcfb"/>
+<text x="70.0" y="92.0" font-size="44" fill="#0b0b0b" text-anchor="start" font-weight="700">When Jev says X% sure, how often is it right?</text>
+<text x="70.0" y="138.0" font-size="25" fill="#52514e" text-anchor="start" font-weight="400">x: confidence it stated · y: how often it was right · 500 examples per task</text>
+<text x="110.0" y="193.0" font-size="26" fill="#0b0b0b" text-anchor="start" font-weight="700">Yes / no</text>
+<line x1="110" x2="510" y1="615.0" y2="615.0" stroke="#e1e0d9"/>
+<text x="98.0" y="621.0" font-size="18" fill="#898781" text-anchor="end" font-weight="400">25%</text>
+<line x1="110" x2="510" y1="481.7" y2="481.7" stroke="#e1e0d9"/>
+<text x="98.0" y="487.7" font-size="18" fill="#898781" text-anchor="end" font-weight="400">50%</text>
+<line x1="110" x2="510" y1="348.3" y2="348.3" stroke="#e1e0d9"/>
+<text x="98.0" y="354.3" font-size="18" fill="#898781" text-anchor="end" font-weight="400">75%</text>
+<line x1="110" x2="510" y1="215.0" y2="215.0" stroke="#e1e0d9"/>
+<text x="98.0" y="221.0" font-size="18" fill="#898781" text-anchor="end" font-weight="400">100%</text>
+<text x="110.0" y="641.0" font-size="18" fill="#898781" text-anchor="middle" font-weight="400">0.50</text>
+<text x="310.0" y="641.0" font-size="18" fill="#898781" text-anchor="middle" font-weight="400">0.75</text>
+<text x="510.0" y="641.0" font-size="18" fill="#898781" text-anchor="middle" font-weight="400">1.00</text>
+<line x1="110.0" y1="481.7" x2="510.0" y2="215.0" stroke="#c3c2b7" stroke-width="2"/>
+<polyline fill="none" stroke="#2a78d6" stroke-width="2.5" stroke-linejoin="round" points="229.4,297.0 318.0,235.5 407.4,222.9 481.9,216.4"/>
+<circle cx="229.4" cy="297.0" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="318.0" cy="235.5" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="407.4" cy="222.9" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="481.9" cy="216.4" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="117" cy="675" r="6" fill="#2a78d6"/>
+<text x="134.0" y="681.0" font-size="18" fill="#52514e" text-anchor="start" font-weight="400">Is this message spam?</text>
+<polyline fill="none" stroke="#eb6834" stroke-width="2.5" stroke-linejoin="round" points="150.8,501.2 233.6,419.3 321.0,406.0 398.7,320.3 482.6,219.1"/>
+<circle cx="150.8" cy="501.2" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="233.6" cy="419.3" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="321.0" cy="406.0" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="398.7" cy="320.3" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="482.6" cy="219.1" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="117" cy="703" r="6" fill="#eb6834"/>
+<text x="134.0" y="709.0" font-size="18" fill="#52514e" text-anchor="start" font-weight="400">Are these two requests duplicates?</text>
+<polyline fill="none" stroke="#1baf7a" stroke-width="2.5" stroke-linejoin="round" points="151.8,330.9 244.4,375.0 322.0,241.7 400.4,282.7 487.8,232.7"/>
+<circle cx="151.8" cy="330.9" r="5.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="244.4" cy="375.0" r="5.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="322.0" cy="241.7" r="5.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="400.4" cy="282.7" r="5.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="487.8" cy="232.7" r="5.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="117" cy="731" r="6" fill="#1baf7a"/>
+<text x="134.0" y="737.0" font-size="18" fill="#52514e" text-anchor="start" font-weight="400">Does the document say yes?</text>
+<polyline fill="none" stroke="#eda100" stroke-width="2.5" stroke-linejoin="round" points="157.8,517.2 235.8,471.0 318.8,398.6 394.7,356.5 481.2,240.5"/>
+<circle cx="157.8" cy="517.2" r="5.5" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="235.8" cy="471.0" r="5.5" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="318.8" cy="398.6" r="5.5" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="394.7" cy="356.5" r="5.5" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="481.2" cy="240.5" r="5.5" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="117" cy="759" r="6" fill="#eda100"/>
+<text x="134.0" y="765.0" font-size="18" fill="#52514e" text-anchor="start" font-weight="400">Is this post offensive?</text>
+<text x="605.0" y="193.0" font-size="26" fill="#0b0b0b" text-anchor="start" font-weight="700">Pick one of N</text>
+<line x1="605" x2="1005" y1="615.0" y2="615.0" stroke="#e1e0d9"/>
+<text x="593.0" y="621.0" font-size="18" fill="#898781" text-anchor="end" font-weight="400">25%</text>
+<line x1="605" x2="1005" y1="481.7" y2="481.7" stroke="#e1e0d9"/>
+<text x="593.0" y="487.7" font-size="18" fill="#898781" text-anchor="end" font-weight="400">50%</text>
+<line x1="605" x2="1005" y1="348.3" y2="348.3" stroke="#e1e0d9"/>
+<text x="593.0" y="354.3" font-size="18" fill="#898781" text-anchor="end" font-weight="400">75%</text>
+<line x1="605" x2="1005" y1="215.0" y2="215.0" stroke="#e1e0d9"/>
+<text x="593.0" y="221.0" font-size="18" fill="#898781" text-anchor="end" font-weight="400">100%</text>
+<text x="605.0" y="641.0" font-size="18" fill="#898781" text-anchor="middle" font-weight="400">0.50</text>
+<text x="805.0" y="641.0" font-size="18" fill="#898781" text-anchor="middle" font-weight="400">0.75</text>
+<text x="1005.0" y="641.0" font-size="18" fill="#898781" text-anchor="middle" font-weight="400">1.00</text>
+<line x1="605.0" y1="481.7" x2="1005.0" y2="215.0" stroke="#c3c2b7" stroke-width="2"/>
+<polyline fill="none" stroke="#2a78d6" stroke-width="2.5" stroke-linejoin="round" points="659.6,481.7 731.6,497.3 808.6,336.2 891.2,283.8 998.4,229.4"/>
+<circle cx="659.6" cy="481.7" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="731.6" cy="497.3" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="808.6" cy="336.2" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="891.2" cy="283.8" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="998.4" cy="229.4" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="612" cy="675" r="6" fill="#2a78d6"/>
+<text x="629.0" y="681.0" font-size="18" fill="#52514e" text-anchor="start" font-weight="400">Route a request · 150 queues</text>
+<polyline fill="none" stroke="#eb6834" stroke-width="2.5" stroke-linejoin="round" points="654.3,579.9 719.6,495.7 805.0,398.9 897.5,345.1 996.8,239.9"/>
+<circle cx="654.3" cy="579.9" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="719.6" cy="495.7" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="805.0" cy="398.9" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="897.5" cy="345.1" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="996.8" cy="239.9" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="612" cy="703" r="6" fill="#eb6834"/>
+<text x="629.0" y="709.0" font-size="18" fill="#52514e" text-anchor="start" font-weight="400">Route a request · 59 queues · English</text>
+<polyline fill="none" stroke="#1baf7a" stroke-width="2.5" stroke-linejoin="round" points="654.8,452.0 730.0,481.7 814.0,490.3 891.9,298.7 996.1,239.8"/>
+<circle cx="654.8" cy="452.0" r="5.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="730.0" cy="481.7" r="5.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="814.0" cy="490.3" r="5.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="891.9" cy="298.7" r="5.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="996.1" cy="239.8" r="5.5" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="612" cy="731" r="6" fill="#1baf7a"/>
+<text x="629.0" y="737.0" font-size="18" fill="#52514e" text-anchor="start" font-weight="400">Route a request · 59 queues · Italian</text>
+<polyline fill="none" stroke="#eda100" stroke-width="2.5" stroke-linejoin="round" points="646.8,584.2 801.6,392.8 894.0,385.7 1000.4,241.5"/>
+<circle cx="646.8" cy="584.2" r="5.5" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="801.6" cy="392.8" r="5.5" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="894.0" cy="385.7" r="5.5" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1000.4" cy="241.5" r="5.5" fill="#eda100" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="612" cy="759" r="6" fill="#eda100"/>
+<text x="629.0" y="765.0" font-size="18" fill="#52514e" text-anchor="start" font-weight="400">Route a news item · 4 desks</text>
+<polyline fill="none" stroke="#e87ba4" stroke-width="2.5" stroke-linejoin="round" points="647.9,522.1 726.8,522.7 811.8,403.2 891.6,357.2 991.9,266.3"/>
+<circle cx="647.9" cy="522.1" r="5.5" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="726.8" cy="522.7" r="5.5" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="811.8" cy="403.2" r="5.5" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="891.6" cy="357.2" r="5.5" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="991.9" cy="266.3" r="5.5" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="612" cy="787" r="6" fill="#e87ba4"/>
+<text x="629.0" y="793.0" font-size="18" fill="#52514e" text-anchor="start" font-weight="400">Route a bank customer · 77 queues</text>
+<polyline fill="none" stroke="#008300" stroke-width="2.5" stroke-linejoin="round" points="642.3,540.2 729.0,440.7 813.0,489.3 892.0,388.9 992.4,283.9"/>
+<circle cx="642.3" cy="540.2" r="5.5" fill="#008300" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="729.0" cy="440.7" r="5.5" fill="#008300" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="813.0" cy="489.3" r="5.5" fill="#008300" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="892.0" cy="388.9" r="5.5" fill="#008300" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="992.4" cy="283.9" r="5.5" fill="#008300" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="612" cy="815" r="6" fill="#008300"/>
+<text x="629.0" y="821.0" font-size="18" fill="#52514e" text-anchor="start" font-weight="400">Type of contract clause · 100 types</text>
+<text x="1100.0" y="193.0" font-size="26" fill="#0b0b0b" text-anchor="start" font-weight="700">Ordered scale</text>
+<line x1="1100" x2="1500" y1="615.0" y2="615.0" stroke="#e1e0d9"/>
+<text x="1088.0" y="621.0" font-size="18" fill="#898781" text-anchor="end" font-weight="400">25%</text>
+<line x1="1100" x2="1500" y1="481.7" y2="481.7" stroke="#e1e0d9"/>
+<text x="1088.0" y="487.7" font-size="18" fill="#898781" text-anchor="end" font-weight="400">50%</text>
+<line x1="1100" x2="1500" y1="348.3" y2="348.3" stroke="#e1e0d9"/>
+<text x="1088.0" y="354.3" font-size="18" fill="#898781" text-anchor="end" font-weight="400">75%</text>
+<line x1="1100" x2="1500" y1="215.0" y2="215.0" stroke="#e1e0d9"/>
+<text x="1088.0" y="221.0" font-size="18" fill="#898781" text-anchor="end" font-weight="400">100%</text>
+<text x="1100.0" y="641.0" font-size="18" fill="#898781" text-anchor="middle" font-weight="400">0.50</text>
+<text x="1300.0" y="641.0" font-size="18" fill="#898781" text-anchor="middle" font-weight="400">0.75</text>
+<text x="1500.0" y="641.0" font-size="18" fill="#898781" text-anchor="middle" font-weight="400">1.00</text>
+<line x1="1100.0" y1="481.7" x2="1500.0" y2="215.0" stroke="#c3c2b7" stroke-width="2"/>
+<polyline fill="none" stroke="#2a78d6" stroke-width="2.5" stroke-linejoin="round" points="1147.6,455.0 1222.4,463.9 1309.3,364.3 1383.8,368.4 1479.2,243.9"/>
+<circle cx="1147.6" cy="455.0" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1222.4" cy="463.9" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1309.3" cy="364.3" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1383.8" cy="368.4" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1479.2" cy="243.9" r="5.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1107" cy="675" r="6" fill="#2a78d6"/>
+<text x="1124.0" y="681.0" font-size="18" fill="#52514e" text-anchor="start" font-weight="400">Sentiment of a tweet · Italian</text>
+<polyline fill="none" stroke="#eb6834" stroke-width="2.5" stroke-linejoin="round" points="1151.4,481.7 1225.7,488.2 1307.5,402.8 1386.2,383.8 1478.9,313.1"/>
+<circle cx="1151.4" cy="481.7" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1225.7" cy="488.2" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1307.5" cy="402.8" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1386.2" cy="383.8" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1478.9" cy="313.1" r="5.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1107" cy="703" r="6" fill="#eb6834"/>
+<text x="1124.0" y="709.0" font-size="18" fill="#52514e" text-anchor="start" font-weight="400">Exact star rating of a review · 1-5</text>
+<text x="110.0" y="641.0" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="400"></text>
+<text x="1530.0" y="138.0" font-size="19" fill="#898781" text-anchor="end" font-weight="400">grey diagonal = perfectly calibrated · below it = over-confident</text>
+<text x="70.0" y="866.0" font-size="19" fill="#898781" text-anchor="start" font-weight="400">github.com/Running-Dolphins/jev-bench · one run, 20 Sept 2026 · public datasets</text>
+</svg>
