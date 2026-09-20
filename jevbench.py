@@ -7,7 +7,7 @@ Standard library only. Needs TYPESAFE_API_KEY in the environment or in a local `
     python3 jevbench.py run sms-spam --n 500
     python3 jevbench.py run all --n 300
     python3 jevbench.py experiment oos            # see `list` for all experiments
-    python3 jevbench.py report                    # rebuilds RESULTS.md from results/*.json
+    python3 jevbench.py report                    # rebuilds RESULTS.md and reliability.svg
     python3 jevbench.py run banking77 --dry-run   # no API calls, fake answers: tests the code
 
 Per-example outputs go to raw/ (git-ignored: they contain dataset text). Aggregates go to
@@ -270,8 +270,8 @@ def t_offensive(n):
 
 TASKS = {
     "banking77":    (t_banking77,    "choice · 77 options",  "Route a bank customer's message to one of 77 intents (PolyAI Banking77, EN)"),
-    "massive-en":   (_massive("en"), "choice · 60 options",  "Voice-assistant intent, English (Amazon MASSIVE) — parallel to massive-it"),
-    "massive-it":   (_massive("it"), "choice · 60 options",  "Same utterances translated to Italian (Amazon MASSIVE)"),
+    "massive-en":   (_massive("en"), "choice · 59 options",  "Voice-assistant intent, English (Amazon MASSIVE) — parallel to massive-it"),
+    "massive-it":   (_massive("it"), "choice · 59 options",  "Same utterances translated to Italian (Amazon MASSIVE)"),
     "clinc150":     (t_clinc,        "choice · 150 options", "Intent routing with 150 in-scope intents (CLINC150, EN)"),
     "ledgar":       (t_ledgar,       "choice · 100 options", "Contract clause type, from SEC filings (LEDGAR / LexGLUE, EN)"),
     "ag-news":      (t_agnews,       "choice · 4 options",   "Route a news item to a desk (AG News, EN)"),
@@ -536,66 +536,148 @@ def x_descriptions(n, dry_run):
     return out, allrows
 
 
-def x_length(n, dry_run):
-    """Accuracy and calibration by input length, from an existing raw/ file (no API calls)."""
-    out = {"name": "x-length", "date": time.strftime("%Y-%m-%d"), "by_task": {}}
-    for task in ("doc-yesno", "yelp-stars", "ledgar"):
-        p = ROOT / "raw" / f"{task}.jsonl"
-        if not p.exists():
-            continue
-        rows = [json.loads(l) for l in p.read_text().splitlines()]
-        rows.sort(key=lambda r: r["usage"].get("input_tokens", 0))
-        third = len(rows) // 3
-        out["by_task"][task] = {}
-        for label, part in (("shortest third", rows[:third]), ("middle third", rows[third:2 * third]), ("longest third", rows[2 * third:])):
-            s = summarize(label, part)
-            out["by_task"][task][label] = {"median_input_tokens": int(statistics.median(r["usage"].get("input_tokens", 0) for r in part)),
-                                           "accuracy": s["accuracy"], "ece": s["ece"], "at_0.9": s["thresholds"]["0.9"]}
-    return out, []
-
-
 EXPERIMENTS = {
     "oos": (x_oos, "The right answer is not among the options: does the confidence tell you?"),
     "language": (x_language, "Same requests in English and Italian (parallel corpus)"),
-    "options": (x_options, "Same examples with 5, 20 and 60 options"),
+    "options": (x_options, "Same examples with 5, 20 and 59 options"),
     "order": (x_order, "Same options in a different order: does the answer move?"),
     "repeat": (x_repeat, "Same request five times: how stable is the number?"),
     "descriptions": (x_descriptions, "Bare labels vs one line of description per option"),
-    "length": (x_length, "Accuracy and calibration by input length (reads raw/, no API calls)"),
 }
 
 
 # ----------------------------------------------------------------------------- report
 
+def pct(x):
+    return "—" if x is None else f"{x:.1%}"
+
+
+def experiment_tables(res):
+    """Markdown for each experiment, one small table each."""
+    L = []
+    if "x-oos" in res:
+        r = res["x-oos"]; a, b = r["A_no_exit_option"], r["B_with_exit_option"]
+        L += [f"### `oos` — {EXPERIMENTS['oos'][1]}", "",
+              f"CLINC150, {r['n_in_scope']} in-scope and {r['n_out_of_scope']} out-of-scope requests.", "",
+              "| Without a \"none of these\" option | |", "|---|---|",
+              f"| Median top probability, in-scope requests | {a['in_scope_median_top_probability']:.2f} |",
+              f"| Median top probability, out-of-scope requests | {a['oos_median_top_probability']:.2f} |",
+              f"| Top probability separates the two (AUROC) | {a['auroc_top_probability_detects_oos']:.2f} |",
+              f"| Out-of-scope requests answered at ≥ 0.9 anyway | {pct(a['oos_share_at_or_above_0.9'])} |",
+              f"| Out-of-scope requests answered at ≥ 0.7 anyway | {pct(a['oos_share_at_or_above_0.7'])} |", "",
+              "| With the option added | |", "|---|---|",
+              f"| Out-of-scope requests caught | {pct(b['oos_caught'])} |",
+              f"| In-scope requests wrongly sent to the exit | {pct(b['in_scope_wrongly_sent_to_exit'])} |",
+              f"| In-scope accuracy, before → after | {pct(a['in_scope_accuracy'])} → {pct(b['in_scope_accuracy'])} |", ""]
+    if "x-language" in res:
+        r = res["x-language"]
+        L += [f"### `language` — {EXPERIMENTS['language'][1]}", "", f"MASSIVE, the same {r['n']} requests.", "",
+              "| | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 |", "|---|---|---|---|---|"]
+        for k, name in (("english", "English"), ("italian", "Italian"),
+                        ("italian_text_english_instructions", "Italian text, English instructions")):
+            v = r[k]
+            L.append(f"| {name} | {pct(v['accuracy'])} | {v['ece']:.3f} | {pct(v['at_0.9']['coverage'])} | {pct(v['at_0.9']['accuracy'])} |")
+        L += ["", f"Both right: {r['both_right']} · only English right: {r['only_english_right']} · "
+                  f"only Italian right: {r['only_italian_right']}.", ""]
+    if "x-options" in res:
+        r = res["x-options"]
+        L += [f"### `options` — {EXPERIMENTS['options'][1]}", "",
+              f"MASSIVE (EN), the same {r['n']} requests; the right option plus random distractors.", "",
+              "| Options | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 | $ / 1,000 |", "|---|---|---|---|---|---|"]
+        for k, v in r["by_number_of_options"].items():
+            L.append(f"| {k} | {pct(v['accuracy'])} | {v['ece']:.3f} | {pct(v['at_0.9']['coverage'])} | "
+                     f"{pct(v['at_0.9']['accuracy'])} | {v['usd_per_1000_decisions']:.4f} |")
+        L.append("")
+    if "x-order" in res:
+        r = res["x-order"]
+        L += [f"### `order` — {EXPERIMENTS['order'][1]}", "", f"Banking77, {r['n']} requests, 77 options in three random orders.", "",
+              "| | |", "|---|---|",
+              f"| Accuracy in each order | {' · '.join(pct(x) for x in r['accuracy_per_order'])} |",
+              f"| Requests whose answer changed with the order | {pct(r['answer_changed_with_order'])} |",
+              f"| Mean top probability when the answer is stable / when it flips | {r['mean_top_probability_when_stable']:.2f} / {r['mean_top_probability_when_it_flips']:.2f} |",
+              f"| Requests at ≥ 0.9 in all three orders | {pct(r['share_always_at_or_above_0.9'])} |",
+              f"| …of which changed answer | {r['flips_among_always_at_or_above_0.9']} |", ""]
+    if "x-repeat" in res:
+        r = res["x-repeat"]
+        L += [f"### `repeat` — {EXPERIMENTS['repeat'][1]}", "", f"Banking77, {r['n']} requests, each sent {r['repeats']} times unchanged.", "",
+              "| | |", "|---|---|",
+              f"| Spread of the top probability across repeats, median / 95th percentile | {r['median_spread_of_top_probability']:.2f} / {r['p95_spread']:.2f} |",
+              f"| Requests whose answer changed between repeats | {pct(r['answer_changed_between_repeats'])} |",
+              f"| Requests that crossed the 0.9 line between repeats | {pct(r['crossed_the_0.9_line_between_repeats'])} |", ""]
+    if "x-descriptions" in res:
+        r = res["x-descriptions"]
+        L += [f"### `descriptions` — {EXPERIMENTS['descriptions'][1]}", "", f"AG News, {r['n']} items, 4 options.", "",
+              "| Criteria | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 |", "|---|---|---|---|---|"]
+        for k, name in (("labels_only", "Label names only"), ("with_descriptions", "One line of description each")):
+            v = r[k]
+            L.append(f"| {name} | {pct(v['accuracy'])} | {v['ece']:.3f} | {pct(v['at_0.9']['coverage'])} | {pct(v['at_0.9']['accuracy'])} |")
+        L.append("")
+    return L
+
+
+def reliability_svg(tasks):
+    """Reliability diagram, one panel per question type. Pure SVG, no dependencies."""
+    groups = [("yes / no (noul)", "noul"), ("pick one of N (choice)", "choice"), ("ordered scale (score)", "score")]
+    colors = ["#2563eb", "#dc2626", "#059669", "#d97706", "#7c3aed", "#0891b2"]
+    S, pad, gap = 230, 44, 36
+    rows_legend = max(sum(1 for t in tasks if t.get("kind", "").startswith(k)) for _, k in groups)
+    W, H = pad + len(groups) * (S + gap), S + 80 + rows_legend * 14
+    o = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" font-family="system-ui,sans-serif" font-size="11">',
+         f'<rect width="{W}" height="{H}" fill="white"/>']
+    for g, (title, kind) in enumerate(groups):
+        x0, y0 = pad + g * (S + gap), 30
+        px = lambda v: x0 + (v - 0.5) / 0.5 * S
+        py = lambda v: y0 + S - (v - 0.25) / 0.75 * S
+        o.append(f'<text x="{x0}" y="18" font-size="13" font-weight="600" fill="#111">{title}</text>')
+        o.append(f'<rect x="{x0}" y="{y0}" width="{S}" height="{S}" fill="none" stroke="#d4d4d8"/>')
+        for v in (0.5, 0.75):
+            o.append(f'<line x1="{x0}" x2="{x0 + S}" y1="{py(v)}" y2="{py(v)}" stroke="#f0f0f2"/>')
+        for v in (0.25, 0.5, 0.75, 1):
+            o.append(f'<text x="{x0 - 6}" y="{py(v) + 4}" text-anchor="end" fill="#71717a">{v:.2f}</text>')
+        for v in (0.5, 0.75, 1.0):
+            o.append(f'<text x="{px(v)}" y="{y0 + S + 14}" text-anchor="middle" fill="#71717a">{v:.2f}</text>')
+        o.append(f'<line x1="{px(0.5)}" y1="{py(0.5)}" x2="{px(1)}" y2="{py(1)}" stroke="#a1a1aa" stroke-dasharray="4 3"/>')
+        mine = [t for t in tasks if t.get("kind", "").startswith(kind)]
+        for i, t in enumerate(mine):
+            pts = [(b["stated"], b["actual"]) for b in t["reliability"] if b["lo"] >= 0.5 and b["n"] >= 10]
+            c = colors[i % len(colors)]
+            o.append(f'<polyline fill="none" stroke="{c}" stroke-width="1.8" points="' +
+                     " ".join(f"{px(a):.1f},{py(b):.1f}" for a, b in pts) + '"/>')
+            o += [f'<circle cx="{px(a):.1f}" cy="{py(b):.1f}" r="2.6" fill="{c}"/>' for a, b in pts]
+            ly = y0 + S + 32 + i * 14
+            o.append(f'<rect x="{x0}" y="{ly - 8}" width="9" height="9" fill="{c}"/>'
+                     f'<text x="{x0 + 14}" y="{ly}" fill="#27272a">{t["name"]}</text>')
+    o.append(f'<text x="{pad}" y="{H - 4}" fill="#71717a">x: confidence Jev stated · y: how often it was right · '
+             f'dashed: perfectly calibrated · below the line = over-confident · bands with n ≥ 10</text>')
+    o.append("</svg>")
+    (ROOT / "reliability.svg").write_text("\n".join(o))
+
+
 def report():
     res = {p.stem: json.loads(p.read_text()) for p in sorted((ROOT / "results").glob("*.json"))}
-    L = ["# Results", "", "Generated by `python3 jevbench.py report` from `results/*.json`. One run per task, "
-         "random sample with a fixed seed. These are measurements on *these* datasets with *these* prompts: "
-         "read them as examples of what you can measure, not as properties of the model.", ""]
-    tasks = [r for k, r in res.items() if not k.startswith("x-")]
-    if tasks:
-        L += ["## Tasks", "", "| Task | Type | n | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 | Median latency | $ / 1,000 |",
-              "|---|---|---|---|---|---|---|---|---|"]
-        for r in tasks:
-            t = r["thresholds"]["0.9"]
-            L.append(f"| `{r['name']}` | {r.get('kind', '')} | {r['n']} | {r['accuracy']:.1%} | {r['ece']:.3f} | {t['coverage']:.1%} | "
-                     f"{t['accuracy']:.1%} | {r['latency_median_s']:.2f} s | {r['usd_per_1000_decisions']:.4f} |" if t["accuracy"] is not None else
-                     f"| `{r['name']}` | {r.get('kind', '')} | {r['n']} | {r['accuracy']:.1%} | {r['ece']:.3f} | 0% | — | {r['latency_median_s']:.2f} s | {r['usd_per_1000_decisions']:.4f} |")
-        L += ["", "## Reliability: stated confidence vs actual accuracy", "",
-              "Each cell: actual accuracy of the answers whose top probability fell in that band (n in brackets). "
-              "A calibrated model has ~0.55 in the 0.5-0.6 column, ~0.95 in the 0.9-1.0 column.", "",
-              "| Task | " + " | ".join(f"{b / 10:.1f}-{(b + 1) / 10:.1f}" for b in range(2, 10)) + " |", "|---|" + "---|" * 8]
-        for r in tasks:
-            cells = {round(b["lo"], 1): f"{b['actual']:.2f} ({b['n']})" for b in r["reliability"]}
-            L.append(f"| `{r['name']}` | " + " | ".join(cells.get(round(b / 10, 1), "—") for b in range(2, 10)) + " |")
-    xs = [r for k, r in res.items() if k.startswith("x-")]
-    if xs:
-        L += ["", "## Experiments", ""]
-        for r in xs:
-            L += [f"### `{r['name'][2:]}` — {EXPERIMENTS[r['name'][2:]][1]}", "", "```json",
-                  json.dumps({k: v for k, v in r.items() if k != "name"}, indent=1, ensure_ascii=False), "```", ""]
+    tasks = sorted((r for k, r in res.items() if not k.startswith("x-")), key=lambda r: -(r["thresholds"]["0.9"]["accuracy"] or 0))
+    L = ["# Results", "",
+         f"Model `{tasks[0]['model']}`, run on {tasks[0]['date']}. One run per task, random sample with a fixed seed. "
+         "Measurements on *these* datasets with *these* prompts: examples of what you can measure, not properties of the model.", "",
+         "![Reliability diagram](reliability.svg)", "",
+         "## Tasks", "", "Sorted by accuracy above the 0.9 line.", "",
+         "| Task | Type | n | Accuracy | ECE | Coverage ≥0.9 | Accuracy ≥0.9 | Median latency | $ / 1,000 |",
+         "|---|---|---|---|---|---|---|---|---|"]
+    for r in tasks:
+        t = r["thresholds"]["0.9"]
+        L.append(f"| `{r['name']}` | {r.get('kind', '')} | {r['n']} | {pct(r['accuracy'])} | {r['ece']:.3f} | {pct(t['coverage'])} | "
+                 f"**{pct(t['accuracy'])}** | {r['latency_median_s']:.2f} s | {r['usd_per_1000_decisions']:.4f} |")
+    L += ["", "## Reliability: stated confidence vs actual accuracy", "",
+          "Each cell: how often Jev was right among the answers whose top probability fell in that band (n in brackets). "
+          "A calibrated model shows ~0.55 under 0.5-0.6 and ~0.95 under 0.9-1.0.", "",
+          "| Task | " + " | ".join(f"{b / 10:.1f}-{(b + 1) / 10:.1f}" for b in range(5, 10)) + " |", "|---|" + "---|" * 5]
+    for r in tasks:
+        cells = {round(b["lo"], 1): f"{b['actual']:.2f} ({b['n']})" for b in r["reliability"]}
+        L.append(f"| `{r['name']}` | " + " | ".join(cells.get(round(b / 10, 1), "—") for b in range(5, 10)) + " |")
+    L += ["", "## Experiments", ""] + experiment_tables(res)
     (ROOT / "RESULTS.md").write_text("\n".join(L) + "\n")
-    print(f"RESULTS.md written ({len(tasks)} tasks, {len(xs)} experiments)")
+    reliability_svg(tasks)
+    print(f"RESULTS.md and reliability.svg written ({len(tasks)} tasks)")
 
 
 # ----------------------------------------------------------------------------- cli

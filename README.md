@@ -24,10 +24,12 @@ Read it as: "of the answers where Jev claimed 80-90%, 73% were right". On a diff
 
 ## What we saw (one run, 20 September 2026)
 
+![Reliability diagram: stated confidence vs actual accuracy, by question type](reliability.svg)
+
 Observations, not laws. Each one is a reason to run the table on your own data.
 
 - **"0.9" is not one number.** Above 0.9 Jev was right 99.8% of the time on spam, 98.9% on duplicates, 95-97% on intent routing, 86.7% on contract clauses and 81.6% on exact star ratings. The threshold has to be set per task.
-- **The middle of the range was over-confident on multi-option tasks, not on yes/no ones.** Between 0.5 and 0.7, routing tasks claimed ~0.6 and were right 32-56% of the time. On `doc-yesno` the same band was right 70-78%, and on `sms-spam` 71-85%: under-confident.
+- **Below 0.9 the number meant different things on different tasks.** Between 0.5 and 0.7, intent routing claimed ~0.6 and was right 32-56% of the time; so were `duplicates` (46-62%) and `offensive` (43-52%). In the same band `doc-yesno` was right 70-78% and `sms-spam` 71-85%: *under*-confident. It does not split cleanly by question type. It is a property of the task, which is the argument for measuring yours.
 - **More options cost coverage, not safety.** Same examples with 5 / 20 / 59 options: accuracy 97.7% → 92.3% → 86.7%, but accuracy above 0.9 stayed at 99.6% → 98.1% → 97.4%. What dropped is the share of answers that clear the bar (92% → 86% → 76%).
 - **Italian cost nothing here.** Same 300 requests in English and Italian: 87.0% and 87.0%, ten errors unique to each side, 97.8% vs 98.1% above 0.9.
 - **When the right answer is missing, the confidence mostly says so, but not always.** Out-of-scope requests got a median top probability of 0.54 against 1.00 for in-scope ones (AUROC 0.91), yet 15% of them still came back at 0.9 or more. Adding an explicit "none of these" option caught 73% of them and cost 0.3 points of in-scope accuracy.
@@ -56,7 +58,7 @@ python3 jevbench.py report    # rebuilds RESULTS.md
 |---|---|---|
 | `banking77` | choice · 77 options | route a customer message to the right queue, many queues |
 | `clinc150` | choice · 150 options | same, with very many intents |
-| `massive-en` / `massive-it` | choice · 60 options | same requests in English and Italian (parallel corpus) |
+| `massive-en` / `massive-it` | choice · 59 options | same requests in English and Italian (parallel corpus) |
 | `ledgar` | choice · 100 options | what type of contract clause is this |
 | `ag-news` | choice · 4 options | coarse routing, few options |
 | `sms-spam` | noul (true/false) | filter junk before it reaches a person |
@@ -74,11 +76,10 @@ Accuracy on a benchmark is the least interesting thing you can measure. These ar
 |---|---|
 | `oos` | The right answer is **not among the options**. Does the confidence drop, or does it pick something at 0.9? And if you add a "none of these" option, does it use it? |
 | `language` | Same requests in English and Italian. How much do you lose? |
-| `options` | Same examples with 5, 20, 60 options. What does each extra option cost? |
+| `options` | Same examples with 5, 20, 59 options. What does each extra option cost? |
 | `order` | Same options, shuffled. Does the answer change? Does it change above 0.9? |
 | `repeat` | Same request five times. How much does the number move on its own, and how often does it cross your threshold? |
 | `descriptions` | Bare label names vs one line of description per option. |
-| `length` | Accuracy and calibration for short vs long inputs (reads saved runs, no API calls). |
 
 ## Results
 
